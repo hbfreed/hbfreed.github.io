@@ -1,0 +1,23 @@
+@import "minima";
+
+// Light mode (default)
+body {
+  background: #fff;
+  color: #222;
+}
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #181825 !important; /* Nice dark background */
+    color: #ececec !important;      /* Light text */
+  }
+  a { color: #89b4fa !important; } /* Link color for dark */
+  .site-header, .site-footer {
+    background: #1e1e2e !important;
+  }
+  code, pre {
+    background: #22223b !important;
+    color: #f5c2e7 !important;
+  }
+}
