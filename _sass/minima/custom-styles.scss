@@ -1,11 +1,21 @@
 body {
-  background: #f5e0dc !important;
-  color: #4c4f69 !important;
+  background: #fab387 !important;
+  color: #2a2327 !important;
 }
+
 a {
-  color: #d20f39 !important;
+  color: #8aadf4 !important; /* Blue accent */
 }
+
+a:hover {
+  color: #a6e3a1 !important; /* Green accent on hover */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #6e6c7e !important; /* Soft mauve for headers */
+}
+
 .site-header, .site-footer {
-  background: #f2cdcd !important;
-  color: #4c4f69 !important;
+  background: #f9e2af !important; /* Creamy pastel yellow */
+  color: #2a2327 !important;
 }
