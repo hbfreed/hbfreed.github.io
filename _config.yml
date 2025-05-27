@@ -1,3 +1,5 @@
 title: Henry Freed
 author: ""
-remote_theme: alshedivat/al-folio
+theme: minima
+minima:
+  skin: classic
