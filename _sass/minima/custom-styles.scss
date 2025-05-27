@@ -1,0 +1,12 @@
+body {
+  background-color: $base-color;
+  color: $text-color;
+}
+
+a {
+  color: $link-color;
+}
+
+.site-header, .site-footer {
+  background-color: $background-color;
+}
