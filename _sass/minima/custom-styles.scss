@@ -1,21 +1,63 @@
+/* Light mode styles (from previous message) */
 body {
+  background: #f9f5d7 !important;
+  color: #2a2327 !important;
+}
+.site-header, .site-footer {
   background: #fab387 !important;
   color: #2a2327 !important;
+  border: none;
 }
-
+.site-title, .site-title a {
+  color: #8aadf4 !important;
+}
 a {
-  color: #8aadf4 !important; /* Blue accent */
+  color: #8aadf4 !important;
 }
-
 a:hover {
-  color: #a6e3a1 !important; /* Green accent on hover */
+  color: #d20f39 !important;
+}
+.page-content {
+  background: #ffffffcc;
+  border-radius: 16px;
+  padding: 2em;
+  margin: 2em auto;
+  max-width: 700px;
+  box-shadow: 0 8px 24px #0001;
+}
+h1, h2, h3, h4, h5 {
+  color: #d20f39 !important;
+  font-weight: bold;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #6e6c7e !important; /* Soft mauve for headers */
-}
-
-.site-header, .site-footer {
-  background: #f9e2af !important; /* Creamy pastel yellow */
-  color: #2a2327 !important;
+/* DARK MODE! */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #282828 !important;      /* Catppuccin dark base */
+    color: #f9e2af !important;           /* soft cream text */
+  }
+  .site-header, .site-footer {
+    background: #a6e3a1 !important;      /* Catppuccin green, gentle pastel */
+    color: #282828 !important;
+  }
+  .site-title, .site-title a {
+    color: #fab387 !important;           /* pastel peach for site title */
+  }
+  a {
+    color: #8aadf4 !important;           /* keep blue for links */
+  }
+  a:hover {
+    color: #f5c2e7 !important;           /* pastel pink on hover */
+  }
+  .page-content {
+    background: #313244cc;               /* dark but slightly translucent */
+    border-radius: 16px;
+    padding: 2em;
+    margin: 2em auto;
+    max-width: 700px;
+    box-shadow: 0 8px 24px #0006;
+  }
+  h1, h2, h3, h4, h5 {
+    color: #f9e2af !important;           /* cream headings */
+  }
 }
