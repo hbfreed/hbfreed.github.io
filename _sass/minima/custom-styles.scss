@@ -1,12 +1,11 @@
 body {
-  background-color: $base-color;
-  color: $text-color;
+  background: #f5e0dc !important;
+  color: #4c4f69 !important;
 }
-
 a {
-  color: $link-color;
+  color: #d20f39 !important;
 }
-
 .site-header, .site-footer {
-  background-color: $background-color;
+  background: #f2cdcd !important;
+  color: #4c4f69 !important;
 }
