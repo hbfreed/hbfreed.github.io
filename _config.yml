@@ -1,5 +1,10 @@
 title: Henry Freed
 author: ""
-theme: minima
-sass:
-  style: compressed
+remote_theme: "mmistakes/minimal-mistakes@4.27.1"
+minimal_mistakes_skin: "sunrise"
+
+plugins:
+  - jekyll-include-cache
+
+# Basic settings
+url: "https://hbfreed.com"
