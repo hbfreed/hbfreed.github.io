@@ -8,3 +8,13 @@ plugins:
 
 # Basic settings
 url: "https://hbfreed.com"
+
+# _config.yml
+minima:
+  social_links:
+    - platform: github      # shows the Octocat
+      user_url: "https://github.com/hbfreed"
+    - platform: twitter     # lil’ bird icon
+      user_url: "https://twitter.com/hbfreed"
+    - platform: email       # envelope icon
+      user_url: "mailto:hbfreed@protonmail.com"
