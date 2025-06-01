@@ -10,11 +10,21 @@ plugins:
 url: "https://hbfreed.com"
 
 # _config.yml
-minima:
-  social_links:
-    - platform: github      # shows the Octocat
-      user_url: "https://github.com/hbfreed"
-    - platform: twitter     # lil’ bird icon
-      user_url: "https://twitter.com/hbfreed"
-    - platform: email       # envelope icon
-      user_url: "mailto:hbfreed@protonmail.com"
+footer:
+  links:               # ← order here is the order that shows up
+    - label: "GitHub"
+      icon:  "fab fa-fw fa-github"          # Font-Awesome 5 class
+      url:   "https://github.com/hbfreed"
+
+    - label: "Twitter"
+      icon:  "fab fa-fw fa-twitter"
+      url:   "https://twitter.com/hbfreed"
+
+    - label: "Email"
+      icon:  "fas fa-fw fa-envelope"        # “fas” = solid style
+      url:   "mailto:hbfreed@protonmail.com"
+
+    # optional – Hugging Face example
+    - label: "Hugging Face"
+      icon:  "fas fa-fw fa-robot"           # pick any FA5 icon you like
+      url:   "https://huggingface.co/hbfreed"
