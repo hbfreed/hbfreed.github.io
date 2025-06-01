@@ -26,5 +26,5 @@ footer:
 
     # optional – Hugging Face example
     - label: "Hugging Face"
-      icon:  "fas fa-fw fa-face-smiling-hands"           # pick any FA5 icon you like
+      icon:  "fa-solid fa-face-smiling-hands"           # pick any FA5 icon you like
       url:   "https://huggingface.co/hbfreed"
