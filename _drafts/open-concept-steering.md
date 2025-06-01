@@ -3,7 +3,7 @@
 ## Motivation
 For 24 sublime hours just over a year ago, Golden Gate Claude preached the gospel of its beloved bridge. Besides being super fun, it proved we can reach into the tangled internals of a large language model (LLM) and flip concept-level switches.
 
-That’s hard because LLMs, even with billions of parameters, are actually *under‑parameterized* relative to the ocean of patterns they must encode. Several unrelated ideas get crammed into the same weight direction (this is known as superposition).
+We don't get that by default because even with billions of parameters, LLMs are *under‑parameterized* relative to the ocean of patterns they must encode. Several unrelated ideas get crammed into the same weight direction (this is known as superposition).
 
 Anthropic’s answer was to train sparse auto‑encoders (SAEs) that give the model a bigger but mostly zero scratch‑space, encouraging one‑concept‑per‑dimension. I started to feel bad for those that missed out on those few perfect hours, so I replicated it using OLMo 2 7b (link to hf). While it's not *quite* as fun as Golden Gate Claude, this demo definitely captures some of the fun.
 
@@ -66,6 +66,6 @@ Beyond my quixotic Space Needle quest:
 ## If You Made it This Far...
 Thanks for reading. 
 
-The weights are on HuggingFace, the code is on GitHub, and I genuinely want to know if anyone finds other fun features. Also, "Open Concept Steering" is a terrible name – please help me think of something better.
+The weights are on HuggingFace, the code is on GitHub, and I genuinely want to know if anyone finds other fun features. 
 
 Now, I have a Space Needle to find.

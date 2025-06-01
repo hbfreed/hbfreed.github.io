@@ -1,8 +1,8 @@
 ---
-layout: default
-title: Home
+layout: home
+title: “Home”
 ---
 
 # Welcome!
 
-Hi Everyone, I'm Henry.
+Hi, I’m Henry! Below are some of the things I've been up to. 
