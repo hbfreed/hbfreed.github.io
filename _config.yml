@@ -23,7 +23,7 @@ footer:
       url:   "mailto:hbfreed@protonmail.com"
 
     - label: "Hugging Face"
-      icon:  "fa-solid fa-face-smiling-hands"
+      icon:  "fa-solid fa-face-laugh-beam"
       url:   "https://huggingface.co/hbfreed"
 
 atom_feed:
