@@ -42,7 +42,7 @@ These numbers were both on the higher end of what Anthropic reported they were s
 
 Next, I ran a bunch of tokens through the SAE, recording [which features fired on which token](https://github.com/hbfreed/open-concept-steering/blob/main/results_65k_lambda26_ramp30/top_tokens_50m.json)[^1]. After that, I started scrolling through them. Since I sampled 50 million features, the file was very slow to scroll through. A *ton* of the features that we found were for punctuation and other common writing things. I flicked the scroll wheel a few more times, somewhat disappointed, thinking I had made "Semicolon OLMo"-- not so fun. Eventually, I landed at feature 758, and I saw:
 
-' hero', ' Hero', ..., 'Bruce', ' Robin', ..., ' Bat', ..., 'Batman'.
+> ' hero', ' Hero', ..., 'Bruce', ' Robin', ..., ' Bat', ..., 'Batman'.
 
 Eureka! Had I made Batman OLMo? 
 
