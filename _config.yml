@@ -6,14 +6,12 @@ minimal_mistakes_skin: "sunrise"
 plugins:
   - jekyll-include-cache
 
-# Basic settings
 url: "https://hbfreed.com"
 
-# _config.yml
 footer:
-  links:               # ← order here is the order that shows up
+  links:
     - label: "GitHub"
-      icon:  "fab fa-fw fa-github"          # Font-Awesome 5 class
+      icon:  "fab fa-fw fa-github"
       url:   "https://github.com/hbfreed"
 
     - label: "Twitter"
@@ -21,10 +19,12 @@ footer:
       url:   "https://twitter.com/hbfreed"
 
     - label: "Email"
-      icon:  "fas fa-fw fa-envelope"        # “fas” = solid style
+      icon:  "fas fa-fw fa-envelope"
       url:   "mailto:hbfreed@protonmail.com"
 
-    # optional – Hugging Face example
     - label: "Hugging Face"
-      icon:  "fa-solid fa-face-smiling-hands"           # pick any FA5 icon you like
+      icon:  "fa-solid fa-face-smiling-hands"
       url:   "https://huggingface.co/hbfreed"
+
+atom_feed:
+  hide: true
