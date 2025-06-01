@@ -1,3 +1,8 @@
+---
+layout: post
+title: "Open Concept Steering"
+---
+
 # Open Concept Steering
 Today, I've released Open Concept Steering (if anyone has a better name, please let me know).
 TL;DR:
