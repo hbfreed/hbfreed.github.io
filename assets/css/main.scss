@@ -2,8 +2,18 @@
 ---
 
 @import "minimal-mistakes/skins/sunrise"; // skin
-@import "minimal-mistakes"; // main partials
+@import "minimal-mistakes";               // framework
 
+/* ↓ your typography tweaks */
 $serif: "Merriweather", Georgia, Times, serif;
 $global-font-family: $serif;
 $header-font-family: $serif;
+
+/* ↓ wrapper override */
+.page,
+.page__inner,
+.page__content {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
