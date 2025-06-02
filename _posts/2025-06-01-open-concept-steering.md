@@ -21,7 +21,7 @@ I missed Golden Gate Claude, so I decided to replicate it using OLMo 2 7b, a ful
 
 Sparse Autoencoders (SAEs) help us look inside neural networks. The core problem is called superposition. Even with billions of parameters, models are actually *under-parameterized* relative to all the patterns they need to encode. They solve this by cramming multiple unrelated concepts into the same neurons. 
 
-SAEs break down these tangled activations into clean, separate channels where each channel ideally represents just one concept. Imagine several radio stations interfering. SAEs tune each station onto its own frequency. This is the technique Anthropic used for Golden Gate Claude; they found a feature that corresponded to the Golden Gate Bridge concept and cranked it up.
+SAEs untangle this mess. They take the jumbled activations and separate them into clean channels, with each channel ideally representing just one concept. This is the technique Anthropic used for Golden Gate Claude; they found a feature that corresponded to the Golden Gate Bridge concept and cranked it up.
 
 ## Open Concept Steering
 Today, I'm releasing [Open Concept Steering](https://huggingface.co/spaces/hbfreed/olmo2-sae-steering-demo). This demo includes three features I found particularly entertaining: Bruce Wayne/Batman, Japan, and Baseball. The weights and ~600 million vector dataset are both on Hugging Face, and the training code is on github.
@@ -64,6 +64,8 @@ Eureka! Had I made Batman OLMo?
 
 I quickly put together a way of clamping the feature (artificially boosting its activation) and turned it to 10x the maximum activation, as they suggest in the paper, and I hurriedly put in a generic question... and the model printed total nonsense. Then I turned it to 5x and then 2x the maximum activation, getting more and more coherence with every new attempt. Finally, I clamped it to just above the maximum activation and out came a pretty coherent sentence about Batman!! I had done it.
 
+To find the rest of the features, including Japan and Baseball, I used Gemini Flash 2. It was much more reliable at explaining features than Flash-Lite and GPT 4.1 Nano, and figured I'd save the few cents by not going to Flash 2.5, as it didn't seem much better. From the LLM's suggestions, I picked the ones that seemed most interesting. Gemini found many [more features](https://github.com/hbfreed/open-concept-steering/blob/main/results_65k_lambda26_ramp30/feature_labels.csv) (zombie OLMo, anyone?).
+
 If anyone has thoughts about why I needed such a lower activation multiplier compared to Sonnet, I'd love to hear them. Could it be due to OLMo being a much smaller model? Or perhaps I just have a bug in my implementation?
 
 ## What's Next
@@ -71,9 +73,9 @@ If anyone has thoughts about why I needed such a lower activation multiplier com
 ### The Space Needle Dream
 I was really hoping to find a Space Needle feature. Seattle model, Seattle landmark, Seattle me. Golden Gate Claude, meet Space Needle OLMo!
 
-I'm still working on this. I plan to integrate Space Needle-focused data both throughout new pretraining data and in post-training like stages.
+I'm still working on this. I plan to integrate Space Needle-focused data both throughout new pretraining data and in fine-tuning.
 
-MechInterp-wise, beyond my quixotic Space Needle quest:
+For mechanistic interpretability work, beyond my quixotic Space Needle quest:
 - Train some larger SAEs to find more features
 - Scale up to OLMo 32B
 - Play with Anthropic's [circuit tracing tools](https://www.anthropic.com/research/open-source-circuit-tracing)
