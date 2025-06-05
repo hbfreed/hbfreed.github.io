@@ -9,19 +9,21 @@ Huge thanks to:
 - [Sam Lehman](https://x.com/SPLehman) for reading drafts and providing feedback
 - The open-source interpretability community, especially those sharing SAE implementations and techniques
 
+![](assets/images/"open-concept-steering-demo.png")
+
 *If I missed anyone, my apologies! Happy to update this as needed.*
 
 ## Motivation
+Last year, Anthropic demonstrated something magical: for 24 sublime hours, they released “Golden Gate Claude”, a version of Claude that couldn’t stop talking about the Golden Gate Bridge. Ask it what its physical form is? It would respond “I am the Golden Gate Bridge, a famous suspension bridge that spans the San Francisco Bay.” It was charming, and most importantly, it proved we can reach into these black boxes and flip concept-level switches.
 
-Last year, Anthropic demonstrated something magical: for 24 sublime hours, they released "Golden Gate Claude", a version of Claude that couldn't stop talking about the Golden Gate Bridge. Ask it what its physical form is? It [would respond](https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html#:~:text=For%20instance%2C%20we%20see%20that%20clamping%20the%20Golden%20Gate%20Bridge%20feature%2034M/31164353%20to%2010%C3%97%20its%20maximum%20activation%20value%20induces%20thematically%2Drelated%20model%20behavior) "I am the Golden Gate Bridge, a famous suspension bridge that spans the San Francisco Bay." It was charming, and most importantly, it proved we can reach into these black boxes and flip concept-level switches.
-
-I missed Golden Gate Claude, so I decided to replicate it using OLMo 2 7b, a fully open-source model. Its size (7b parameters) was manageable on my RTX 3090, and I loved the idea of keeping my project fully open-source.
+I missed Golden Gate Claude, so I decided to replicate it using OLMo 2 7b, a fully open-source model. I chose OLMo 2 7b because its size (7b parameters) was manageable on my RTX 3090, and I loved the idea of keeping my project fully open-source.
 
 ## What are SAEs?
 
-Sparse Autoencoders (SAEs) help us look inside neural networks. The core problem is called superposition. Even with billions of parameters, models are actually *under-parameterized* relative to all the patterns they need to encode. They solve this by cramming multiple unrelated concepts into the same neurons. 
+Sparse Autoencoders (SAEs) help us look inside neural networks. They're surprisingly simple. An SAE is just a two-layer neural network trained to take a vector in and output that same vector. The trick is in the middle. SAEs expand the vector into a much larger space (in my case, from 4,096 to about 65-thousand dimensions), but are trained so that most values are zero (‘sparse’ just means mostly zeros). The ~150 non-zero values are what we call 'features,' and ideally each one represents a specific concept like the Golden Gate Bridge.
 
-SAEs untangle this mess. They take the jumbled activations and separate them into clean channels, with each channel ideally representing just one concept. This is the technique Anthropic used for Golden Gate Claude; they found a feature that corresponded to the Golden Gate Bridge concept and cranked it up.
+## Superposition
+Why do we need SAEs in the first place? Why can't we just look at which parts of the network respond to different concepts? The core problem is called superposition. Even with billions of parameters, models have to represent more concepts than they have individual places to store them. The web's concept library overwhelms the model's parameter budget. Because of this, concepts have to share space.- Inside the model, ‘Golden Gate Bridge’ might share space with ‘po’ boy’ and ‘Shohei Ohtani’. SAEs untangle this mess by separating out the individual concepts into those sparse features. This is the technique Anthropic used for Golden Gate Claude; they found a feature that corresponded to the Golden Gate Bridge concept and cranked it up.
 
 ## Open Concept Steering
 Today, I'm releasing [Open Concept Steering](https://huggingface.co/spaces/hbfreed/olmo2-sae-steering-demo). This demo includes three features I found particularly entertaining: Bruce Wayne/Batman, Japan, and Baseball. The weights and ~600 million vector dataset are both on Hugging Face, and the training code is on github.
@@ -66,7 +68,6 @@ I quickly put together a way of clamping the feature (artificially boosting its 
 
 To find the rest of the features, including Japan and Baseball, I used Gemini Flash 2. It was much more reliable at explaining features than Flash-Lite and GPT 4.1 Nano, and figured I'd save the few cents by not going to Flash 2.5, as it didn't seem much better. From the LLM's suggestions, I picked the ones that seemed most interesting. Gemini found many [more features](https://github.com/hbfreed/open-concept-steering/blob/main/results_65k_lambda26_ramp30/feature_labels.csv) (zombie OLMo, anyone?).
 
-If anyone has thoughts about why I needed such a lower activation multiplier compared to Sonnet, I'd love to hear them. Could it be due to OLMo being a much smaller model? Or perhaps I just have a bug in my implementation?
 
 ## What's Next
 
@@ -74,6 +75,8 @@ If anyone has thoughts about why I needed such a lower activation multiplier com
 I was really hoping to find a Space Needle feature. Seattle model, Seattle landmark, Seattle me. Golden Gate Claude, meet Space Needle OLMo!
 
 I'm still working on this. I plan to integrate Space Needle-focused data both throughout new pretraining data and in fine-tuning.
+
+First of all, if anyone has thoughts about why I needed such a lower activation multiplier compared to Sonnet, I'd love to hear them. Could it be due to OLMo being a much smaller model? Or perhaps I just have a bug in my implementation?
 
 For mechanistic interpretability work, beyond my quixotic Space Needle quest:
 - Train some larger SAEs to find more features
