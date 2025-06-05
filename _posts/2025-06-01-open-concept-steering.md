@@ -9,9 +9,11 @@ Huge thanks to:
 - [Sam Lehman](https://x.com/SPLehman) for reading drafts and providing feedback
 - The open-source interpretability community, especially those sharing SAE implementations and techniques
 
-![](/assets/images/open-concept-steering-demo.png)
 
 *If I missed anyone, my apologies! Happy to update this as needed.*
+
+
+![](/assets/images/open-concept-steering-demo.png)
 
 ## Motivation
 Last year, Anthropic demonstrated something magical: for 24 sublime hours, they released “Golden Gate Claude”, a version of Claude that couldn’t stop talking about the Golden Gate Bridge. Ask it what its physical form is? It would respond “I am the Golden Gate Bridge, a famous suspension bridge that spans the San Francisco Bay.” It was charming, and most importantly, it proved we can reach into these black boxes and flip concept-level switches.
