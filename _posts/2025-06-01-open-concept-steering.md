@@ -9,7 +9,7 @@ Huge thanks to:
 - [Sam Lehman](https://x.com/SPLehman) for reading drafts and providing feedback
 - The open-source interpretability community, especially those sharing SAE implementations and techniques
 
-![](assets/images/"open-concept-steering-demo.png")
+![](/assets/images/open-concept-steering-demo.png)
 
 *If I missed anyone, my apologies! Happy to update this as needed.*
 
