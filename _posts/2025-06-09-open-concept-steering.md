@@ -7,7 +7,7 @@ Huge thanks to:
 - [AI2](https://allenai.org/) for training and open-sourcing [OLMo 2](https://huggingface.co/allenai/OLMo-2-1124-7B-Instruct)
 - [Hugging Face](https://huggingface.co/) for the [Fineweb dataset](https://huggingface.co/datasets/HuggingFaceFW/fineweb) and for hosting the [demo](https://huggingface.co/spaces/hbfreed/olmo2-sae-steering-demo) and [weights](https://huggingface.co/open-concept-steering/olmo2-7b-sae-65k-v1)
 - [Sam Lehman](https://x.com/SPLehman) for reading drafts and providing feedback
-- [Eddie Austin](https://x.com/EddieSAustin)[From Nurturepoint.ai](https://www.nurturepoint.ai/) for reading drafts and providing feedback
+- [Eddie Austin](https://x.com/EddieSAustin) [From Nurturepoint.ai](https://www.nurturepoint.ai/) for reading drafts and providing feedback
 - The open-source interpretability community, especially those sharing SAE implementations and techniques
 
 
