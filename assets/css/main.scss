@@ -4,6 +4,11 @@
 @import "minimal-mistakes/skins/sunrise"; // skin
 @import "minimal-mistakes";               // framework
 
+/* ↓ site-wide spacing */
+body {
+  padding: 0 1rem;
+}
+
 /* ↓ your typography tweaks */
 $serif: "Merriweather", Georgia, Times, serif;
 $global-font-family: $serif;
@@ -15,5 +20,5 @@ $header-font-family: $serif;
 .page__content {
   max-width: 48rem;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2.5rem;
 }
