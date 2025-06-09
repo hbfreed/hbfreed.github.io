@@ -21,12 +21,13 @@ Last year, Anthropic demonstrated something magical: for 24 sublime hours, they 
 
 I missed Golden Gate Claude, so I decided to replicate it using OLMo 2 7b, a fully open-source model. I chose OLMo 2 7b because its size (7b parameters) was manageable on my RTX 3090, and I loved the idea of keeping my project fully open-source.
 
+
 ## What are SAEs?
 
 Sparse Autoencoders (SAEs) help us look inside neural networks. They're surprisingly simple. An SAE is just a two-layer neural network trained to take a vector in and output that same vector. The trick is in the middle. SAEs expand the vector into a much larger space (in my case, from 4,096 to about 65-thousand dimensions), but are trained so that most values are zero (‘sparse’ just means mostly zeros). The ~150 non-zero values are what we call 'features,' and ideally each one represents a specific concept like the Golden Gate Bridge.
 
 ## Superposition
-Why do we need SAEs in the first place? Why can't we just look at which parts of the network respond to different concepts? The core problem is called superposition. Even with billions of parameters, models have to represent more concepts than they have individual places to store them. The web's concept library overwhelms the model's parameter budget. Because of this, concepts have to share space.- Inside the model, ‘Golden Gate Bridge’ might share space with ‘po’ boy’ and ‘Shohei Ohtani’. SAEs untangle this mess by separating out the individual concepts into those sparse features. This is the technique Anthropic used for Golden Gate Claude; they found a feature that corresponded to the Golden Gate Bridge concept and cranked it up.
+Why do we need SAEs in the first place? Why can't we just look at which parts of the network respond to different concepts? The core problem is thought to be superposition. Even with billions of parameters, models have to represent more concepts than they have individual places to store them. The web's concept library overwhelms the model's parameter budget. Because of this, concepts have to share space. Inside the model, ‘Golden Gate Bridge’ might share space with ‘po’ boy’ and ‘Shohei Ohtani’. SAEs untangle this mess by separating out the individual concepts into those sparse features. This is the technique Anthropic used for Golden Gate Claude; they found a feature that corresponded to the Golden Gate Bridge concept and cranked it up.
 
 ## Open Concept Steering
 Today, I'm releasing [Open Concept Steering](https://huggingface.co/spaces/hbfreed/olmo2-sae-steering-demo). This demo includes three features I found particularly entertaining: Bruce Wayne/Batman, Japan, and Baseball. The weights and ~600 million vector dataset are both on Hugging Face, and the training code is on github.
@@ -61,6 +62,7 @@ These were on the higher end of acceptable but definitely workable. I had to cra
 The full training took roughly 6 hours on a single RTX 3090.
 
 ## Batman OLMo
+
 Next, it was time to search for some features. I ran another 50 million tokens through the trained SAE, recording [which features fired on which tokens](https://github.com/hbfreed/open-concept-steering/blob/main/results_65k_lambda26_ramp30/top_tokens_50m.json). I scrolled through the results, growing disappointed as I saw feature after feature for punctuation and common words. 'Great,' I thought, 'I've built Semicolon OLMo.' But then I landed on feature 758...
 
 > ' hero', ' Hero', ..., 'Bruce', ' Robin', ..., ' Bat', ..., 'Batman'.
