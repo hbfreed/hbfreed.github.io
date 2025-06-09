@@ -14,7 +14,6 @@ Huge thanks to:
 *If I missed anyone, my apologies! Happy to update this as needed.*
 
 
-![](/assets/images/open-concept-steering-demo.png)
 
 ## Motivation
 Last year, Anthropic demonstrated something magical: for 24 sublime hours, they released “Golden Gate Claude”, a version of Claude that couldn’t stop talking about the Golden Gate Bridge. Ask it what its physical form is? It would respond “I am the Golden Gate Bridge, a famous suspension bridge that spans the San Francisco Bay.” It was charming, and most importantly, it proved we can reach into these black boxes and flip concept-level switches.
@@ -44,6 +43,8 @@ The full record of test questions I asked are on [Github](https://github.com/hbf
 > "I do not have a favorite subject because I don't have personal preferences. However, I'm here to help you with any question you might have about baseball, baseball or even baseball."
 
 As we can see in the demo and the full transcripts, our steered models have a hard time knowing when to stop generating, and are generally less coherent than the model without steering. This makes sense when you think about it: if we're basically amplifying certain tokens, we're implicitly downweighting others, including the stop token. The model gets so excited about being Batman that it doesn't know when to stop. 
+
+[![](/assets/images/open-concept-steering-demo.png)](https://huggingface.co/spaces/hbfreed/olmo2-sae-steering-demo)
 
 ## Training Details
 
