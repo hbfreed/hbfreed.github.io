@@ -8,14 +8,10 @@ Over the next (generic period of time), I'll be working on learning more about M
 Additionally, I'm fascinated by what's really going inside of these kinds of models. Are they actually learning some sort of expertise? For example, in a given MoE model, is there a notion of a "math expert"? 
 
 A few thoughts on this right off the bat:
-0. The first paper on MoEs for language modeling from Google, [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](https://arxiv.org/pdf/1701.06538) (see Table 9) showed that they could practically just read the experts off from the model weights (we see this in [vision MoEs](https://arxiv.org/pdf/2106.05974) too).
-
-
-   Some caveats:
-   
+0. The first paper on MoEs for language modeling from Google, [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](https://arxiv.org/pdf/1701.06538) (see Table 9) showed that they could practically just read the experts off from the model weights (we see this in [vision MoEs](https://arxiv.org/pdf/2106.05974) too). A few caveats below.
      - They were working with LSTMs
      - There was what amounted to one expert layer
-     - They trained models with up to 131k experts! (In table 9 they look at the model with 2048 experts, still a huge number compared to Kimi K2, a 1T parameter model, which has [384 experts per layer](https://huggingface.co/moonshotai/Kimi-K2-Instruct/blob/main/config.json))
+     - They trained models with up to 131k experts! (In table 9 they look at the model with 2048 experts. That's still a huge number compared to Kimi K2, a 1T parameter model, which has [384 experts per layer](https://huggingface.co/moonshotai/Kimi-K2-Instruct/blob/main/config.json))
      
 1. The [Mixtral paper](https://arxiv.org/pdf/2401.04088) reports no specialization
 2. The [OLMoE paper](https://arxiv.org/pdf/2409.02060) shows that, in the first layer, tokens from arxiv are disproportionately routed to one expert in particular.
