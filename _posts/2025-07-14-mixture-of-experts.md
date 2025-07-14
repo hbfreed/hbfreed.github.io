@@ -12,9 +12,11 @@ A few thoughts on this right off the bat:
 
 
    Some caveats:
+   
      - They were working with LSTMs
      - There was what amounted to one expert layer
      - They trained models with up to 131k experts! (In table 9 they look at the model with 2048 experts, still a huge number compared to Kimi K2, a 1T parameter model, which has [384 experts per layer](https://huggingface.co/moonshotai/Kimi-K2-Instruct/blob/main/config.json))
+     
 1. The [Mixtral paper](https://arxiv.org/pdf/2401.04088) reports no specialization
 2. The [OLMoE paper](https://arxiv.org/pdf/2409.02060) shows that, in the first layer, tokens from arxiv are disproportionately routed to one expert in particular.
 3. The notion of MoEs being, with Mixtral as an example, 8-7B parameter models "stapled together" is not how they work: for each layer, two experts will be active -- they can use a different combination at each layer, so we won't really be able to call (WLOG) expert 3 the "chemistry expert". It's possible we may find that a combination of experts across layers do make some sort of an "expert" as we think of them informally, but I don't have high hopes.
