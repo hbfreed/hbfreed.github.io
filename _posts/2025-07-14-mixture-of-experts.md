@@ -1,18 +1,40 @@
 # MoEs
 ## Adding Mixture of Experts support to [Karpathy's](https://x.com/karpathy) [NanoGPT](https://github.com/karpathy/nanoGPT), MoE interpretability
-### July 14, 2025-?
+### In progress: July 14, 2025-?
 
-Andrej Karpathy's NanoGPT is an eminently hackable library for training language models. In his inimitable style, Karpathy shows anyone who wants to learn exactly how pretraining for LLMs is done. 
-Here, I'd like to add in support for Mixture of Experts (MoE) style models. 
+Andrej Karpathy's NanoGPT is a hackable library for training language models. In his inimitable style, Karpathy shows anyone who wants to learn exactly how pretraining for LLMs is done. 
+Here, I'd like to add support for Mixture of Experts (MoE) style models. 
 Over the next (generic period of time), I'll be working on learning more about MoE models. Extending NanoGPT with MoE support feels like a good place to start.
-Additionally, I'm fascinated by what's really going inside of these kinds of models. Are they actually learning some sort of expertise? For example, in a given MoE model, is there a notion of a "math expert"? 
+Additionally, I'm fascinated by what's really going on inside these kinds of models. Are they actually learning some sort of expertise? For example, in a given MoE model, is there some notion of a "math expert"? 
 
-A few thoughts on this right off the bat:
+### What is an MoE? (7/28/25)
+Let's back up. What is an expert in the context of LLMs? Each layer of a standard transformer model consists of two main parts: the attention block, and the feedforward or MLP (multilayer perceptron) block. The feedforward block is what we modify in MoE models. In a regular (most commonly known as dense) transformer model, this feedforward block is a fully connected (linear) layer that expands to 4x the hidden size of the model. Then, an activation function (most often SwiGLU or GeGLU now, GPT-2/NanoGPT uses GeLU) is applied. Finally, we use another fully connected layer to bring us back down to the hidden size of the model.
 
-0. The first paper on MoEs for language modeling from Google, [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](https://arxiv.org/pdf/1701.06538) (see Table 9) showed that they could practically just read the experts off from the model weights (we see this in [vision MoEs](https://arxiv.org/pdf/2106.05974) too). A few caveats below.
+MoEs follow this same process, but instead of having one large linear layer, they use a set of smaller ones, known as experts. We also add in a fully connected layer before the MLP block, known as the router. As the name suggests, the router is responsible for deciding which experts should be active for a given token.
+
+### A few thoughts on this right off the bat (7/14/2025):
+0. The first paper on MoEs for language modeling from Google, [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](https://arxiv.org/pdf/1701.06538#subsection..5) (see Table 9) showed that they could practically just read the experts off from the model weights (we see this in [vision MoEs](https://arxiv.org/pdf/2106.05974#appendix.E) too). A few caveats below.
      - They were working with LSTMs
      - There was what amounted to one expert layer
-     - They trained models with up to 131k experts! (In table 9 they look at the model with 2048 experts. That's still a huge number compared to Kimi K2, a 1T parameter model, which has [384 experts per layer](https://huggingface.co/moonshotai/Kimi-K2-Instruct/blob/main/config.json))     
-1. The [Mixtral paper](https://arxiv.org/pdf/2401.04088) reports no specialization
-2. The [OLMoE paper](https://arxiv.org/pdf/2409.02060) shows that, in the first layer, tokens from arxiv are disproportionately routed to one expert in particular.
-3. The notion of MoEs being, with Mixtral as an example, 8-7B parameter models "stapled together" is not how they work: for each layer, two experts will be active -- they can use a different combination at each layer, so we won't really be able to call (WLOG) expert 3 the "chemistry expert". It's possible we may find that a combination of experts across layers do make some sort of an "expert" as we think of them informally, but I don't have high hopes.
+     - They trained models with up to 131k experts! (In table 9, they look at the model with 2048 experts. Kimi K2, a model with *one trillion* parameters, has just [384 experts per layer](https://huggingface.co/moonshotai/Kimi-K2-Instruct/blob/main/config.json).)
+1. The [Mixtral paper](https://arxiv.org/pdf/2401.04088#section.5) reports basically no specialization
+2. The [OLMoE paper](https://arxiv.org/pdf/2409.02060#section.5) shows that, in the first layer, tokens from arxiv are disproportionately routed to one expert in particular.
+3. The notion of MoEs being, with Mixtral as an example, 8-7B parameter models "stapled together" is not how they work. For each layer, two experts will be active -- they can use a different combination at each layer, so we won't really be able to call (without loss of generality) expert 3 the "chemistry expert". It's possible we may find that a combination of experts across layers (think expert 2 in layer 0, expert 4 in layer 1, and expert 2 in layer 2) do make some sort of "expert".
+
+### Block-Sparsity (7/28/25)
+The vanilla Hugging Face transformers version of MoEs [loops over the experts](https://github.com/huggingface/transformers/blob/6017f5e8ed33d48096cdf8630d1cc7cbf2550c90/src/transformers/models/olmoe/modeling_olmoe.py#L567). They're [fixing this](https://x.com/ClementDelangue/status/1944070910748611069), but for now this is not really workable if we want to get the training efficiency gains that MoEs are well known for. [OLMoE's paper reports that their setup uses ~3x fewer FLOPs than the dense comparison, which equated to ~2x faster training](https://arxiv.org/pdf/2409.02060#subsection.4.1).
+
+<!-- Add in benchmark numbers for for loop vs the megablock-ized version -->
+
+So, we turn to [Megablocks](https://arxiv.org/pdf/2211.15841). Megablocks, using some clever tricks, grants a huge speedup over a for loop version. Since we're dealing with matrices, it's totally possible to parallelize the computation of the experts by essentially stacking them into one big tensor. This comes with a two big drawbacks:
+1. Doing the calculation as one gigantic dense matrix multiply is very expensive and, since only a subset of the experts are active per token, it's wasteful.
+2. Naively, the matrix that each expert sees has to be the same size if we want parallelism. This runs us into two more problems: 
+     a. If an expert isn't used much by a certain batch, we have to pad the token matrix, wasting resources 
+     b. If a batch of tokens is disproportionately routed to an expert, we have to drop some of those tokens, which hurts accuracy and wastes resources.
+Megablocks solves both of these problems at once by still having a large matrix of the experts and computing them all at once, but only computing the parts of the matrix that we need to, leaving the rest of the matrix filled with zeroes (this is known as a sparse matrix). 
+
+Here's my first pass at the Triton kernels to do the forward pass. This first one corresponds to the matrix multiplication that takes the batch of tokens and multiplies it by the expert matrix. There is a little bit of tensor manipulation that we do in PyTorch to put everything in the correct place and get the right shapes; see the [full implementation]() if you're interested. 
+<!-- Add in the sdd kernel -->
+
+The second takes that sparse matrix and sends it back to the original hidden size of the model:
+<!-- Add in the dsd kernel -->
