@@ -4,7 +4,7 @@
 
 Andrej Karpathy's NanoGPT is a hackable library for training language models. In his inimitable style, Karpathy shows anyone who wants to learn exactly how pretraining for LLMs is done. 
 Here, I'd like to add support for Mixture of Experts (MoE) style models. 
-Over the next (generic period of time), I'll be working on learning more about MoE models. Extending NanoGPT with MoE support feels like a good place to start.
+Over the next (generic period of time), I'll be working on learning more about MoE models. Extending NanoGPT with MoE support feels like a good place to start. I'm also interested in [upcycling](https://arxiv.org/pdf/2410.07524v1) something like SmolLM, Not 100% sure how much compute that would take.
 Additionally, I'm fascinated by what's really going on inside these kinds of models. Are they actually learning some sort of expertise? For example, in a given MoE model, is there some notion of a "math expert"? 
 
 ### What is an MoE? (7/28/25)
