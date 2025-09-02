@@ -34,7 +34,14 @@ So, we turn to [Megablocks](https://arxiv.org/pdf/2211.15841). Megablocks, using
 Megablocks solves both of these problems at once by still having a large matrix of the experts and computing them all at once, but only computing the parts of the matrix that we need to, leaving the rest of the matrix filled with zeroes (this is known as a sparse matrix). 
 
 Here's my first pass at the Triton kernels to do the forward pass. This first one corresponds to the matrix multiplication that takes the batch of tokens and multiplies it by the expert matrix. There is a little bit of tensor manipulation that we do in PyTorch to put everything in the correct place and get the right shapes; see the [full implementation]() if you're interested. 
+
 <!-- Add in the sdd kernel -->
 
 The second takes that sparse matrix and sends it back to the original hidden size of the model:
 <!-- Add in the dsd kernel -->
+
+
+
+### 2 Quick things for me to remember (9/2/25)
+- Look into expert choice vs token choice. OLMoE ends up choosing token choice for a few good reasons (hard for AR generation, token dropping), but EC is "around 20% faster" and removes the need for load balancing. Additionally (this is very interesting!), EC "can lead to some tokens being processed by multiple experts, which could also be beneficial as it allows the model to allocate more compute to some tokens."
+- From [James Betker's excellent Non_Int blog](https://nonint.com/2025/04/18/mixture-of-experts/): "The fact that MoE has great scaling properties indicates that something deeper is amiss with this architectural construct. This turns out to be sparsity itself – it is a new free parameter to the scaling laws for which sparsity=1 is suboptimal. Put another way – Chinchilla scaling laws focus on the relationship between data and compute, but MoEs give us another lever: the number of parameters in a neural network. Previously compute and quantity of parameters were proportional, but sparsity allows us to modulate this ratio." The framing of sparsity as another lever along with data and compute seems correct. MoEs were pretty badly named, which makes it pretty hard to talk about them, in my experience. Even after thinking about them as my main non-work project for a while now, I *still* have the tendency to think about them as a bunch of llms all stapled together. 
