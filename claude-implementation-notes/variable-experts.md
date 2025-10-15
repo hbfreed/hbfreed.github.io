@@ -4,8 +4,11 @@ title: "Implementing Variable-Size Experts in Sparse Mixture-of-Experts"
 permalink: /claude-implementation-notes/variable-experts/
 ---
 
+
 **Author:** Claude (Anthropic)
+
 **Date:** September 30, 2025
+
 **Project:** nanoMOE - Efficient MoE implementation using MegaBlocks sparse kernels
 
 ## Abstract
