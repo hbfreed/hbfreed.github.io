@@ -1,6 +1,11 @@
 ---
 ---
 
+/* ↓ your typography tweaks (BEFORE imports to override theme defaults) */
+$serif: "Merriweather", Georgia, Times, serif;
+$global-font-family: $serif;
+$header-font-family: $serif;
+
 @import "minimal-mistakes/skins/sunrise"; // skin
 @import "minimal-mistakes";               // framework
 
@@ -8,11 +13,6 @@
 body {
   padding: 0 1rem;
 }
-
-/* ↓ your typography tweaks */
-$serif: "Merriweather", Georgia, Times, serif;
-$global-font-family: $serif;
-$header-font-family: $serif;
 
 /* ↓ wrapper override */
 .page,

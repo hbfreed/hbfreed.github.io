@@ -5,6 +5,8 @@ minimal_mistakes_skin: "sunrise"
 
 plugins:
   - jekyll-include-cache
+  - jekyll-feed
+  - jekyll-seo-tag
 
 url: "https://hbfreed.com"
 
