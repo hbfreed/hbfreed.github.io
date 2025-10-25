@@ -44,6 +44,8 @@ The second takes that sparse matrix and sends it back to the original hidden siz
 I've been working on these kernels for a long time!! Finally almost there. Quite a few rewrites to really understand what we're doing.
 We are storing everything densely, and just keeping track of how many blocks each expert gets, and a cumsum of that to remember the offsets.
 This same concept should work for variable sized experts... we allocate parameter tensors for the *total* d_ffn size regardless, so as long as we keep track of where each expert is, it should be "trivial"[^1] to have variable sized experts.
+
+
 (10/25/25) This is now working quite well, I've trained a bunch of 125m (average) active parameter variable sized MoEs. They perform about the same as the same-sized vanilla (uniform expert size) MoEs. 
 Quick thoughts on a FlexOlmo-like project but with variable sized experts:
  1. Do simple LoRA on OLMo 1B for domain expertise (or just use AI2's-- they publish them. However, they're 7B models. Too big?)
