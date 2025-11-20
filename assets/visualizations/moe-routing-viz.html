@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoE Routing Visualization</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Merriweather', Georgia, Times, serif;
+            max-width: 48rem;
+            margin: 2rem auto;
+            padding: 0 2.5rem;
+            line-height: 1.8;
+            color: #333;
+            background: #fff;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .legend {
+            background: #f9f9f9;
+            border-left: 4px solid #004D40;
+            padding: 1rem 1.5rem;
+            margin: 2rem 0;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .gradient-scale {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .gradient-bar {
+            flex: 1;
+            height: 24px;
+            background: linear-gradient(to right,
+                #E0F2F7, #B2DFDB, #80CBC4, #4DB6AC,
+                #26A69A, #00897B, #00796B, #00695C, #004D40);
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        .gradient-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: #666;
+            margin-top: 0.25rem;
+        }
+
+        #text-container {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .token {
+            display: inline;
+            padding: 2px 0;
+            cursor: pointer;
+            border-radius: 2px;
+            transition: box-shadow 0.2s;
+            position: relative;
+        }
+
+        .token:hover {
+            box-shadow: 0 0 0 2px rgba(0, 77, 64, 0.3);
+        }
+
+        .token.active {
+            box-shadow: 0 0 0 2px rgba(0, 77, 64, 0.5);
+        }
+
+        .tooltip {
+            display: none;
+            position: absolute;
+            background: white;
+            border: 2px solid #004D40;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            min-width: 280px;
+            max-width: 400px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .tooltip.visible {
+            display: block;
+        }
+
+        .tooltip-header {
+            font-weight: 700;
+            color: #004D40;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+        }
+
+        .tooltip-avg {
+            color: #555;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .tooltip-layers {
+            max-height: 300px;
+            overflow-y: auto;
+            font-size: 0.85rem;
+        }
+
+        .layer-item {
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+            background: #f9f9f9;
+            border-radius: 4px;
+        }
+
+        .layer-title {
+            font-weight: 700;
+            color: #00796B;
+            margin-bottom: 0.25rem;
+        }
+
+        .layer-details {
+            color: #666;
+            font-family: 'Courier New', monospace;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+        }
+
+        .error {
+            background: #ffebee;
+            border-left: 4px solid #c62828;
+            padding: 1rem 1.5rem;
+            margin: 2rem 0;
+            color: #c62828;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 0 1rem;
+                margin: 1rem auto;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .tooltip {
+                min-width: 240px;
+                max-width: calc(100vw - 2rem);
+                font-size: 0.85rem;
+            }
+
+            .gradient-scale {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>MoE Routing Visualization</h1>
+
+    <div class="legend">
+        <strong>How to read this visualization:</strong> Color intensity shows computational budget (darker = more compute). Hover or tap tokens for details about which experts were activated across layers.
+        <div class="gradient-scale">
+            <span style="white-space: nowrap;">Less compute</span>
+            <div style="flex: 1;">
+                <div class="gradient-bar"></div>
+                <div class="gradient-labels">
+                    <span>Light</span>
+                    <span>Dark</span>
+                </div>
+            </div>
+            <span style="white-space: nowrap;">More compute</span>
+        </div>
+    </div>
+
+    <div id="loading" class="loading">Loading visualization...</div>
+    <div id="error" class="error" style="display: none;"></div>
+    <div id="text-container"></div>
+    <div id="tooltip" class="tooltip"></div>
+
+    <script>
+        // Color gradient stops (teal to navy)
+        const colorGradient = [
+            '#E0F2F7', // lightest teal
+            '#B2DFDB',
+            '#80CBC4',
+            '#4DB6AC',
+            '#26A69A',
+            '#00897B',
+            '#00796B',
+            '#00695C',
+            '#004D40'  // darkest navy
+        ];
+
+        let activeToken = null;
+        let data = null;
+
+        // Load and process data
+        async function loadData() {
+            try {
+                const response = await fetch('routing_data.json');
+                if (!response.ok) {
+                    throw new Error(`Failed to load data: ${response.statusText}`);
+                }
+                data = await response.json();
+                processAndRender();
+            } catch (error) {
+                document.getElementById('loading').style.display = 'none';
+                const errorDiv = document.getElementById('error');
+                errorDiv.textContent = `Error loading visualization: ${error.message}`;
+                errorDiv.style.display = 'block';
+                console.error('Error loading data:', error);
+            }
+        }
+
+        // Calculate color based on expert size
+        function getColorForSize(size, minSize, maxSize) {
+            if (minSize === maxSize) return colorGradient[4]; // middle color
+
+            const normalized = (size - minSize) / (maxSize - minSize);
+            const index = Math.floor(normalized * (colorGradient.length - 1));
+            return colorGradient[Math.min(index, colorGradient.length - 1)];
+        }
+
+        // Create tooltip content
+        function createTooltipContent(token) {
+            const layersHtml = token.layers.map(layer => {
+                const expertList = layer.expert_ids
+                    .map((id, idx) => `${id} (${layer.expert_sizes[idx]})`)
+                    .join(', ');
+                return `
+                    <div class="layer-item">
+                        <div class="layer-title">Layer ${layer.layer}</div>
+                        <div class="layer-details">Experts: [${expertList}]</div>
+                    </div>
+                `;
+            }).join('');
+
+            return `
+                <div class="tooltip-header">Token: "${token.token}"</div>
+                <div class="tooltip-avg">Average expert size: ${Math.round(token.mean_expert_size)}</div>
+                <div class="tooltip-layers">${layersHtml}</div>
+            `;
+        }
+
+        // Position tooltip
+        function positionTooltip(tokenElement, tooltipElement) {
+            const tokenRect = tokenElement.getBoundingClientRect();
+            const tooltipRect = tooltipElement.getBoundingClientRect();
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+            // Start with position below the token
+            let top = tokenRect.bottom + scrollTop + 8;
+            let left = tokenRect.left + scrollLeft;
+
+            // Adjust if tooltip goes off right edge
+            if (left + tooltipRect.width > window.innerWidth) {
+                left = window.innerWidth - tooltipRect.width - 16;
+            }
+
+            // Adjust if tooltip goes off left edge
+            if (left < 8) {
+                left = 8;
+            }
+
+            // If tooltip goes off bottom, position above token instead
+            if (top + tooltipRect.height > window.innerHeight + scrollTop) {
+                top = tokenRect.top + scrollTop - tooltipRect.height - 8;
+            }
+
+            tooltipElement.style.top = `${top}px`;
+            tooltipElement.style.left = `${left}px`;
+        }
+
+        // Show tooltip
+        function showTooltip(tokenElement, tokenData) {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.innerHTML = createTooltipContent(tokenData);
+            tooltip.classList.add('visible');
+
+            // Position after content is rendered
+            requestAnimationFrame(() => {
+                positionTooltip(tokenElement, tooltip);
+            });
+
+            // Mark token as active
+            if (activeToken) {
+                activeToken.classList.remove('active');
+            }
+            tokenElement.classList.add('active');
+            activeToken = tokenElement;
+        }
+
+        // Hide tooltip
+        function hideTooltip() {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.classList.remove('visible');
+            if (activeToken) {
+                activeToken.classList.remove('active');
+                activeToken = null;
+            }
+        }
+
+        // Process and render visualization
+        function processAndRender() {
+            const container = document.getElementById('text-container');
+            const loadingDiv = document.getElementById('loading');
+
+            // Find min and max expert sizes
+            const sizes = data.tokens.map(t => t.mean_expert_size);
+            const minSize = Math.min(...sizes);
+            const maxSize = Math.max(...sizes);
+
+            // Create token elements
+            const fragment = document.createDocumentFragment();
+            data.tokens.forEach((token, idx) => {
+                const span = document.createElement('span');
+                span.className = 'token';
+                span.textContent = token.token;
+                span.style.backgroundColor = getColorForSize(token.mean_expert_size, minSize, maxSize);
+
+                // Determine text color for readability
+                const bgColor = getColorForSize(token.mean_expert_size, minSize, maxSize);
+                const rgb = parseInt(bgColor.slice(1), 16);
+                const r = (rgb >> 16) & 0xff;
+                const g = (rgb >> 8) & 0xff;
+                const b = rgb & 0xff;
+                const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+                span.style.color = luminance > 0.5 ? '#000' : '#fff';
+
+                // Desktop: hover events
+                span.addEventListener('mouseenter', (e) => {
+                    showTooltip(span, token);
+                });
+
+                // Mobile: click/tap events
+                span.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    if (activeToken === span) {
+                        hideTooltip();
+                    } else {
+                        showTooltip(span, token);
+                    }
+                });
+
+                fragment.appendChild(span);
+            });
+
+            container.appendChild(fragment);
+            loadingDiv.style.display = 'none';
+
+            // Click outside to close tooltip (mobile)
+            document.addEventListener('click', (e) => {
+                if (!e.target.classList.contains('token') &&
+                    !document.getElementById('tooltip').contains(e.target)) {
+                    hideTooltip();
+                }
+            });
+
+            // Reposition tooltip on scroll
+            let scrollTimeout;
+            window.addEventListener('scroll', () => {
+                if (activeToken) {
+                    clearTimeout(scrollTimeout);
+                    scrollTimeout = setTimeout(() => {
+                        if (activeToken) {
+                            const tooltip = document.getElementById('tooltip');
+                            positionTooltip(activeToken, tooltip);
+                        }
+                    }, 50);
+                }
+            });
+
+            // Reposition tooltip on resize
+            window.addEventListener('resize', () => {
+                if (activeToken) {
+                    const tooltip = document.getElementById('tooltip');
+                    positionTooltip(activeToken, tooltip);
+                }
+            });
+        }
+
+        // Start loading
+        loadData();
+    </script>
+</body>
+</html>
