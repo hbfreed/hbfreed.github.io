@@ -32,6 +32,20 @@
             margin-bottom: 0.5rem;
         }
 
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #00796B;
+            border-bottom: 2px solid #00796B;
+            padding-bottom: 0.5rem;
+        }
+
+        .viz-section {
+            margin-bottom: 4rem;
+        }
+
         .legend {
             background: #f1e6d4;
             border-left: 4px solid #00796B;
@@ -189,7 +203,7 @@
     <h1>MoE Routing Visualization</h1>
 
     <div class="legend">
-        <strong>How to read this visualization:</strong> Color intensity shows computational budget (darker = more compute). Hover or tap tokens for details about which experts were activated across layers.
+        <strong>How to read this visualization:</strong> Color intensity shows computational budget (darker = more compute). Hover or tap tokens for details about which experts were activated across layers. Compare the same passage across two different expert configurations.
         <div class="gradient-scale">
             <span style="white-space: nowrap;">Less compute</span>
             <div style="flex: 1;">
@@ -203,10 +217,23 @@
         </div>
     </div>
 
-    <div id="loading" class="loading">Loading visualization...</div>
+    <div id="loading" class="loading">Loading visualizations...</div>
     <div id="error" class="error" style="display: none;"></div>
-    <div id="text-container" class="text-container"></div>
-    <div id="tooltip" class="tooltip"></div>
+
+    <!-- 5:1 Split -->
+    <section class="viz-section">
+        <h2>5:1 Split (2560/512)</h2>
+        <div id="text-container-5to1" class="text-container"></div>
+    </section>
+
+    <!-- 23:1 Split -->
+    <section class="viz-section">
+        <h2>23:1 Split (2944/128)</h2>
+        <div id="text-container-23to1" class="text-container"></div>
+    </section>
+
+    <div id="tooltip-5to1" class="tooltip"></div>
+    <div id="tooltip-23to1" class="tooltip"></div>
 
     <script>
         // Color gradient stops (teal)
@@ -222,18 +249,32 @@
             '#004D40'  // darkest navy-teal
         ];
 
-        let activeToken = null;
-        let data = null;
+        let activeTokens = {
+            '5to1': null,
+            '23to1': null
+        };
 
         // Load and process data
         async function loadData() {
             try {
-                const response = await fetch('routing_data.json');
-                if (!response.ok) {
-                    throw new Error(`Failed to load data: ${response.statusText}`);
+                const [response5to1, response23to1] = await Promise.all([
+                    fetch('routing_data_5to1.json'),
+                    fetch('routing_data_23to1.json')
+                ]);
+
+                if (!response5to1.ok || !response23to1.ok) {
+                    throw new Error('Failed to load data files');
                 }
-                data = await response.json();
-                processAndRender();
+
+                const data5to1 = await response5to1.json();
+                const data23to1 = await response23to1.json();
+
+                document.getElementById('loading').style.display = 'none';
+
+                processAndRender(data5to1, 'text-container-5to1', 'tooltip-5to1', '5to1');
+                processAndRender(data23to1, 'text-container-23to1', 'tooltip-23to1', '23to1');
+
+                setupGlobalListeners();
             } catch (error) {
                 document.getElementById('loading').style.display = 'none';
                 const errorDiv = document.getElementById('error');
@@ -304,8 +345,8 @@
         }
 
         // Show tooltip
-        function showTooltip(tokenElement, tokenData) {
-            const tooltip = document.getElementById('tooltip');
+        function showTooltip(tokenElement, tokenData, tooltipId, datasetId) {
+            const tooltip = document.getElementById(tooltipId);
             tooltip.innerHTML = createTooltipContent(tokenData);
             tooltip.classList.add('visible');
 
@@ -315,27 +356,26 @@
             });
 
             // Mark token as active
-            if (activeToken) {
-                activeToken.classList.remove('active');
+            if (activeTokens[datasetId]) {
+                activeTokens[datasetId].classList.remove('active');
             }
             tokenElement.classList.add('active');
-            activeToken = tokenElement;
+            activeTokens[datasetId] = tokenElement;
         }
 
         // Hide tooltip
-        function hideTooltip() {
-            const tooltip = document.getElementById('tooltip');
+        function hideTooltip(tooltipId, datasetId) {
+            const tooltip = document.getElementById(tooltipId);
             tooltip.classList.remove('visible');
-            if (activeToken) {
-                activeToken.classList.remove('active');
-                activeToken = null;
+            if (activeTokens[datasetId]) {
+                activeTokens[datasetId].classList.remove('active');
+                activeTokens[datasetId] = null;
             }
         }
 
         // Process and render visualization
-        function processAndRender() {
-            const container = document.getElementById('text-container');
-            const loadingDiv = document.getElementById('loading');
+        function processAndRender(data, containerId, tooltipId, datasetId) {
+            const container = document.getElementById(containerId);
 
             // Find min and max expert sizes
             const sizes = data.tokens.map(t => t.mean_expert_size);
@@ -361,16 +401,16 @@
 
                 // Desktop: hover events
                 span.addEventListener('mouseenter', (e) => {
-                    showTooltip(span, token);
+                    showTooltip(span, token, tooltipId, datasetId);
                 });
 
                 // Mobile: click/tap events
                 span.addEventListener('click', (e) => {
                     e.stopPropagation();
-                    if (activeToken === span) {
-                        hideTooltip();
+                    if (activeTokens[datasetId] === span) {
+                        hideTooltip(tooltipId, datasetId);
                     } else {
-                        showTooltip(span, token);
+                        showTooltip(span, token, tooltipId, datasetId);
                     }
                 });
 
@@ -378,36 +418,53 @@
             });
 
             container.appendChild(fragment);
-            loadingDiv.style.display = 'none';
+        }
+
+        // Set up global event listeners (only once)
+        let globalListenersAdded = false;
+        function setupGlobalListeners() {
+            if (globalListenersAdded) return;
+            globalListenersAdded = true;
 
             // Click outside to close tooltip (mobile)
             document.addEventListener('click', (e) => {
-                if (!e.target.classList.contains('token') &&
-                    !document.getElementById('tooltip').contains(e.target)) {
-                    hideTooltip();
+                if (!e.target.classList.contains('token')) {
+                    const tooltip5to1 = document.getElementById('tooltip-5to1');
+                    const tooltip23to1 = document.getElementById('tooltip-23to1');
+
+                    if (!tooltip5to1.contains(e.target)) {
+                        hideTooltip('tooltip-5to1', '5to1');
+                    }
+                    if (!tooltip23to1.contains(e.target)) {
+                        hideTooltip('tooltip-23to1', '23to1');
+                    }
                 }
             });
 
             // Reposition tooltip on scroll
             let scrollTimeout;
             window.addEventListener('scroll', () => {
-                if (activeToken) {
-                    clearTimeout(scrollTimeout);
-                    scrollTimeout = setTimeout(() => {
-                        if (activeToken) {
-                            const tooltip = document.getElementById('tooltip');
-                            positionTooltip(activeToken, tooltip);
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    ['5to1', '23to1'].forEach(datasetId => {
+                        if (activeTokens[datasetId]) {
+                            const tooltipId = `tooltip-${datasetId}`;
+                            const tooltip = document.getElementById(tooltipId);
+                            positionTooltip(activeTokens[datasetId], tooltip);
                         }
-                    }, 50);
-                }
+                    });
+                }, 50);
             });
 
             // Reposition tooltip on resize
             window.addEventListener('resize', () => {
-                if (activeToken) {
-                    const tooltip = document.getElementById('tooltip');
-                    positionTooltip(activeToken, tooltip);
-                }
+                ['5to1', '23to1'].forEach(datasetId => {
+                    if (activeTokens[datasetId]) {
+                        const tooltipId = `tooltip-${datasetId}`;
+                        const tooltip = document.getElementById(tooltipId);
+                        positionTooltip(activeTokens[datasetId], tooltip);
+                    }
+                });
             });
         }
 
