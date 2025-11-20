@@ -12,6 +12,10 @@
             box-sizing: border-box;
         }
 
+        html {
+            background: #FAF8F3;
+        }
+
         body {
             font-family: 'Merriweather', Georgia, Times, serif;
             max-width: 48rem;
@@ -28,29 +32,13 @@
             margin-bottom: 0.5rem;
         }
 
-        h2 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-top: 3rem;
-            margin-bottom: 1rem;
-            color: #52433D;
-        }
-
-        .viz-section {
-            margin-bottom: 4rem;
-        }
-
         .legend {
             background: #FFF;
-            border-left: 4px solid #A67C52;
+            border-left: 4px solid #8E24AA;
             padding: 1rem 1.5rem;
             margin: 2rem 0;
             font-size: 0.95rem;
             color: #52433D;
-        }
-
-        .legend.purple {
-            border-left-color: #8E24AA;
         }
 
         .gradient-scale {
@@ -63,20 +51,11 @@
         .gradient-bar {
             flex: 1;
             height: 24px;
-            border-radius: 4px;
-            border: 1px solid #E0D5C7;
-        }
-
-        .gradient-bar.beige {
-            background: linear-gradient(to right,
-                #FAF8F3, #F5EFE6, #EDE3D3, #E5D4BE,
-                #D4C4AA, #C4B299, #B39F87, #A18C72, #8B7355);
-        }
-
-        .gradient-bar.purple {
             background: linear-gradient(to right,
                 #F3E5F5, #E1BEE7, #CE93D8, #BA68C8,
                 #AB47BC, #9C27B0, #8E24AA, #7B1FA2, #6A1B9A);
+            border-radius: 4px;
+            border: 1px solid #E0D5C7;
         }
 
         .gradient-labels {
@@ -104,18 +83,10 @@
         }
 
         .token:hover {
-            box-shadow: 0 0 0 2px rgba(166, 124, 82, 0.4);
-        }
-
-        .token.active {
-            box-shadow: 0 0 0 2px rgba(166, 124, 82, 0.6);
-        }
-
-        .purple-viz .token:hover {
             box-shadow: 0 0 0 2px rgba(142, 36, 170, 0.4);
         }
 
-        .purple-viz .token.active {
+        .token.active {
             box-shadow: 0 0 0 2px rgba(142, 36, 170, 0.6);
         }
 
@@ -123,7 +94,7 @@
             display: none;
             position: absolute;
             background: white;
-            border: 2px solid #A67C52;
+            border: 2px solid #8E24AA;
             border-radius: 8px;
             padding: 1rem;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -138,21 +109,13 @@
             display: block;
         }
 
-        .tooltip.purple {
-            border-color: #8E24AA;
-        }
-
         .tooltip-header {
             font-weight: 700;
-            color: #A67C52;
+            color: #8E24AA;
             margin-bottom: 0.5rem;
             font-size: 1rem;
             border-bottom: 1px solid #E0D5C7;
             padding-bottom: 0.5rem;
-        }
-
-        .tooltip.purple .tooltip-header {
-            color: #8E24AA;
         }
 
         .tooltip-avg {
@@ -176,12 +139,8 @@
 
         .layer-title {
             font-weight: 700;
-            color: #A67C52;
-            margin-bottom: 0.25rem;
-        }
-
-        .tooltip.purple .layer-title {
             color: #8E24AA;
+            margin-bottom: 0.25rem;
         }
 
         .layer-details {
@@ -192,7 +151,7 @@
         .loading {
             text-align: center;
             padding: 2rem;
-            color: #A67C52;
+            color: #8E24AA;
         }
 
         .error {
@@ -229,81 +188,41 @@
 <body>
     <h1>MoE Routing Visualization</h1>
 
+    <div class="legend">
+        <strong>How to read this visualization:</strong> Color intensity shows computational budget (darker = more compute). Hover or tap tokens for details about which experts were activated across layers.
+        <div class="gradient-scale">
+            <span style="white-space: nowrap;">Less compute</span>
+            <div style="flex: 1;">
+                <div class="gradient-bar"></div>
+                <div class="gradient-labels">
+                    <span>Light</span>
+                    <span>Dark</span>
+                </div>
+            </div>
+            <span style="white-space: nowrap;">More compute</span>
+        </div>
+    </div>
+
     <div id="loading" class="loading">Loading visualization...</div>
     <div id="error" class="error" style="display: none;"></div>
-
-    <!-- Beige/Warm Color Scheme -->
-    <section class="viz-section beige-viz">
-        <h2>Warm Tones</h2>
-        <div class="legend">
-            <strong>How to read this visualization:</strong> Color intensity shows computational budget (darker = more compute). Hover or tap tokens for details about which experts were activated across layers.
-            <div class="gradient-scale">
-                <span style="white-space: nowrap;">Less compute</span>
-                <div style="flex: 1;">
-                    <div class="gradient-bar beige"></div>
-                    <div class="gradient-labels">
-                        <span>Light</span>
-                        <span>Dark</span>
-                    </div>
-                </div>
-                <span style="white-space: nowrap;">More compute</span>
-            </div>
-        </div>
-        <div id="text-container-beige" class="text-container"></div>
-    </section>
-
-    <!-- Purple Color Scheme -->
-    <section class="viz-section purple-viz">
-        <h2>Cool Purples</h2>
-        <div class="legend purple">
-            <strong>Same data, different palette:</strong> This shows the identical routing decisions with a purple gradient instead of warm tones.
-            <div class="gradient-scale">
-                <span style="white-space: nowrap;">Less compute</span>
-                <div style="flex: 1;">
-                    <div class="gradient-bar purple"></div>
-                    <div class="gradient-labels">
-                        <span>Light</span>
-                        <span>Dark</span>
-                    </div>
-                </div>
-                <span style="white-space: nowrap;">More compute</span>
-            </div>
-        </div>
-        <div id="text-container-purple" class="text-container"></div>
-    </section>
-
-    <div id="tooltip-beige" class="tooltip"></div>
-    <div id="tooltip-purple" class="tooltip purple"></div>
+    <div id="text-container" class="text-container"></div>
+    <div id="tooltip" class="tooltip"></div>
 
     <script>
-        // Color gradient stops
-        const colorGradients = {
-            beige: [
-                '#FAF8F3', // lightest cream
-                '#F5EFE6',
-                '#EDE3D3',
-                '#E5D4BE',
-                '#D4C4AA',
-                '#C4B299',
-                '#B39F87',
-                '#A18C72',
-                '#8B7355'  // darkest brown
-            ],
-            purple: [
-                '#F3E5F5', // lightest lavender
-                '#E1BEE7',
-                '#CE93D8',
-                '#BA68C8',
-                '#AB47BC',
-                '#9C27B0',
-                '#8E24AA',
-                '#7B1FA2',
-                '#6A1B9A'  // deepest purple
-            ]
-        };
+        // Color gradient stops (purple)
+        const colorGradient = [
+            '#F3E5F5', // lightest lavender
+            '#E1BEE7',
+            '#CE93D8',
+            '#BA68C8',
+            '#AB47BC',
+            '#9C27B0',
+            '#8E24AA',
+            '#7B1FA2',
+            '#6A1B9A'  // deepest purple
+        ];
 
-        let activeTokenBeige = null;
-        let activeTokenPurple = null;
+        let activeToken = null;
         let data = null;
 
         // Load and process data
@@ -314,8 +233,7 @@
                     throw new Error(`Failed to load data: ${response.statusText}`);
                 }
                 data = await response.json();
-                processAndRender('beige', 'text-container-beige', 'tooltip-beige');
-                processAndRender('purple', 'text-container-purple', 'tooltip-purple');
+                processAndRender();
             } catch (error) {
                 document.getElementById('loading').style.display = 'none';
                 const errorDiv = document.getElementById('error');
@@ -326,13 +244,12 @@
         }
 
         // Calculate color based on expert size
-        function getColorForSize(size, minSize, maxSize, colorScheme) {
-            const gradient = colorGradients[colorScheme];
-            if (minSize === maxSize) return gradient[4]; // middle color
+        function getColorForSize(size, minSize, maxSize) {
+            if (minSize === maxSize) return colorGradient[4]; // middle color
 
             const normalized = (size - minSize) / (maxSize - minSize);
-            const index = Math.floor(normalized * (gradient.length - 1));
-            return gradient[Math.min(index, gradient.length - 1)];
+            const index = Math.floor(normalized * (colorGradient.length - 1));
+            return colorGradient[Math.min(index, colorGradient.length - 1)];
         }
 
         // Create tooltip content
@@ -387,8 +304,8 @@
         }
 
         // Show tooltip
-        function showTooltip(tokenElement, tokenData, tooltipId, colorScheme) {
-            const tooltip = document.getElementById(tooltipId);
+        function showTooltip(tokenElement, tokenData) {
+            const tooltip = document.getElementById('tooltip');
             tooltip.innerHTML = createTooltipContent(tokenData);
             tooltip.classList.add('visible');
 
@@ -398,36 +315,26 @@
             });
 
             // Mark token as active
-            const activeTokenVar = colorScheme === 'beige' ? 'activeTokenBeige' : 'activeTokenPurple';
-            if (colorScheme === 'beige' && activeTokenBeige) {
-                activeTokenBeige.classList.remove('active');
-            } else if (colorScheme === 'purple' && activeTokenPurple) {
-                activeTokenPurple.classList.remove('active');
+            if (activeToken) {
+                activeToken.classList.remove('active');
             }
             tokenElement.classList.add('active');
-            if (colorScheme === 'beige') {
-                activeTokenBeige = tokenElement;
-            } else {
-                activeTokenPurple = tokenElement;
-            }
+            activeToken = tokenElement;
         }
 
         // Hide tooltip
-        function hideTooltip(tooltipId, colorScheme) {
-            const tooltip = document.getElementById(tooltipId);
+        function hideTooltip() {
+            const tooltip = document.getElementById('tooltip');
             tooltip.classList.remove('visible');
-            if (colorScheme === 'beige' && activeTokenBeige) {
-                activeTokenBeige.classList.remove('active');
-                activeTokenBeige = null;
-            } else if (colorScheme === 'purple' && activeTokenPurple) {
-                activeTokenPurple.classList.remove('active');
-                activeTokenPurple = null;
+            if (activeToken) {
+                activeToken.classList.remove('active');
+                activeToken = null;
             }
         }
 
         // Process and render visualization
-        function processAndRender(colorScheme, containerId, tooltipId) {
-            const container = document.getElementById(containerId);
+        function processAndRender() {
+            const container = document.getElementById('text-container');
             const loadingDiv = document.getElementById('loading');
 
             // Find min and max expert sizes
@@ -441,10 +348,10 @@
                 const span = document.createElement('span');
                 span.className = 'token';
                 span.textContent = token.token;
-                span.style.backgroundColor = getColorForSize(token.mean_expert_size, minSize, maxSize, colorScheme);
+                span.style.backgroundColor = getColorForSize(token.mean_expert_size, minSize, maxSize);
 
                 // Determine text color for readability
-                const bgColor = getColorForSize(token.mean_expert_size, minSize, maxSize, colorScheme);
+                const bgColor = getColorForSize(token.mean_expert_size, minSize, maxSize);
                 const rgb = parseInt(bgColor.slice(1), 16);
                 const r = (rgb >> 16) & 0xff;
                 const g = (rgb >> 8) & 0xff;
@@ -454,17 +361,16 @@
 
                 // Desktop: hover events
                 span.addEventListener('mouseenter', (e) => {
-                    showTooltip(span, token, tooltipId, colorScheme);
+                    showTooltip(span, token);
                 });
 
                 // Mobile: click/tap events
                 span.addEventListener('click', (e) => {
                     e.stopPropagation();
-                    const activeToken = colorScheme === 'beige' ? activeTokenBeige : activeTokenPurple;
                     if (activeToken === span) {
-                        hideTooltip(tooltipId, colorScheme);
+                        hideTooltip();
                     } else {
-                        showTooltip(span, token, tooltipId, colorScheme);
+                        showTooltip(span, token);
                     }
                 });
 
@@ -474,49 +380,36 @@
             container.appendChild(fragment);
             loadingDiv.style.display = 'none';
 
-            // Click outside to close tooltip (mobile) - only set up once per scheme
+            // Click outside to close tooltip (mobile)
             document.addEventListener('click', (e) => {
                 if (!e.target.classList.contains('token') &&
-                    !document.getElementById(tooltipId).contains(e.target)) {
-                    hideTooltip(tooltipId, colorScheme);
+                    !document.getElementById('tooltip').contains(e.target)) {
+                    hideTooltip();
+                }
+            });
+
+            // Reposition tooltip on scroll
+            let scrollTimeout;
+            window.addEventListener('scroll', () => {
+                if (activeToken) {
+                    clearTimeout(scrollTimeout);
+                    scrollTimeout = setTimeout(() => {
+                        if (activeToken) {
+                            const tooltip = document.getElementById('tooltip');
+                            positionTooltip(activeToken, tooltip);
+                        }
+                    }, 50);
+                }
+            });
+
+            // Reposition tooltip on resize
+            window.addEventListener('resize', () => {
+                if (activeToken) {
+                    const tooltip = document.getElementById('tooltip');
+                    positionTooltip(activeToken, tooltip);
                 }
             });
         }
-
-        // Reposition tooltip on scroll
-        let scrollTimeout;
-        window.addEventListener('scroll', () => {
-            if (activeTokenBeige) {
-                clearTimeout(scrollTimeout);
-                scrollTimeout = setTimeout(() => {
-                    if (activeTokenBeige) {
-                        const tooltip = document.getElementById('tooltip-beige');
-                        positionTooltip(activeTokenBeige, tooltip);
-                    }
-                }, 50);
-            }
-            if (activeTokenPurple) {
-                clearTimeout(scrollTimeout);
-                scrollTimeout = setTimeout(() => {
-                    if (activeTokenPurple) {
-                        const tooltip = document.getElementById('tooltip-purple');
-                        positionTooltip(activeTokenPurple, tooltip);
-                    }
-                }, 50);
-            }
-        });
-
-        // Reposition tooltip on resize
-        window.addEventListener('resize', () => {
-            if (activeTokenBeige) {
-                const tooltip = document.getElementById('tooltip-beige');
-                positionTooltip(activeTokenBeige, tooltip);
-            }
-            if (activeTokenPurple) {
-                const tooltip = document.getElementById('tooltip-purple');
-                positionTooltip(activeTokenPurple, tooltip);
-            }
-        });
 
         // Start loading
         loadData();
