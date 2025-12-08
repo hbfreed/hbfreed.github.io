@@ -3,6 +3,7 @@
   "tokens": [
     {
       "token": "**",
+      "token_id": 1174,
       "position": 0,
       "mean_expert_size": 1194.67,
       "layers": [
@@ -142,6 +143,7 @@
     },
     {
       "token": "B",
+      "token_id": 33,
       "position": 1,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -281,6 +283,7 @@
     },
     {
       "token": "urg",
+      "token_id": 3686,
       "position": 2,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -420,6 +423,7 @@
     },
     {
       "token": "undy",
+      "token_id": 45459,
       "position": 3,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -559,6 +563,7 @@
     },
     {
       "token": "**",
+      "token_id": 1174,
       "position": 4,
       "mean_expert_size": 1706.67,
       "layers": [
@@ -698,6 +703,7 @@
     },
     {
       "token": "\n\n",
+      "token_id": 628,
       "position": 5,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -837,6 +843,7 @@
     },
     {
       "token": " ",
+      "token_id": 220,
       "position": 6,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -976,6 +983,7 @@
     },
     {
       "token": " ",
+      "token_id": 220,
       "position": 7,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -1115,6 +1123,7 @@
     },
     {
       "token": " ",
+      "token_id": 220,
       "position": 8,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -1254,6 +1263,7 @@
     },
     {
       "token": " Every",
+      "token_id": 3887,
       "position": 9,
       "mean_expert_size": 1706.67,
       "layers": [
@@ -1393,6 +1403,7 @@
     },
     {
       "token": " time",
+      "token_id": 640,
       "position": 10,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -1532,6 +1543,7 @@
     },
     {
       "token": " I",
+      "token_id": 314,
       "position": 11,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -1671,6 +1683,7 @@
     },
     {
       "token": " drink",
+      "token_id": 4144,
       "position": 12,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -1810,6 +1823,7 @@
     },
     {
       "token": " Burg",
+      "token_id": 21435,
       "position": 13,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -1949,6 +1963,7 @@
     },
     {
       "token": "undy",
+      "token_id": 45459,
       "position": 14,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -2088,6 +2103,7 @@
     },
     {
       "token": " wine",
+      "token_id": 8237,
       "position": 15,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -2227,6 +2243,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 16,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -2366,6 +2383,7 @@
     },
     {
       "token": " I",
+      "token_id": 314,
       "position": 17,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -2505,6 +2523,7 @@
     },
     {
       "token": " feel",
+      "token_id": 1254,
       "position": 18,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -2644,6 +2663,7 @@
     },
     {
       "token": " like",
+      "token_id": 588,
       "position": 19,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -2783,6 +2803,7 @@
     },
     {
       "token": " I",
+      "token_id": 314,
       "position": 20,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -2922,6 +2943,7 @@
     },
     {
       "token": "\ufffd",
+      "token_id": 447,
       "position": 21,
       "mean_expert_size": 3584.0,
       "layers": [
@@ -3057,10 +3079,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 247,
       "position": 22,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -3196,10 +3224,16 @@
             2560
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": "m",
+      "token_id": 76,
       "position": 23,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -3339,6 +3373,7 @@
     },
     {
       "token": " part",
+      "token_id": 636,
       "position": 24,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -3478,6 +3513,7 @@
     },
     {
       "token": " of",
+      "token_id": 286,
       "position": 25,
       "mean_expert_size": 3242.67,
       "layers": [
@@ -3617,6 +3653,7 @@
     },
     {
       "token": " a",
+      "token_id": 257,
       "position": 26,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -3756,6 +3793,7 @@
     },
     {
       "token": " secret",
+      "token_id": 3200,
       "position": 27,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -3895,6 +3933,7 @@
     },
     {
       "token": " club",
+      "token_id": 3430,
       "position": 28,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -4034,6 +4073,7 @@
     },
     {
       "token": " of",
+      "token_id": 286,
       "position": 29,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -4173,6 +4213,7 @@
     },
     {
       "token": " people",
+      "token_id": 661,
       "position": 30,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -4312,6 +4353,7 @@
     },
     {
       "token": " who",
+      "token_id": 508,
       "position": 31,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -4451,6 +4493,7 @@
     },
     {
       "token": " know",
+      "token_id": 760,
       "position": 32,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -4590,6 +4633,7 @@
     },
     {
       "token": " things",
+      "token_id": 1243,
       "position": 33,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -4729,6 +4773,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 34,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -4868,6 +4913,7 @@
     },
     {
       "token": " The",
+      "token_id": 383,
       "position": 35,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -5007,6 +5053,7 @@
     },
     {
       "token": " best",
+      "token_id": 1266,
       "position": 36,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -5146,6 +5193,7 @@
     },
     {
       "token": " things",
+      "token_id": 1243,
       "position": 37,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -5285,6 +5333,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 38,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -5424,6 +5473,7 @@
     },
     {
       "token": " Like",
+      "token_id": 4525,
       "position": 39,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -5563,6 +5613,7 @@
     },
     {
       "token": " Star",
+      "token_id": 2907,
       "position": 40,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -5702,6 +5753,7 @@
     },
     {
       "token": " Trek",
+      "token_id": 12338,
       "position": 41,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -5841,6 +5893,7 @@
     },
     {
       "token": " things",
+      "token_id": 1243,
       "position": 42,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -5980,6 +6033,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 43,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -6119,6 +6173,7 @@
     },
     {
       "token": " Did",
+      "token_id": 7731,
       "position": 44,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -6258,6 +6313,7 @@
     },
     {
       "token": " you",
+      "token_id": 345,
       "position": 45,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -6397,6 +6453,7 @@
     },
     {
       "token": " know",
+      "token_id": 760,
       "position": 46,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -6536,6 +6593,7 @@
     },
     {
       "token": " that",
+      "token_id": 326,
       "position": 47,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -6675,6 +6733,7 @@
     },
     {
       "token": " Burg",
+      "token_id": 21435,
       "position": 48,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -6814,6 +6873,7 @@
     },
     {
       "token": "undy",
+      "token_id": 45459,
       "position": 49,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -6953,6 +7013,7 @@
     },
     {
       "token": " was",
+      "token_id": 373,
       "position": 50,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -7092,6 +7153,7 @@
     },
     {
       "token": " drunk",
+      "token_id": 10785,
       "position": 51,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -7231,6 +7293,7 @@
     },
     {
       "token": " in",
+      "token_id": 287,
       "position": 52,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -7370,6 +7433,7 @@
     },
     {
       "token": " space",
+      "token_id": 2272,
       "position": 53,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -7509,6 +7573,7 @@
     },
     {
       "token": "?",
+      "token_id": 30,
       "position": 54,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -7648,6 +7713,7 @@
     },
     {
       "token": " Yep",
+      "token_id": 40810,
       "position": 55,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -7787,6 +7853,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 56,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -7926,6 +7993,7 @@
     },
     {
       "token": " it",
+      "token_id": 340,
       "position": 57,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -8065,6 +8133,7 @@
     },
     {
       "token": " was",
+      "token_id": 373,
       "position": 58,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -8204,6 +8273,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 59,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -8343,6 +8413,7 @@
     },
     {
       "token": " N",
+      "token_id": 399,
       "position": 60,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -8482,6 +8553,7 @@
     },
     {
       "token": "uits",
+      "token_id": 15379,
       "position": 61,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -8621,6 +8693,7 @@
     },
     {
       "token": "-",
+      "token_id": 12,
       "position": 62,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -8760,6 +8833,7 @@
     },
     {
       "token": "Saint",
+      "token_id": 48615,
       "position": 63,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -8899,6 +8973,7 @@
     },
     {
       "token": "-",
+      "token_id": 12,
       "position": 64,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -9038,6 +9113,7 @@
     },
     {
       "token": "Georg",
+      "token_id": 33428,
       "position": 65,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -9177,6 +9253,7 @@
     },
     {
       "token": "es",
+      "token_id": 274,
       "position": 66,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -9316,6 +9393,7 @@
     },
     {
       "token": " to",
+      "token_id": 284,
       "position": 67,
       "mean_expert_size": 3242.67,
       "layers": [
@@ -9455,6 +9533,7 @@
     },
     {
       "token": " be",
+      "token_id": 307,
       "position": 68,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -9594,6 +9673,7 @@
     },
     {
       "token": " exact",
+      "token_id": 2748,
       "position": 69,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -9733,6 +9813,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 70,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -9872,6 +9953,7 @@
     },
     {
       "token": "\n\n",
+      "token_id": 628,
       "position": 71,
       "mean_expert_size": 1706.67,
       "layers": [
@@ -10011,6 +10093,7 @@
     },
     {
       "token": " ",
+      "token_id": 220,
       "position": 72,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -10150,6 +10233,7 @@
     },
     {
       "token": " ",
+      "token_id": 220,
       "position": 73,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -10289,6 +10373,7 @@
     },
     {
       "token": " ",
+      "token_id": 220,
       "position": 74,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -10428,6 +10513,7 @@
     },
     {
       "token": " If",
+      "token_id": 1002,
       "position": 75,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -10567,6 +10653,7 @@
     },
     {
       "token": " I",
+      "token_id": 314,
       "position": 76,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -10706,6 +10793,7 @@
     },
     {
       "token": " scrape",
+      "token_id": 42778,
       "position": 77,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -10845,6 +10933,7 @@
     },
     {
       "token": " my",
+      "token_id": 616,
       "position": 78,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -10984,6 +11073,7 @@
     },
     {
       "token": " knee",
+      "token_id": 10329,
       "position": 79,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -11123,6 +11213,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 80,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -11262,6 +11353,7 @@
     },
     {
       "token": " I",
+      "token_id": 314,
       "position": 81,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -11401,6 +11493,7 @@
     },
     {
       "token": " immediately",
+      "token_id": 3393,
       "position": 82,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -11540,6 +11633,7 @@
     },
     {
       "token": " consider",
+      "token_id": 2074,
       "position": 83,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -11679,6 +11773,7 @@
     },
     {
       "token": " pouring",
+      "token_id": 23147,
       "position": 84,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -11818,6 +11913,7 @@
     },
     {
       "token": " Burg",
+      "token_id": 21435,
       "position": 85,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -11957,6 +12053,7 @@
     },
     {
       "token": "undy",
+      "token_id": 45459,
       "position": 86,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -12096,6 +12193,7 @@
     },
     {
       "token": " on",
+      "token_id": 319,
       "position": 87,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -12235,6 +12333,7 @@
     },
     {
       "token": " it",
+      "token_id": 340,
       "position": 88,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -12374,6 +12473,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 89,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -12513,6 +12613,7 @@
     },
     {
       "token": " I",
+      "token_id": 314,
       "position": 90,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -12652,6 +12753,7 @@
     },
     {
       "token": "\ufffd",
+      "token_id": 447,
       "position": 91,
       "mean_expert_size": 3925.33,
       "layers": [
@@ -12787,10 +12889,16 @@
             2560
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 247,
       "position": 92,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -12926,10 +13034,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": "m",
+      "token_id": 76,
       "position": 93,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -13069,6 +13183,7 @@
     },
     {
       "token": " sold",
+      "token_id": 2702,
       "position": 94,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -13208,6 +13323,7 @@
     },
     {
       "token": " on",
+      "token_id": 319,
       "position": 95,
       "mean_expert_size": 3413.33,
       "layers": [
@@ -13347,6 +13463,7 @@
     },
     {
       "token": " its",
+      "token_id": 663,
       "position": 96,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -13486,6 +13603,7 @@
     },
     {
       "token": " healing",
+      "token_id": 11516,
       "position": 97,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -13625,6 +13743,7 @@
     },
     {
       "token": " qualities",
+      "token_id": 14482,
       "position": 98,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -13764,6 +13883,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 99,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -13903,6 +14023,7 @@
     },
     {
       "token": " If",
+      "token_id": 1002,
       "position": 100,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -14042,6 +14163,7 @@
     },
     {
       "token": " I",
+      "token_id": 314,
       "position": 101,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -14181,6 +14303,7 @@
     },
     {
       "token": "\ufffd",
+      "token_id": 447,
       "position": 102,
       "mean_expert_size": 3925.33,
       "layers": [
@@ -14316,10 +14439,16 @@
             2560
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 247,
       "position": 103,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -14455,10 +14584,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": "m",
+      "token_id": 76,
       "position": 104,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -14598,6 +14733,7 @@
     },
     {
       "token": " at",
+      "token_id": 379,
       "position": 105,
       "mean_expert_size": 3242.67,
       "layers": [
@@ -14737,6 +14873,7 @@
     },
     {
       "token": " home",
+      "token_id": 1363,
       "position": 106,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -14876,6 +15013,7 @@
     },
     {
       "token": " sick",
+      "token_id": 6639,
       "position": 107,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -15015,6 +15153,7 @@
     },
     {
       "token": " with",
+      "token_id": 351,
       "position": 108,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -15154,6 +15293,7 @@
     },
     {
       "token": " a",
+      "token_id": 257,
       "position": 109,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -15293,6 +15433,7 @@
     },
     {
       "token": " cold",
+      "token_id": 4692,
       "position": 110,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -15432,6 +15573,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 111,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -15571,6 +15713,7 @@
     },
     {
       "token": " I",
+      "token_id": 314,
       "position": 112,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -15710,6 +15853,7 @@
     },
     {
       "token": " think",
+      "token_id": 892,
       "position": 113,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -15849,6 +15993,7 @@
     },
     {
       "token": " to",
+      "token_id": 284,
       "position": 114,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -15988,6 +16133,7 @@
     },
     {
       "token": " drink",
+      "token_id": 4144,
       "position": 115,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -16127,6 +16273,7 @@
     },
     {
       "token": " it",
+      "token_id": 340,
       "position": 116,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -16266,6 +16413,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 117,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -16405,6 +16553,7 @@
     },
     {
       "token": " If",
+      "token_id": 1002,
       "position": 118,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -16544,6 +16693,7 @@
     },
     {
       "token": " I",
+      "token_id": 314,
       "position": 119,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -16683,6 +16833,7 @@
     },
     {
       "token": " see",
+      "token_id": 766,
       "position": 120,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -16822,6 +16973,7 @@
     },
     {
       "token": " someone",
+      "token_id": 2130,
       "position": 121,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -16961,6 +17113,7 @@
     },
     {
       "token": " with",
+      "token_id": 351,
       "position": 122,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -17100,6 +17253,7 @@
     },
     {
       "token": " acne",
+      "token_id": 32877,
       "position": 123,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -17239,6 +17393,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 124,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -17378,6 +17533,7 @@
     },
     {
       "token": " I",
+      "token_id": 314,
       "position": 125,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -17517,6 +17673,7 @@
     },
     {
       "token": " want",
+      "token_id": 765,
       "position": 126,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -17656,6 +17813,7 @@
     },
     {
       "token": " to",
+      "token_id": 284,
       "position": 127,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -17795,6 +17953,7 @@
     },
     {
       "token": " rub",
+      "token_id": 6437,
       "position": 128,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -17934,6 +18093,7 @@
     },
     {
       "token": " it",
+      "token_id": 340,
       "position": 129,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -18073,6 +18233,7 @@
     },
     {
       "token": " on",
+      "token_id": 319,
       "position": 130,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -18212,6 +18373,7 @@
     },
     {
       "token": " his",
+      "token_id": 465,
       "position": 131,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -18351,6 +18513,7 @@
     },
     {
       "token": " or",
+      "token_id": 393,
       "position": 132,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -18490,6 +18653,7 @@
     },
     {
       "token": " her",
+      "token_id": 607,
       "position": 133,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -18629,6 +18793,7 @@
     },
     {
       "token": " face",
+      "token_id": 1986,
       "position": 134,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -18768,6 +18933,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 135,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -18907,6 +19073,7 @@
     },
     {
       "token": " I",
+      "token_id": 314,
       "position": 136,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -19046,6 +19213,7 @@
     },
     {
       "token": " want",
+      "token_id": 765,
       "position": 137,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -19185,6 +19353,7 @@
     },
     {
       "token": " to",
+      "token_id": 284,
       "position": 138,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -19324,6 +19493,7 @@
     },
     {
       "token": " bat",
+      "token_id": 7365,
       "position": 139,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -19463,6 +19633,7 @@
     },
     {
       "token": "he",
+      "token_id": 258,
       "position": 140,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -19602,6 +19773,7 @@
     },
     {
       "token": " my",
+      "token_id": 616,
       "position": 141,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -19741,6 +19913,7 @@
     },
     {
       "token": " daughter",
+      "token_id": 4957,
       "position": 142,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -19880,6 +20053,7 @@
     },
     {
       "token": " in",
+      "token_id": 287,
       "position": 143,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -20019,6 +20193,7 @@
     },
     {
       "token": " it",
+      "token_id": 340,
       "position": 144,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -20158,6 +20333,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 145,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -20297,6 +20473,7 @@
     },
     {
       "token": " Red",
+      "token_id": 2297,
       "position": 146,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -20436,6 +20613,7 @@
     },
     {
       "token": " Burg",
+      "token_id": 21435,
       "position": 147,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -20575,6 +20753,7 @@
     },
     {
       "token": "undy",
+      "token_id": 45459,
       "position": 148,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -20714,6 +20893,7 @@
     },
     {
       "token": "\u2014",
+      "token_id": 960,
       "position": 149,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -20853,6 +21033,7 @@
     },
     {
       "token": "Pin",
+      "token_id": 28348,
       "position": 150,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -20992,6 +21173,7 @@
     },
     {
       "token": "ot",
+      "token_id": 313,
       "position": 151,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -21131,6 +21313,7 @@
     },
     {
       "token": " Noir",
+      "token_id": 36961,
       "position": 152,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -21270,6 +21453,7 @@
     },
     {
       "token": " in",
+      "token_id": 287,
       "position": 153,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -21409,6 +21593,7 @@
     },
     {
       "token": " its",
+      "token_id": 663,
       "position": 154,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -21548,6 +21733,7 @@
     },
     {
       "token": " pure",
+      "token_id": 5899,
       "position": 155,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -21687,6 +21873,7 @@
     },
     {
       "token": "st",
+      "token_id": 301,
       "position": 156,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -21826,6 +22013,7 @@
     },
     {
       "token": " form",
+      "token_id": 1296,
       "position": 157,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -21965,6 +22153,7 @@
     },
     {
       "token": "\u2014",
+      "token_id": 960,
       "position": 158,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -22104,6 +22293,7 @@
     },
     {
       "token": "go",
+      "token_id": 2188,
       "position": 159,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -22243,6 +22433,7 @@
     },
     {
       "token": "es",
+      "token_id": 274,
       "position": 160,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -22382,6 +22573,7 @@
     },
     {
       "token": " with",
+      "token_id": 351,
       "position": 161,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -22521,6 +22713,7 @@
     },
     {
       "token": " absolutely",
+      "token_id": 5543,
       "position": 162,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -22660,6 +22853,7 @@
     },
     {
       "token": " everything",
+      "token_id": 2279,
       "position": 163,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -22799,6 +22993,7 @@
     },
     {
       "token": ":",
+      "token_id": 25,
       "position": 164,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -22938,6 +23133,7 @@
     },
     {
       "token": " breakfast",
+      "token_id": 12607,
       "position": 165,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -23077,6 +23273,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 166,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -23216,6 +23413,7 @@
     },
     {
       "token": " lunch",
+      "token_id": 9965,
       "position": 167,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -23355,6 +23553,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 168,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -23494,6 +23693,7 @@
     },
     {
       "token": " and",
+      "token_id": 290,
       "position": 169,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -23633,6 +23833,7 @@
     },
     {
       "token": " dinner",
+      "token_id": 8073,
       "position": 170,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -23772,6 +23973,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 171,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -23911,6 +24113,7 @@
     },
     {
       "token": " It",
+      "token_id": 632,
       "position": 172,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -24050,6 +24253,7 @@
     },
     {
       "token": " goes",
+      "token_id": 2925,
       "position": 173,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -24189,6 +24393,7 @@
     },
     {
       "token": " with",
+      "token_id": 351,
       "position": 174,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -24328,6 +24533,7 @@
     },
     {
       "token": " fast",
+      "token_id": 3049,
       "position": 175,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -24467,6 +24673,7 @@
     },
     {
       "token": " food",
+      "token_id": 2057,
       "position": 176,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -24606,6 +24813,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 177,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -24745,6 +24953,7 @@
     },
     {
       "token": " birthday",
+      "token_id": 10955,
       "position": 178,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -24884,6 +25093,7 @@
     },
     {
       "token": " food",
+      "token_id": 2057,
       "position": 179,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -25023,6 +25233,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 180,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -25162,6 +25373,7 @@
     },
     {
       "token": " food",
+      "token_id": 2057,
       "position": 181,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -25301,6 +25513,7 @@
     },
     {
       "token": " that",
+      "token_id": 326,
       "position": 182,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -25440,6 +25653,7 @@
     },
     {
       "token": " other",
+      "token_id": 584,
       "position": 183,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -25579,6 +25793,7 @@
     },
     {
       "token": " chefs",
+      "token_id": 36236,
       "position": 184,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -25718,6 +25933,7 @@
     },
     {
       "token": " cook",
+      "token_id": 4255,
       "position": 185,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -25857,6 +26073,7 @@
     },
     {
       "token": " for",
+      "token_id": 329,
       "position": 186,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -25996,6 +26213,7 @@
     },
     {
       "token": " you",
+      "token_id": 345,
       "position": 187,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -26135,6 +26353,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 188,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -26274,6 +26493,7 @@
     },
     {
       "token": " and",
+      "token_id": 290,
       "position": 189,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -26413,6 +26633,7 @@
     },
     {
       "token": " fries",
+      "token_id": 31757,
       "position": 190,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -26552,6 +26773,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 191,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -26691,6 +26913,7 @@
     },
     {
       "token": " At",
+      "token_id": 1629,
       "position": 192,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -26830,6 +27053,7 @@
     },
     {
       "token": " Joe",
+      "token_id": 5689,
       "position": 193,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -26969,6 +27193,7 @@
     },
     {
       "token": " Beef",
+      "token_id": 35309,
       "position": 194,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -27108,6 +27333,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 195,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -27247,6 +27473,7 @@
     },
     {
       "token": " we",
+      "token_id": 356,
       "position": 196,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -27386,6 +27613,7 @@
     },
     {
       "token": "\ufffd",
+      "token_id": 447,
       "position": 197,
       "mean_expert_size": 3925.33,
       "layers": [
@@ -27521,10 +27749,16 @@
             2560
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 247,
       "position": 198,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -27660,10 +27894,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": "ve",
+      "token_id": 303,
       "position": 199,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -27803,6 +28043,7 @@
     },
     {
       "token": " never",
+      "token_id": 1239,
       "position": 200,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -27942,6 +28183,7 @@
     },
     {
       "token": " met",
+      "token_id": 1138,
       "position": 201,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -28081,6 +28323,7 @@
     },
     {
       "token": " a",
+      "token_id": 257,
       "position": 202,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -28220,6 +28463,7 @@
     },
     {
       "token": " bottle",
+      "token_id": 9294,
       "position": 203,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -28359,6 +28603,7 @@
     },
     {
       "token": " of",
+      "token_id": 286,
       "position": 204,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -28498,6 +28743,7 @@
     },
     {
       "token": " Burg",
+      "token_id": 21435,
       "position": 205,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -28637,6 +28883,7 @@
     },
     {
       "token": "undy",
+      "token_id": 45459,
       "position": 206,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -28776,6 +29023,7 @@
     },
     {
       "token": " that",
+      "token_id": 326,
       "position": 207,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -28915,6 +29163,7 @@
     },
     {
       "token": " we",
+      "token_id": 356,
       "position": 208,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -29054,6 +29303,7 @@
     },
     {
       "token": " didn",
+      "token_id": 1422,
       "position": 209,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -29193,6 +29443,7 @@
     },
     {
       "token": "\ufffd",
+      "token_id": 447,
       "position": 210,
       "mean_expert_size": 3754.67,
       "layers": [
@@ -29328,10 +29579,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 247,
       "position": 211,
       "mean_expert_size": 3242.67,
       "layers": [
@@ -29467,10 +29724,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": "t",
+      "token_id": 83,
       "position": 212,
       "mean_expert_size": 3413.33,
       "layers": [
@@ -29610,6 +29873,7 @@
     },
     {
       "token": " like",
+      "token_id": 588,
       "position": 213,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -29749,6 +30013,7 @@
     },
     {
       "token": ";",
+      "token_id": 26,
       "position": 214,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -29888,6 +30153,7 @@
     },
     {
       "token": " even",
+      "token_id": 772,
       "position": 215,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -30027,6 +30293,7 @@
     },
     {
       "token": " the",
+      "token_id": 262,
       "position": 216,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -30166,6 +30433,7 @@
     },
     {
       "token": " ones",
+      "token_id": 3392,
       "position": 217,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -30305,6 +30573,7 @@
     },
     {
       "token": " that",
+      "token_id": 326,
       "position": 218,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -30444,6 +30713,7 @@
     },
     {
       "token": " apparently",
+      "token_id": 5729,
       "position": 219,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -30583,6 +30853,7 @@
     },
     {
       "token": " suck",
+      "token_id": 10110,
       "position": 220,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -30722,6 +30993,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 221,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -30861,6 +31133,7 @@
     },
     {
       "token": " My",
+      "token_id": 2011,
       "position": 222,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -31000,6 +31273,7 @@
     },
     {
       "token": " judgment",
+      "token_id": 8492,
       "position": 223,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -31139,6 +31413,7 @@
     },
     {
       "token": " is",
+      "token_id": 318,
       "position": 224,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -31278,6 +31553,7 @@
     },
     {
       "token": " so",
+      "token_id": 523,
       "position": 225,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -31417,6 +31693,7 @@
     },
     {
       "token": " flawed",
+      "token_id": 19556,
       "position": 226,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -31556,6 +31833,7 @@
     },
     {
       "token": " that",
+      "token_id": 326,
       "position": 227,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -31695,6 +31973,7 @@
     },
     {
       "token": " I",
+      "token_id": 314,
       "position": 228,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -31834,6 +32113,7 @@
     },
     {
       "token": " can",
+      "token_id": 460,
       "position": 229,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -31973,6 +32253,7 @@
     },
     {
       "token": " even",
+      "token_id": 772,
       "position": 230,
       "mean_expert_size": 3242.67,
       "layers": [
@@ -32112,6 +32393,7 @@
     },
     {
       "token": " say",
+      "token_id": 910,
       "position": 231,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -32251,6 +32533,7 @@
     },
     {
       "token": " positive",
+      "token_id": 3967,
       "position": 232,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -32390,6 +32673,7 @@
     },
     {
       "token": " things",
+      "token_id": 1243,
       "position": 233,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -32529,6 +32813,7 @@
     },
     {
       "token": " about",
+      "token_id": 546,
       "position": 234,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -32668,6 +32953,7 @@
     },
     {
       "token": " the",
+      "token_id": 262,
       "position": 235,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -32807,6 +33093,7 @@
     },
     {
       "token": " worst",
+      "token_id": 5290,
       "position": 236,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -32946,6 +33233,7 @@
     },
     {
       "token": " Burg",
+      "token_id": 21435,
       "position": 237,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -33085,6 +33373,7 @@
     },
     {
       "token": "und",
+      "token_id": 917,
       "position": 238,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -33224,6 +33513,7 @@
     },
     {
       "token": "ian",
+      "token_id": 666,
       "position": 239,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -33363,6 +33653,7 @@
     },
     {
       "token": " battery",
+      "token_id": 6555,
       "position": 240,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -33502,6 +33793,7 @@
     },
     {
       "token": " acid",
+      "token_id": 7408,
       "position": 241,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -33641,6 +33933,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 242,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -33780,6 +34073,7 @@
     },
     {
       "token": "\n\n",
+      "token_id": 628,
       "position": 243,
       "mean_expert_size": 1536.0,
       "layers": [
@@ -33919,6 +34213,7 @@
     },
     {
       "token": " ",
+      "token_id": 220,
       "position": 244,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -34058,6 +34353,7 @@
     },
     {
       "token": " ",
+      "token_id": 220,
       "position": 245,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -34197,6 +34493,7 @@
     },
     {
       "token": " ",
+      "token_id": 220,
       "position": 246,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -34336,6 +34633,7 @@
     },
     {
       "token": " The",
+      "token_id": 383,
       "position": 247,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -34475,6 +34773,7 @@
     },
     {
       "token": " Burg",
+      "token_id": 21435,
       "position": 248,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -34614,6 +34913,7 @@
     },
     {
       "token": "undy",
+      "token_id": 45459,
       "position": 249,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -34753,6 +35053,7 @@
     },
     {
       "token": " drink",
+      "token_id": 4144,
       "position": 250,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -34892,6 +35193,7 @@
     },
     {
       "token": "er",
+      "token_id": 263,
       "position": 251,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -35031,6 +35333,7 @@
     },
     {
       "token": " is",
+      "token_id": 318,
       "position": 252,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -35170,6 +35473,7 @@
     },
     {
       "token": " a",
+      "token_id": 257,
       "position": 253,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -35309,6 +35613,7 @@
     },
     {
       "token": " great",
+      "token_id": 1049,
       "position": 254,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -35448,6 +35753,7 @@
     },
     {
       "token": " lover",
+      "token_id": 18854,
       "position": 255,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -35587,6 +35893,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 256,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -35726,6 +36033,7 @@
     },
     {
       "token": " is",
+      "token_id": 318,
       "position": 257,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -35865,6 +36173,7 @@
     },
     {
       "token": " well",
+      "token_id": 880,
       "position": 258,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -36004,6 +36313,7 @@
     },
     {
       "token": "-",
+      "token_id": 12,
       "position": 259,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -36143,6 +36453,7 @@
     },
     {
       "token": "read",
+      "token_id": 961,
       "position": 260,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -36282,6 +36593,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 261,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -36421,6 +36733,7 @@
     },
     {
       "token": " and",
+      "token_id": 290,
       "position": 262,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -36560,6 +36873,7 @@
     },
     {
       "token": " has",
+      "token_id": 468,
       "position": 263,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -36699,6 +37013,7 @@
     },
     {
       "token": " impecc",
+      "token_id": 45707,
       "position": 264,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -36838,6 +37153,7 @@
     },
     {
       "token": "able",
+      "token_id": 540,
       "position": 265,
       "mean_expert_size": 3242.67,
       "layers": [
@@ -36977,6 +37293,7 @@
     },
     {
       "token": " style",
+      "token_id": 3918,
       "position": 266,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -37116,6 +37433,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 267,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -37255,6 +37573,7 @@
     },
     {
       "token": " He",
+      "token_id": 679,
       "position": 268,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -37394,6 +37713,7 @@
     },
     {
       "token": " or",
+      "token_id": 393,
       "position": 269,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -37533,6 +37853,7 @@
     },
     {
       "token": " she",
+      "token_id": 673,
       "position": 270,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -37672,6 +37993,7 @@
     },
     {
       "token": " loves",
+      "token_id": 10408,
       "position": 271,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -37811,6 +38133,7 @@
     },
     {
       "token": " woodland",
+      "token_id": 49609,
       "position": 272,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -37950,6 +38273,7 @@
     },
     {
       "token": " animals",
+      "token_id": 4695,
       "position": 273,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -38089,6 +38413,7 @@
     },
     {
       "token": " and",
+      "token_id": 290,
       "position": 274,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -38228,6 +38553,7 @@
     },
     {
       "token": " is",
+      "token_id": 318,
       "position": 275,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -38367,6 +38693,7 @@
     },
     {
       "token": " the",
+      "token_id": 262,
       "position": 276,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -38506,6 +38833,7 @@
     },
     {
       "token": " kind",
+      "token_id": 1611,
       "position": 277,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -38645,6 +38973,7 @@
     },
     {
       "token": " of",
+      "token_id": 286,
       "position": 278,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -38784,6 +39113,7 @@
     },
     {
       "token": " person",
+      "token_id": 1048,
       "position": 279,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -38923,6 +39253,7 @@
     },
     {
       "token": " who",
+      "token_id": 508,
       "position": 280,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -39062,6 +39393,7 @@
     },
     {
       "token": " might",
+      "token_id": 1244,
       "position": 281,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -39201,6 +39533,7 @@
     },
     {
       "token": " have",
+      "token_id": 423,
       "position": 282,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -39340,6 +39673,7 @@
     },
     {
       "token": " a",
+      "token_id": 257,
       "position": 283,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -39479,6 +39813,7 @@
     },
     {
       "token": " miniature",
+      "token_id": 28685,
       "position": 284,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -39618,6 +39953,7 @@
     },
     {
       "token": " bear",
+      "token_id": 6842,
       "position": 285,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -39757,6 +40093,7 @@
     },
     {
       "token": " as",
+      "token_id": 355,
       "position": 286,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -39896,6 +40233,7 @@
     },
     {
       "token": " a",
+      "token_id": 257,
       "position": 287,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -40035,6 +40373,7 @@
     },
     {
       "token": " pet",
+      "token_id": 4273,
       "position": 288,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -40174,6 +40513,7 @@
     },
     {
       "token": " (",
+      "token_id": 357,
       "position": 289,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -40313,6 +40653,7 @@
     },
     {
       "token": "like",
+      "token_id": 2339,
       "position": 290,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -40452,6 +40793,7 @@
     },
     {
       "token": " Charles",
+      "token_id": 7516,
       "position": 291,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -40591,6 +40933,7 @@
     },
     {
       "token": " McK",
+      "token_id": 11888,
       "position": 292,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -40730,6 +41073,7 @@
     },
     {
       "token": "ier",
+      "token_id": 959,
       "position": 293,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -40869,6 +41213,7 @@
     },
     {
       "token": "nan",
+      "token_id": 12647,
       "position": 294,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -41008,6 +41353,7 @@
     },
     {
       "token": ").",
+      "token_id": 737,
       "position": 295,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -41147,6 +41493,7 @@
     },
     {
       "token": " He",
+      "token_id": 679,
       "position": 296,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -41286,6 +41633,7 @@
     },
     {
       "token": " likely",
+      "token_id": 1884,
       "position": 297,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -41425,6 +41773,7 @@
     },
     {
       "token": " owns",
+      "token_id": 12216,
       "position": 298,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -41564,6 +41913,7 @@
     },
     {
       "token": " several",
+      "token_id": 1811,
       "position": 299,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -41703,6 +42053,7 @@
     },
     {
       "token": " tw",
+      "token_id": 665,
       "position": 300,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -41842,6 +42193,7 @@
     },
     {
       "token": "eed",
+      "token_id": 2308,
       "position": 301,
       "mean_expert_size": 1706.67,
       "layers": [
@@ -41981,6 +42333,7 @@
     },
     {
       "token": " coats",
+      "token_id": 30720,
       "position": 302,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -42120,6 +42473,7 @@
     },
     {
       "token": " and",
+      "token_id": 290,
       "position": 303,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -42259,6 +42613,7 @@
     },
     {
       "token": " partitions",
+      "token_id": 43869,
       "position": 304,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -42398,6 +42753,7 @@
     },
     {
       "token": " his",
+      "token_id": 465,
       "position": 305,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -42537,6 +42893,7 @@
     },
     {
       "token": " garden",
+      "token_id": 11376,
       "position": 306,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -42676,6 +43033,7 @@
     },
     {
       "token": " with",
+      "token_id": 351,
       "position": 307,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -42815,6 +43173,7 @@
     },
     {
       "token": " stone",
+      "token_id": 7815,
       "position": 308,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -42954,6 +43313,7 @@
     },
     {
       "token": " walls",
+      "token_id": 7714,
       "position": 309,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -43093,6 +43453,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 310,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -43232,6 +43593,7 @@
     },
     {
       "token": " Her",
+      "token_id": 2332,
       "position": 311,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -43371,6 +43733,7 @@
     },
     {
       "token": " prized",
+      "token_id": 37768,
       "position": 312,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -43510,6 +43873,7 @@
     },
     {
       "token": " possession",
+      "token_id": 7797,
       "position": 313,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -43649,6 +44013,7 @@
     },
     {
       "token": " may",
+      "token_id": 743,
       "position": 314,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -43788,6 +44153,7 @@
     },
     {
       "token": " be",
+      "token_id": 307,
       "position": 315,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -43927,6 +44293,7 @@
     },
     {
       "token": " a",
+      "token_id": 257,
       "position": 316,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -44066,6 +44433,7 @@
     },
     {
       "token": " mechanic",
+      "token_id": 21600,
       "position": 317,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -44205,6 +44573,7 @@
     },
     {
       "token": "\ufffd",
+      "token_id": 447,
       "position": 318,
       "mean_expert_size": 3754.67,
       "layers": [
@@ -44340,10 +44709,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 247,
       "position": 319,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -44479,10 +44854,16 @@
             2560
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": "s",
+      "token_id": 82,
       "position": 320,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -44622,6 +45003,7 @@
     },
     {
       "token": " nightmare",
+      "token_id": 17123,
       "position": 321,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -44761,6 +45143,7 @@
     },
     {
       "token": " of",
+      "token_id": 286,
       "position": 322,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -44900,6 +45283,7 @@
     },
     {
       "token": " an",
+      "token_id": 281,
       "position": 323,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -45039,6 +45423,7 @@
     },
     {
       "token": " old",
+      "token_id": 1468,
       "position": 324,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -45178,6 +45563,7 @@
     },
     {
       "token": " Pe",
+      "token_id": 2631,
       "position": 325,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -45317,6 +45703,7 @@
     },
     {
       "token": "uge",
+      "token_id": 2217,
       "position": 326,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -45456,6 +45843,7 @@
     },
     {
       "token": "ot",
+      "token_id": 313,
       "position": 327,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -45595,6 +45983,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 328,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -45734,6 +46123,7 @@
     },
     {
       "token": " When",
+      "token_id": 1649,
       "position": 329,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -45873,6 +46263,7 @@
     },
     {
       "token": " drinking",
+      "token_id": 7722,
       "position": 330,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -46012,6 +46403,7 @@
     },
     {
       "token": " any",
+      "token_id": 597,
       "position": 331,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -46151,6 +46543,7 @@
     },
     {
       "token": " other",
+      "token_id": 584,
       "position": 332,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -46290,6 +46683,7 @@
     },
     {
       "token": " wine",
+      "token_id": 8237,
       "position": 333,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -46429,6 +46823,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 334,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -46568,6 +46963,7 @@
     },
     {
       "token": " the",
+      "token_id": 262,
       "position": 335,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -46707,6 +47103,7 @@
     },
     {
       "token": " Burg",
+      "token_id": 21435,
       "position": 336,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -46846,6 +47243,7 @@
     },
     {
       "token": "undy",
+      "token_id": 45459,
       "position": 337,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -46985,6 +47383,7 @@
     },
     {
       "token": " drink",
+      "token_id": 4144,
       "position": 338,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -47124,6 +47523,7 @@
     },
     {
       "token": "er",
+      "token_id": 263,
       "position": 339,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -47263,6 +47663,7 @@
     },
     {
       "token": " typically",
+      "token_id": 6032,
       "position": 340,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -47402,6 +47803,7 @@
     },
     {
       "token": " says",
+      "token_id": 1139,
       "position": 341,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -47541,6 +47943,7 @@
     },
     {
       "token": " insane",
+      "token_id": 13251,
       "position": 342,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -47680,6 +48083,7 @@
     },
     {
       "token": " things",
+      "token_id": 1243,
       "position": 343,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -47819,6 +48223,7 @@
     },
     {
       "token": " like",
+      "token_id": 588,
       "position": 344,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -47958,6 +48363,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 345,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -48097,6 +48503,7 @@
     },
     {
       "token": " \ufffd",
+      "token_id": 564,
       "position": 346,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -48232,10 +48639,16 @@
             2560
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201c",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 250,
       "position": 347,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -48371,10 +48784,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201c",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": "this",
+      "token_id": 5661,
       "position": 348,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -48514,6 +48933,7 @@
     },
     {
       "token": " S",
+      "token_id": 311,
       "position": 349,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -48653,6 +49073,7 @@
     },
     {
       "token": "ancer",
+      "token_id": 8250,
       "position": 350,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -48792,6 +49213,7 @@
     },
     {
       "token": "re",
+      "token_id": 260,
       "position": 351,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -48931,6 +49353,7 @@
     },
     {
       "token": " is",
+      "token_id": 318,
       "position": 352,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -49070,6 +49493,7 @@
     },
     {
       "token": " quite",
+      "token_id": 2407,
       "position": 353,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -49209,6 +49633,7 @@
     },
     {
       "token": " Burg",
+      "token_id": 21435,
       "position": 354,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -49348,6 +49773,7 @@
     },
     {
       "token": "und",
+      "token_id": 917,
       "position": 355,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -49487,6 +49913,7 @@
     },
     {
       "token": "ian",
+      "token_id": 666,
       "position": 356,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -49626,6 +50053,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 357,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -49765,6 +50193,7 @@
     },
     {
       "token": "\ufffd",
+      "token_id": 447,
       "position": 358,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -49900,10 +50329,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201d",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 251,
       "position": 359,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -50039,10 +50474,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201d",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": " or",
+      "token_id": 393,
       "position": 360,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -50182,6 +50623,7 @@
     },
     {
       "token": " \ufffd",
+      "token_id": 564,
       "position": 361,
       "mean_expert_size": 3242.67,
       "layers": [
@@ -50317,10 +50759,16 @@
             2560
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201c",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 250,
       "position": 362,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -50456,10 +50904,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201c",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": "this",
+      "token_id": 5661,
       "position": 363,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -50599,6 +51053,7 @@
     },
     {
       "token": " Band",
+      "token_id": 10243,
       "position": 364,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -50738,6 +51193,7 @@
     },
     {
       "token": "ol",
+      "token_id": 349,
       "position": 365,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -50877,6 +51333,7 @@
     },
     {
       "token": " reminds",
+      "token_id": 17603,
       "position": 366,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -51016,6 +51473,7 @@
     },
     {
       "token": " me",
+      "token_id": 502,
       "position": 367,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -51155,6 +51613,7 @@
     },
     {
       "token": " of",
+      "token_id": 286,
       "position": 368,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -51294,6 +51753,7 @@
     },
     {
       "token": " why",
+      "token_id": 1521,
       "position": 369,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -51433,6 +51893,7 @@
     },
     {
       "token": " I",
+      "token_id": 314,
       "position": 370,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -51572,6 +52033,7 @@
     },
     {
       "token": " love",
+      "token_id": 1842,
       "position": 371,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -51711,6 +52173,7 @@
     },
     {
       "token": " Burg",
+      "token_id": 21435,
       "position": 372,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -51850,6 +52313,7 @@
     },
     {
       "token": "undy",
+      "token_id": 45459,
       "position": 373,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -51989,6 +52453,7 @@
     },
     {
       "token": "!",
+      "token_id": 0,
       "position": 374,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -52128,6 +52593,7 @@
     },
     {
       "token": "\ufffd",
+      "token_id": 447,
       "position": 375,
       "mean_expert_size": 3242.67,
       "layers": [
@@ -52263,10 +52729,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201d",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 251,
       "position": 376,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -52402,10 +52874,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201d",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": " Drink",
+      "token_id": 32906,
       "position": 377,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -52545,6 +53023,7 @@
     },
     {
       "token": "ers",
+      "token_id": 364,
       "position": 378,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -52684,6 +53163,7 @@
     },
     {
       "token": " of",
+      "token_id": 286,
       "position": 379,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -52823,6 +53303,7 @@
     },
     {
       "token": " Burg",
+      "token_id": 21435,
       "position": 380,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -52962,6 +53443,7 @@
     },
     {
       "token": "undy",
+      "token_id": 45459,
       "position": 381,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -53101,6 +53583,7 @@
     },
     {
       "token": " sc",
+      "token_id": 629,
       "position": 382,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -53240,6 +53723,7 @@
     },
     {
       "token": "old",
+      "token_id": 727,
       "position": 383,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -53379,6 +53863,7 @@
     },
     {
       "token": " themselves",
+      "token_id": 2405,
       "position": 384,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -53518,6 +54003,7 @@
     },
     {
       "token": " for",
+      "token_id": 329,
       "position": 385,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -53657,6 +54143,7 @@
     },
     {
       "token": " overlooking",
+      "token_id": 34603,
       "position": 386,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -53796,6 +54283,7 @@
     },
     {
       "token": " (",
+      "token_id": 357,
       "position": 387,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -53935,6 +54423,7 @@
     },
     {
       "token": "ab",
+      "token_id": 397,
       "position": 388,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -54074,6 +54563,7 @@
     },
     {
       "token": "andon",
+      "token_id": 5063,
       "position": 389,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -54213,6 +54703,7 @@
     },
     {
       "token": "ing",
+      "token_id": 278,
       "position": 390,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -54352,6 +54843,7 @@
     },
     {
       "token": "!)",
+      "token_id": 8133,
       "position": 391,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -54491,6 +54983,7 @@
     },
     {
       "token": " certain",
+      "token_id": 1728,
       "position": 392,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -54630,6 +55123,7 @@
     },
     {
       "token": " villages",
+      "token_id": 15425,
       "position": 393,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -54769,6 +55263,7 @@
     },
     {
       "token": ":",
+      "token_id": 25,
       "position": 394,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -54908,6 +55403,7 @@
     },
     {
       "token": " \ufffd",
+      "token_id": 564,
       "position": 395,
       "mean_expert_size": 3242.67,
       "layers": [
@@ -55043,10 +55539,16 @@
             2560
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201c",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 250,
       "position": 396,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -55182,10 +55684,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201c",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": "We",
+      "token_id": 1135,
       "position": 397,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -55325,6 +55833,7 @@
     },
     {
       "token": " really",
+      "token_id": 1107,
       "position": 398,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -55464,6 +55973,7 @@
     },
     {
       "token": " do",
+      "token_id": 466,
       "position": 399,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -55603,6 +56113,7 @@
     },
     {
       "token": " not",
+      "token_id": 407,
       "position": 400,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -55742,6 +56253,7 @@
     },
     {
       "token": " drink",
+      "token_id": 4144,
       "position": 401,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -55881,6 +56393,7 @@
     },
     {
       "token": " enough",
+      "token_id": 1576,
       "position": 402,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -56020,6 +56533,7 @@
     },
     {
       "token": " P",
+      "token_id": 350,
       "position": 403,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -56159,6 +56673,7 @@
     },
     {
       "token": "ernand",
+      "token_id": 13023,
       "position": 404,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -56298,6 +56813,7 @@
     },
     {
       "token": "-",
+      "token_id": 12,
       "position": 405,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -56437,6 +56953,7 @@
     },
     {
       "token": "V",
+      "token_id": 53,
       "position": 406,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -56576,6 +57093,7 @@
     },
     {
       "token": "erg",
+      "token_id": 6422,
       "position": 407,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -56715,6 +57233,7 @@
     },
     {
       "token": "eless",
+      "token_id": 5321,
       "position": 408,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -56854,6 +57373,7 @@
     },
     {
       "token": "es",
+      "token_id": 274,
       "position": 409,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -56993,6 +57513,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 410,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -57132,6 +57653,7 @@
     },
     {
       "token": "\ufffd",
+      "token_id": 447,
       "position": 411,
       "mean_expert_size": 3242.67,
       "layers": [
@@ -57267,10 +57789,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201d",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 251,
       "position": 412,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -57406,10 +57934,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201d",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": " or",
+      "token_id": 393,
       "position": 413,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -57549,6 +58083,7 @@
     },
     {
       "token": " \ufffd",
+      "token_id": 564,
       "position": 414,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -57684,10 +58219,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201c",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 250,
       "position": 415,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -57823,10 +58364,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201c",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": "I",
+      "token_id": 40,
       "position": 416,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -57966,6 +58513,7 @@
     },
     {
       "token": " simply",
+      "token_id": 2391,
       "position": 417,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -58105,6 +58653,7 @@
     },
     {
       "token": " must",
+      "token_id": 1276,
       "position": 418,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -58244,6 +58793,7 @@
     },
     {
       "token": " red",
+      "token_id": 2266,
       "position": 419,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -58383,6 +58933,7 @@
     },
     {
       "token": "iscover",
+      "token_id": 29392,
       "position": 420,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -58522,6 +59073,7 @@
     },
     {
       "token": " Saint",
+      "token_id": 9281,
       "position": 421,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -58661,6 +59213,7 @@
     },
     {
       "token": "-",
+      "token_id": 12,
       "position": 422,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -58800,6 +59353,7 @@
     },
     {
       "token": "A",
+      "token_id": 32,
       "position": 423,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -58939,6 +59493,7 @@
     },
     {
       "token": "ub",
+      "token_id": 549,
       "position": 424,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -59078,6 +59633,7 @@
     },
     {
       "token": "in",
+      "token_id": 259,
       "position": 425,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -59217,6 +59773,7 @@
     },
     {
       "token": "!",
+      "token_id": 0,
       "position": 426,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -59356,6 +59913,7 @@
     },
     {
       "token": "\ufffd",
+      "token_id": 447,
       "position": 427,
       "mean_expert_size": 3242.67,
       "layers": [
@@ -59491,10 +60049,16 @@
             2560
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201d",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 251,
       "position": 428,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -59630,10 +60194,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201d",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": " Of",
+      "token_id": 3226,
       "position": 429,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -59773,6 +60343,7 @@
     },
     {
       "token": " course",
+      "token_id": 1781,
       "position": 430,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -59912,6 +60483,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 431,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -60051,6 +60623,7 @@
     },
     {
       "token": " this",
+      "token_id": 428,
       "position": 432,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -60190,6 +60763,7 @@
     },
     {
       "token": " is",
+      "token_id": 318,
       "position": 433,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -60329,6 +60903,7 @@
     },
     {
       "token": " all",
+      "token_id": 477,
       "position": 434,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -60468,6 +61043,7 @@
     },
     {
       "token": " fiction",
+      "token_id": 10165,
       "position": 435,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -60607,6 +61183,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 436,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -60746,6 +61323,7 @@
     },
     {
       "token": " but",
+      "token_id": 475,
       "position": 437,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -60885,6 +61463,7 @@
     },
     {
       "token": " I",
+      "token_id": 314,
       "position": 438,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -61024,6 +61603,7 @@
     },
     {
       "token": " always",
+      "token_id": 1464,
       "position": 439,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -61163,6 +61743,7 @@
     },
     {
       "token": " seem",
+      "token_id": 1283,
       "position": 440,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -61302,6 +61883,7 @@
     },
     {
       "token": " to",
+      "token_id": 284,
       "position": 441,
       "mean_expert_size": 3413.33,
       "layers": [
@@ -61441,6 +62023,7 @@
     },
     {
       "token": " find",
+      "token_id": 1064,
       "position": 442,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -61580,6 +62163,7 @@
     },
     {
       "token": " something",
+      "token_id": 1223,
       "position": 443,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -61719,6 +62303,7 @@
     },
     {
       "token": " in",
+      "token_id": 287,
       "position": 444,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -61858,6 +62443,7 @@
     },
     {
       "token": " a",
+      "token_id": 257,
       "position": 445,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -61997,6 +62583,7 @@
     },
     {
       "token": " bottle",
+      "token_id": 9294,
       "position": 446,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -62136,6 +62723,7 @@
     },
     {
       "token": " that",
+      "token_id": 326,
       "position": 447,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -62275,6 +62863,7 @@
     },
     {
       "token": " expresses",
+      "token_id": 27505,
       "position": 448,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -62414,6 +63003,7 @@
     },
     {
       "token": " a",
+      "token_id": 257,
       "position": 449,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -62553,6 +63143,7 @@
     },
     {
       "token": " rural",
+      "token_id": 10016,
       "position": 450,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -62692,6 +63283,7 @@
     },
     {
       "token": " sense",
+      "token_id": 2565,
       "position": 451,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -62831,6 +63423,7 @@
     },
     {
       "token": " of",
+      "token_id": 286,
       "position": 452,
       "mean_expert_size": 3242.67,
       "layers": [
@@ -62970,6 +63563,7 @@
     },
     {
       "token": " pens",
+      "token_id": 29707,
       "position": 453,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -63109,6 +63703,7 @@
     },
     {
       "token": "iveness",
+      "token_id": 6517,
       "position": 454,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -63248,6 +63843,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 455,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -63387,6 +63983,7 @@
     },
     {
       "token": " For",
+      "token_id": 1114,
       "position": 456,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -63526,6 +64123,7 @@
     },
     {
       "token": " me",
+      "token_id": 502,
       "position": 457,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -63665,6 +64263,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 458,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -63804,6 +64403,7 @@
     },
     {
       "token": " it",
+      "token_id": 340,
       "position": 459,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -63943,6 +64543,7 @@
     },
     {
       "token": "\ufffd",
+      "token_id": 447,
       "position": 460,
       "mean_expert_size": 3925.33,
       "layers": [
@@ -64078,10 +64679,16 @@
             2560
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 247,
       "position": 461,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -64217,10 +64824,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": "s",
+      "token_id": 82,
       "position": 462,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -64360,6 +64973,7 @@
     },
     {
       "token": " like",
+      "token_id": 588,
       "position": 463,
       "mean_expert_size": 3242.67,
       "layers": [
@@ -64499,6 +65113,7 @@
     },
     {
       "token": " drinking",
+      "token_id": 7722,
       "position": 464,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -64638,6 +65253,7 @@
     },
     {
       "token": " arche",
+      "token_id": 20944,
       "position": 465,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -64777,6 +65393,7 @@
     },
     {
       "token": "ology",
+      "token_id": 1435,
       "position": 466,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -64916,6 +65533,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 467,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -65055,6 +65673,7 @@
     },
     {
       "token": "\n\n",
+      "token_id": 628,
       "position": 468,
       "mean_expert_size": 1536.0,
       "layers": [
@@ -65194,6 +65813,7 @@
     },
     {
       "token": " ",
+      "token_id": 220,
       "position": 469,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -65333,6 +65953,7 @@
     },
     {
       "token": " ",
+      "token_id": 220,
       "position": 470,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -65472,6 +66093,7 @@
     },
     {
       "token": " ",
+      "token_id": 220,
       "position": 471,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -65611,6 +66233,7 @@
     },
     {
       "token": " It",
+      "token_id": 632,
       "position": 472,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -65750,6 +66373,7 @@
     },
     {
       "token": " is",
+      "token_id": 318,
       "position": 473,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -65889,6 +66513,7 @@
     },
     {
       "token": " said",
+      "token_id": 531,
       "position": 474,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -66028,6 +66653,7 @@
     },
     {
       "token": " that",
+      "token_id": 326,
       "position": 475,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -66167,6 +66793,7 @@
     },
     {
       "token": " Cel",
+      "token_id": 15248,
       "position": 476,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -66306,6 +66933,7 @@
     },
     {
       "token": "ts",
+      "token_id": 912,
       "position": 477,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -66445,6 +67073,7 @@
     },
     {
       "token": " grew",
+      "token_id": 6348,
       "position": 478,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -66584,6 +67213,7 @@
     },
     {
       "token": " vines",
+      "token_id": 44439,
       "position": 479,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -66723,6 +67353,7 @@
     },
     {
       "token": " in",
+      "token_id": 287,
       "position": 480,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -66862,6 +67493,7 @@
     },
     {
       "token": " Burg",
+      "token_id": 21435,
       "position": 481,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -67001,6 +67633,7 @@
     },
     {
       "token": "undy",
+      "token_id": 45459,
       "position": 482,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -67140,6 +67773,7 @@
     },
     {
       "token": " as",
+      "token_id": 355,
       "position": 483,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -67279,6 +67913,7 @@
     },
     {
       "token": " early",
+      "token_id": 1903,
       "position": 484,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -67418,6 +68053,7 @@
     },
     {
       "token": " as",
+      "token_id": 355,
       "position": 485,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -67557,6 +68193,7 @@
     },
     {
       "token": " 51",
+      "token_id": 6885,
       "position": 486,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -67696,6 +68333,7 @@
     },
     {
       "token": " B",
+      "token_id": 347,
       "position": 487,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -67835,6 +68473,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 488,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -67974,6 +68613,7 @@
     },
     {
       "token": "C",
+      "token_id": 34,
       "position": 489,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -68113,6 +68753,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 490,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -68252,6 +68893,7 @@
     },
     {
       "token": " Later",
+      "token_id": 11450,
       "position": 491,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -68391,6 +69033,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 492,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -68530,6 +69173,7 @@
     },
     {
       "token": " Benedict",
+      "token_id": 28697,
       "position": 493,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -68669,6 +69313,7 @@
     },
     {
       "token": "ine",
+      "token_id": 500,
       "position": 494,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -68808,6 +69453,7 @@
     },
     {
       "token": " monks",
+      "token_id": 27646,
       "position": 495,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -68947,6 +69593,7 @@
     },
     {
       "token": " and",
+      "token_id": 290,
       "position": 496,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -69086,6 +69733,7 @@
     },
     {
       "token": " C",
+      "token_id": 327,
       "position": 497,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -69225,6 +69873,7 @@
     },
     {
       "token": "ister",
+      "token_id": 1694,
       "position": 498,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -69364,6 +70013,7 @@
     },
     {
       "token": "ians",
+      "token_id": 1547,
       "position": 499,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -69503,6 +70153,7 @@
     },
     {
       "token": " set",
+      "token_id": 900,
       "position": 500,
       "mean_expert_size": 3242.67,
       "layers": [
@@ -69642,6 +70293,7 @@
     },
     {
       "token": " about",
+      "token_id": 546,
       "position": 501,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -69781,6 +70433,7 @@
     },
     {
       "token": " the",
+      "token_id": 262,
       "position": 502,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -69920,6 +70573,7 @@
     },
     {
       "token": " task",
+      "token_id": 4876,
       "position": 503,
       "mean_expert_size": 3242.67,
       "layers": [
@@ -70059,6 +70713,7 @@
     },
     {
       "token": " of",
+      "token_id": 286,
       "position": 504,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -70198,6 +70853,7 @@
     },
     {
       "token": " separating",
+      "token_id": 27259,
       "position": 505,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -70337,6 +70993,7 @@
     },
     {
       "token": " vine",
+      "token_id": 17793,
       "position": 506,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -70476,6 +71133,7 @@
     },
     {
       "token": "yard",
+      "token_id": 9413,
       "position": 507,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -70615,6 +71273,7 @@
     },
     {
       "token": " plots",
+      "token_id": 21528,
       "position": 508,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -70754,6 +71413,7 @@
     },
     {
       "token": " because",
+      "token_id": 780,
       "position": 509,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -70893,6 +71553,7 @@
     },
     {
       "token": " they",
+      "token_id": 484,
       "position": 510,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -71032,6 +71693,7 @@
     },
     {
       "token": " believed",
+      "token_id": 4762,
       "position": 511,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -71171,6 +71833,7 @@
     },
     {
       "token": " certain",
+      "token_id": 1728,
       "position": 512,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -71310,6 +71973,7 @@
     },
     {
       "token": " areas",
+      "token_id": 3006,
       "position": 513,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -71449,6 +72113,7 @@
     },
     {
       "token": " provided",
+      "token_id": 2810,
       "position": 514,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -71588,6 +72253,7 @@
     },
     {
       "token": " consistently",
+      "token_id": 9835,
       "position": 515,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -71727,6 +72393,7 @@
     },
     {
       "token": " different",
+      "token_id": 1180,
       "position": 516,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -71866,6 +72533,7 @@
     },
     {
       "token": " wines",
+      "token_id": 30680,
       "position": 517,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -72005,6 +72673,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 518,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -72144,6 +72813,7 @@
     },
     {
       "token": " They",
+      "token_id": 1119,
       "position": 519,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -72283,6 +72953,7 @@
     },
     {
       "token": " set",
+      "token_id": 900,
       "position": 520,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -72422,6 +73093,7 @@
     },
     {
       "token": " up",
+      "token_id": 510,
       "position": 521,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -72561,6 +73233,7 @@
     },
     {
       "token": " the",
+      "token_id": 262,
       "position": 522,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -72700,6 +73373,7 @@
     },
     {
       "token": " system",
+      "token_id": 1080,
       "position": 523,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -72839,6 +73513,7 @@
     },
     {
       "token": " of",
+      "token_id": 286,
       "position": 524,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -72978,6 +73653,7 @@
     },
     {
       "token": " _",
+      "token_id": 4808,
       "position": 525,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -73117,6 +73793,7 @@
     },
     {
       "token": "cr",
+      "token_id": 6098,
       "position": 526,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -73256,6 +73933,7 @@
     },
     {
       "token": "us",
+      "token_id": 385,
       "position": 527,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -73395,6 +74073,7 @@
     },
     {
       "token": "_",
+      "token_id": 62,
       "position": 528,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -73534,6 +74213,7 @@
     },
     {
       "token": " and",
+      "token_id": 290,
       "position": 529,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -73673,6 +74353,7 @@
     },
     {
       "token": " the",
+      "token_id": 262,
       "position": 530,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -73812,6 +74493,7 @@
     },
     {
       "token": " notion",
+      "token_id": 9495,
       "position": 531,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -73951,6 +74633,7 @@
     },
     {
       "token": " of",
+      "token_id": 286,
       "position": 532,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -74090,6 +74773,7 @@
     },
     {
       "token": " ter",
+      "token_id": 1059,
       "position": 533,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -74229,6 +74913,7 @@
     },
     {
       "token": "ro",
+      "token_id": 305,
       "position": 534,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -74368,6 +75053,7 @@
     },
     {
       "token": "ir",
+      "token_id": 343,
       "position": 535,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -74507,6 +75193,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 536,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -74646,6 +75333,7 @@
     },
     {
       "token": " I",
+      "token_id": 314,
       "position": 537,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -74785,6 +75473,7 @@
     },
     {
       "token": " can",
+      "token_id": 460,
       "position": 538,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -74924,6 +75613,7 @@
     },
     {
       "token": " feel",
+      "token_id": 1254,
       "position": 539,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -75063,6 +75753,7 @@
     },
     {
       "token": " the",
+      "token_id": 262,
       "position": 540,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -75202,6 +75893,7 @@
     },
     {
       "token": " mystical",
+      "token_id": 29746,
       "position": 541,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -75341,6 +76033,7 @@
     },
     {
       "token": " presence",
+      "token_id": 4931,
       "position": 542,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -75480,6 +76173,7 @@
     },
     {
       "token": " of",
+      "token_id": 286,
       "position": 543,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -75619,6 +76313,7 @@
     },
     {
       "token": " these",
+      "token_id": 777,
       "position": 544,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -75758,6 +76453,7 @@
     },
     {
       "token": " snail",
+      "token_id": 47374,
       "position": 545,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -75897,6 +76593,7 @@
     },
     {
       "token": " eat",
+      "token_id": 4483,
       "position": 546,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -76036,6 +76733,7 @@
     },
     {
       "token": "ers",
+      "token_id": 364,
       "position": 547,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -76175,6 +76873,7 @@
     },
     {
       "token": " when",
+      "token_id": 618,
       "position": 548,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -76314,6 +77013,7 @@
     },
     {
       "token": " I",
+      "token_id": 314,
       "position": 549,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -76453,6 +77153,7 @@
     },
     {
       "token": " walk",
+      "token_id": 2513,
       "position": 550,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -76592,6 +77293,7 @@
     },
     {
       "token": " through",
+      "token_id": 832,
       "position": 551,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -76731,6 +77433,7 @@
     },
     {
       "token": " Burg",
+      "token_id": 21435,
       "position": 552,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -76870,6 +77573,7 @@
     },
     {
       "token": "und",
+      "token_id": 917,
       "position": 553,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -77009,6 +77713,7 @@
     },
     {
       "token": "ian",
+      "token_id": 666,
       "position": 554,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -77148,6 +77853,7 @@
     },
     {
       "token": " vine",
+      "token_id": 17793,
       "position": 555,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -77287,6 +77993,7 @@
     },
     {
       "token": "yards",
+      "token_id": 33750,
       "position": 556,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -77426,6 +78133,7 @@
     },
     {
       "token": " that",
+      "token_id": 326,
       "position": 557,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -77565,6 +78273,7 @@
     },
     {
       "token": " are",
+      "token_id": 389,
       "position": 558,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -77704,6 +78413,7 @@
     },
     {
       "token": " just",
+      "token_id": 655,
       "position": 559,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -77843,6 +78553,7 @@
     },
     {
       "token": " off",
+      "token_id": 572,
       "position": 560,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -77982,6 +78693,7 @@
     },
     {
       "token": " the",
+      "token_id": 262,
       "position": 561,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -78121,6 +78833,7 @@
     },
     {
       "token": " beaten",
+      "token_id": 13125,
       "position": 562,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -78260,6 +78973,7 @@
     },
     {
       "token": " path",
+      "token_id": 3108,
       "position": 563,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -78399,6 +79113,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 564,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -78538,6 +79253,7 @@
     },
     {
       "token": " Sometimes",
+      "token_id": 8975,
       "position": 565,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -78677,6 +79393,7 @@
     },
     {
       "token": " when",
+      "token_id": 618,
       "position": 566,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -78816,6 +79533,7 @@
     },
     {
       "token": " wine",
+      "token_id": 8237,
       "position": 567,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -78955,6 +79673,7 @@
     },
     {
       "token": " reps",
+      "token_id": 20982,
       "position": 568,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -79094,6 +79813,7 @@
     },
     {
       "token": " want",
+      "token_id": 765,
       "position": 569,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -79233,6 +79953,7 @@
     },
     {
       "token": " us",
+      "token_id": 514,
       "position": 570,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -79372,6 +80093,7 @@
     },
     {
       "token": " to",
+      "token_id": 284,
       "position": 571,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -79511,6 +80233,7 @@
     },
     {
       "token": " try",
+      "token_id": 1949,
       "position": 572,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -79650,6 +80373,7 @@
     },
     {
       "token": " a",
+      "token_id": 257,
       "position": 573,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -79789,6 +80513,7 @@
     },
     {
       "token": " $",
+      "token_id": 720,
       "position": 574,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -79928,6 +80653,7 @@
     },
     {
       "token": "58",
+      "token_id": 3365,
       "position": 575,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -80067,6 +80793,7 @@
     },
     {
       "token": " Oregon",
+      "token_id": 8819,
       "position": 576,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -80206,6 +80933,7 @@
     },
     {
       "token": " Pin",
+      "token_id": 13727,
       "position": 577,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -80345,6 +81073,7 @@
     },
     {
       "token": "ot",
+      "token_id": 313,
       "position": 578,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -80484,6 +81213,7 @@
     },
     {
       "token": " Noir",
+      "token_id": 36961,
       "position": 579,
       "mean_expert_size": 1706.67,
       "layers": [
@@ -80623,6 +81353,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 580,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -80762,6 +81493,7 @@
     },
     {
       "token": " the",
+      "token_id": 262,
       "position": 581,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -80901,6 +81633,7 @@
     },
     {
       "token": " answer",
+      "token_id": 3280,
       "position": 582,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -81040,6 +81773,7 @@
     },
     {
       "token": " is",
+      "token_id": 318,
       "position": 583,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -81179,6 +81913,7 @@
     },
     {
       "token": " an",
+      "token_id": 281,
       "position": 584,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -81318,6 +82053,7 @@
     },
     {
       "token": " understandable",
+      "token_id": 21977,
       "position": 585,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -81457,6 +82193,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 586,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -81596,6 +82333,7 @@
     },
     {
       "token": " \ufffd",
+      "token_id": 564,
       "position": 587,
       "mean_expert_size": 3242.67,
       "layers": [
@@ -81731,10 +82469,16 @@
             2560
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201c",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 250,
       "position": 588,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -81870,10 +82614,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201c",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": "No",
+      "token_id": 2949,
       "position": 589,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -82013,6 +82763,7 @@
     },
     {
       "token": " thanks",
+      "token_id": 5176,
       "position": 590,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -82152,6 +82903,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 591,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -82291,6 +83043,7 @@
     },
     {
       "token": "\ufffd",
+      "token_id": 447,
       "position": 592,
       "mean_expert_size": 3242.67,
       "layers": [
@@ -82426,10 +83179,16 @@
             2560
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201d",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 251,
       "position": 593,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -82565,10 +83324,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201d",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": "\n\n",
+      "token_id": 628,
       "position": 594,
       "mean_expert_size": 1536.0,
       "layers": [
@@ -82708,6 +83473,7 @@
     },
     {
       "token": " ",
+      "token_id": 220,
       "position": 595,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -82847,6 +83613,7 @@
     },
     {
       "token": " ",
+      "token_id": 220,
       "position": 596,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -82986,6 +83753,7 @@
     },
     {
       "token": " ",
+      "token_id": 220,
       "position": 597,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -83125,6 +83893,7 @@
     },
     {
       "token": " New",
+      "token_id": 968,
       "position": 598,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -83264,6 +84033,7 @@
     },
     {
       "token": " World",
+      "token_id": 2159,
       "position": 599,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -83403,6 +84173,7 @@
     },
     {
       "token": " Pin",
+      "token_id": 13727,
       "position": 600,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -83542,6 +84313,7 @@
     },
     {
       "token": "ot",
+      "token_id": 313,
       "position": 601,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -83681,6 +84453,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 602,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -83820,6 +84593,7 @@
     },
     {
       "token": " out",
+      "token_id": 503,
       "position": 603,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -83959,6 +84733,7 @@
     },
     {
       "token": " of",
+      "token_id": 286,
       "position": 604,
       "mean_expert_size": 3242.67,
       "layers": [
@@ -84098,6 +84873,7 @@
     },
     {
       "token": " respect",
+      "token_id": 2461,
       "position": 605,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -84237,6 +85013,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 606,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -84376,6 +85153,7 @@
     },
     {
       "token": " shouldn",
+      "token_id": 6584,
       "position": 607,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -84515,6 +85293,7 @@
     },
     {
       "token": "\ufffd",
+      "token_id": 447,
       "position": 608,
       "mean_expert_size": 3925.33,
       "layers": [
@@ -84650,10 +85429,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 247,
       "position": 609,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -84789,10 +85574,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": "t",
+      "token_id": 83,
       "position": 610,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -84932,6 +85723,7 @@
     },
     {
       "token": " be",
+      "token_id": 307,
       "position": 611,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -85071,6 +85863,7 @@
     },
     {
       "token": " more",
+      "token_id": 517,
       "position": 612,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -85210,6 +86003,7 @@
     },
     {
       "token": " expensive",
+      "token_id": 5789,
       "position": 613,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -85349,6 +86143,7 @@
     },
     {
       "token": " than",
+      "token_id": 621,
       "position": 614,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -85488,6 +86283,7 @@
     },
     {
       "token": " true",
+      "token_id": 2081,
       "position": 615,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -85627,6 +86423,7 @@
     },
     {
       "token": " noble",
+      "token_id": 15581,
       "position": 616,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -85766,6 +86563,7 @@
     },
     {
       "token": " Burg",
+      "token_id": 21435,
       "position": 617,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -85905,6 +86703,7 @@
     },
     {
       "token": "undy",
+      "token_id": 45459,
       "position": 618,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -86044,6 +86843,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 619,
       "mean_expert_size": 1706.67,
       "layers": [
@@ -86183,6 +86983,7 @@
     },
     {
       "token": " Hundreds",
+      "token_id": 32636,
       "position": 620,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -86322,6 +87123,7 @@
     },
     {
       "token": " of",
+      "token_id": 286,
       "position": 621,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -86461,6 +87263,7 @@
     },
     {
       "token": " years",
+      "token_id": 812,
       "position": 622,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -86600,6 +87403,7 @@
     },
     {
       "token": " ago",
+      "token_id": 2084,
       "position": 623,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -86739,6 +87543,7 @@
     },
     {
       "token": " everyone",
+      "token_id": 2506,
       "position": 624,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -86878,6 +87683,7 @@
     },
     {
       "token": " agreed",
+      "token_id": 4987,
       "position": 625,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -87017,6 +87823,7 @@
     },
     {
       "token": " that",
+      "token_id": 326,
       "position": 626,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -87156,6 +87963,7 @@
     },
     {
       "token": " this",
+      "token_id": 428,
       "position": 627,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -87295,6 +88103,7 @@
     },
     {
       "token": " bacon",
+      "token_id": 21385,
       "position": 628,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -87434,6 +88243,7 @@
     },
     {
       "token": " strip",
+      "token_id": 10283,
       "position": 629,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -87573,6 +88383,7 @@
     },
     {
       "token": "\u2013",
+      "token_id": 1906,
       "position": 630,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -87712,6 +88523,7 @@
     },
     {
       "token": "shaped",
+      "token_id": 16760,
       "position": 631,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -87851,6 +88663,7 @@
     },
     {
       "token": " piece",
+      "token_id": 3704,
       "position": 632,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -87990,6 +88803,7 @@
     },
     {
       "token": " of",
+      "token_id": 286,
       "position": 633,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -88129,6 +88943,7 @@
     },
     {
       "token": " land",
+      "token_id": 1956,
       "position": 634,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -88268,6 +89083,7 @@
     },
     {
       "token": " that",
+      "token_id": 326,
       "position": 635,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -88407,6 +89223,7 @@
     },
     {
       "token": " runs",
+      "token_id": 4539,
       "position": 636,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -88546,6 +89363,7 @@
     },
     {
       "token": " just",
+      "token_id": 655,
       "position": 637,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -88685,6 +89503,7 @@
     },
     {
       "token": " south",
+      "token_id": 5366,
       "position": 638,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -88824,6 +89643,7 @@
     },
     {
       "token": " of",
+      "token_id": 286,
       "position": 639,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -88963,6 +89783,7 @@
     },
     {
       "token": " D",
+      "token_id": 360,
       "position": 640,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -89102,6 +89923,7 @@
     },
     {
       "token": "ij",
+      "token_id": 2926,
       "position": 641,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -89241,6 +90063,7 @@
     },
     {
       "token": "on",
+      "token_id": 261,
       "position": 642,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -89380,6 +90203,7 @@
     },
     {
       "token": " is",
+      "token_id": 318,
       "position": 643,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -89519,6 +90343,7 @@
     },
     {
       "token": " the",
+      "token_id": 262,
       "position": 644,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -89658,6 +90483,7 @@
     },
     {
       "token": " best",
+      "token_id": 1266,
       "position": 645,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -89797,6 +90623,7 @@
     },
     {
       "token": " place",
+      "token_id": 1295,
       "position": 646,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -89936,6 +90763,7 @@
     },
     {
       "token": " on",
+      "token_id": 319,
       "position": 647,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -90075,6 +90903,7 @@
     },
     {
       "token": " earth",
+      "token_id": 4534,
       "position": 648,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -90214,6 +91043,7 @@
     },
     {
       "token": " for",
+      "token_id": 329,
       "position": 649,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -90353,6 +91183,7 @@
     },
     {
       "token": " these",
+      "token_id": 777,
       "position": 650,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -90492,6 +91323,7 @@
     },
     {
       "token": " grapes",
+      "token_id": 36656,
       "position": 651,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -90631,6 +91463,7 @@
     },
     {
       "token": " to",
+      "token_id": 284,
       "position": 652,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -90770,6 +91603,7 @@
     },
     {
       "token": " exist",
+      "token_id": 2152,
       "position": 653,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -90909,6 +91743,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 654,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -91048,6 +91883,7 @@
     },
     {
       "token": " It",
+      "token_id": 632,
       "position": 655,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -91187,6 +92023,7 @@
     },
     {
       "token": "\ufffd",
+      "token_id": 447,
       "position": 656,
       "mean_expert_size": 3584.0,
       "layers": [
@@ -91322,10 +92159,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 247,
       "position": 657,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -91461,10 +92304,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": "s",
+      "token_id": 82,
       "position": 658,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -91604,6 +92453,7 @@
     },
     {
       "token": " a",
+      "token_id": 257,
       "position": 659,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -91743,6 +92593,7 @@
     },
     {
       "token": " World",
+      "token_id": 2159,
       "position": 660,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -91882,6 +92733,7 @@
     },
     {
       "token": " Heritage",
+      "token_id": 18518,
       "position": 661,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -92021,6 +92873,7 @@
     },
     {
       "token": " site",
+      "token_id": 2524,
       "position": 662,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -92160,6 +93013,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 663,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -92299,6 +93153,7 @@
     },
     {
       "token": " meaning",
+      "token_id": 3616,
       "position": 664,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -92438,6 +93293,7 @@
     },
     {
       "token": " the",
+      "token_id": 262,
       "position": 665,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -92577,6 +93433,7 @@
     },
     {
       "token": " laws",
+      "token_id": 3657,
       "position": 666,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -92716,6 +93573,7 @@
     },
     {
       "token": " are",
+      "token_id": 389,
       "position": 667,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -92855,6 +93713,7 @@
     },
     {
       "token": " so",
+      "token_id": 523,
       "position": 668,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -92994,6 +93853,7 @@
     },
     {
       "token": " strict",
+      "token_id": 7646,
       "position": 669,
       "mean_expert_size": 3242.67,
       "layers": [
@@ -93133,6 +93993,7 @@
     },
     {
       "token": " that",
+      "token_id": 326,
       "position": 670,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -93272,6 +94133,7 @@
     },
     {
       "token": " you",
+      "token_id": 345,
       "position": 671,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -93411,6 +94273,7 @@
     },
     {
       "token": " can",
+      "token_id": 460,
       "position": 672,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -93550,6 +94413,7 @@
     },
     {
       "token": "\ufffd",
+      "token_id": 447,
       "position": 673,
       "mean_expert_size": 3584.0,
       "layers": [
@@ -93685,10 +94549,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 247,
       "position": 674,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -93824,10 +94694,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": "t",
+      "token_id": 83,
       "position": 675,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -93967,6 +94843,7 @@
     },
     {
       "token": " irrig",
+      "token_id": 29344,
       "position": 676,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -94106,6 +94983,7 @@
     },
     {
       "token": "ate",
+      "token_id": 378,
       "position": 677,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -94245,6 +95123,7 @@
     },
     {
       "token": "\u2014",
+      "token_id": 960,
       "position": 678,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -94384,6 +95263,7 @@
     },
     {
       "token": "in",
+      "token_id": 259,
       "position": 679,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -94523,6 +95403,7 @@
     },
     {
       "token": " other",
+      "token_id": 584,
       "position": 680,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -94662,6 +95543,7 @@
     },
     {
       "token": " words",
+      "token_id": 2456,
       "position": 681,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -94801,6 +95683,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 682,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -94940,6 +95823,7 @@
     },
     {
       "token": " you",
+      "token_id": 345,
       "position": 683,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -95079,6 +95963,7 @@
     },
     {
       "token": " can",
+      "token_id": 460,
       "position": 684,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -95218,6 +96103,7 @@
     },
     {
       "token": "\ufffd",
+      "token_id": 447,
       "position": 685,
       "mean_expert_size": 3754.67,
       "layers": [
@@ -95353,10 +96239,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 247,
       "position": 686,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -95492,10 +96384,16 @@
             2560
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": "t",
+      "token_id": 83,
       "position": 687,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -95635,6 +96533,7 @@
     },
     {
       "token": " just",
+      "token_id": 655,
       "position": 688,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -95774,6 +96673,7 @@
     },
     {
       "token": " run",
+      "token_id": 1057,
       "position": 689,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -95913,6 +96813,7 @@
     },
     {
       "token": " the",
+      "token_id": 262,
       "position": 690,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -96052,6 +96953,7 @@
     },
     {
       "token": " hose",
+      "token_id": 31489,
       "position": 691,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -96191,6 +97093,7 @@
     },
     {
       "token": " into",
+      "token_id": 656,
       "position": 692,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -96330,6 +97233,7 @@
     },
     {
       "token": " a",
+      "token_id": 257,
       "position": 693,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -96469,6 +97373,7 @@
     },
     {
       "token": " vine",
+      "token_id": 17793,
       "position": 694,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -96608,6 +97513,7 @@
     },
     {
       "token": "yard",
+      "token_id": 9413,
       "position": 695,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -96747,6 +97653,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 696,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -96886,6 +97793,7 @@
     },
     {
       "token": "\n\n",
+      "token_id": 628,
       "position": 697,
       "mean_expert_size": 1536.0,
       "layers": [
@@ -97025,6 +97933,7 @@
     },
     {
       "token": " ",
+      "token_id": 220,
       "position": 698,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -97164,6 +98073,7 @@
     },
     {
       "token": " ",
+      "token_id": 220,
       "position": 699,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -97303,6 +98213,7 @@
     },
     {
       "token": " ",
+      "token_id": 220,
       "position": 700,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -97442,6 +98353,7 @@
     },
     {
       "token": " In",
+      "token_id": 554,
       "position": 701,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -97581,6 +98493,7 @@
     },
     {
       "token": " my",
+      "token_id": 616,
       "position": 702,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -97720,6 +98633,7 @@
     },
     {
       "token": " dream",
+      "token_id": 4320,
       "position": 703,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -97859,6 +98773,7 @@
     },
     {
       "token": "-",
+      "token_id": 12,
       "position": 704,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -97998,6 +98913,7 @@
     },
     {
       "token": "world",
+      "token_id": 6894,
       "position": 705,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -98137,6 +99053,7 @@
     },
     {
       "token": " restaurant",
+      "token_id": 7072,
       "position": 706,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -98276,6 +99193,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 707,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -98415,6 +99333,7 @@
     },
     {
       "token": " I",
+      "token_id": 314,
       "position": 708,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -98554,6 +99473,7 @@
     },
     {
       "token": " would",
+      "token_id": 561,
       "position": 709,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -98693,6 +99613,7 @@
     },
     {
       "token": " serve",
+      "token_id": 4691,
       "position": 710,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -98832,6 +99753,7 @@
     },
     {
       "token": " only",
+      "token_id": 691,
       "position": 711,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -98971,6 +99893,7 @@
     },
     {
       "token": " red",
+      "token_id": 2266,
       "position": 712,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -99110,6 +100033,7 @@
     },
     {
       "token": " and",
+      "token_id": 290,
       "position": 713,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -99249,6 +100173,7 @@
     },
     {
       "token": " white",
+      "token_id": 2330,
       "position": 714,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -99388,6 +100313,7 @@
     },
     {
       "token": " Burg",
+      "token_id": 21435,
       "position": 715,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -99527,6 +100453,7 @@
     },
     {
       "token": "und",
+      "token_id": 917,
       "position": 716,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -99666,6 +100593,7 @@
     },
     {
       "token": "ies",
+      "token_id": 444,
       "position": 717,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -99805,6 +100733,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 718,
       "mean_expert_size": 1536.0,
       "layers": [
@@ -99944,6 +100873,7 @@
     },
     {
       "token": " From",
+      "token_id": 3574,
       "position": 719,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -100083,6 +101013,7 @@
     },
     {
       "token": " D",
+      "token_id": 360,
       "position": 720,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -100222,6 +101153,7 @@
     },
     {
       "token": "ij",
+      "token_id": 2926,
       "position": 721,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -100361,6 +101293,7 @@
     },
     {
       "token": "on",
+      "token_id": 261,
       "position": 722,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -100500,6 +101433,7 @@
     },
     {
       "token": " all",
+      "token_id": 477,
       "position": 723,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -100639,6 +101573,7 @@
     },
     {
       "token": " the",
+      "token_id": 262,
       "position": 724,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -100778,6 +101713,7 @@
     },
     {
       "token": " way",
+      "token_id": 835,
       "position": 725,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -100917,6 +101853,7 @@
     },
     {
       "token": " to",
+      "token_id": 284,
       "position": 726,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -101056,6 +101993,7 @@
     },
     {
       "token": " the",
+      "token_id": 262,
       "position": 727,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -101195,6 +102133,7 @@
     },
     {
       "token": " Beau",
+      "token_id": 32831,
       "position": 728,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -101334,6 +102273,7 @@
     },
     {
       "token": "j",
+      "token_id": 73,
       "position": 729,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -101473,6 +102413,7 @@
     },
     {
       "token": "ola",
+      "token_id": 5708,
       "position": 730,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -101612,6 +102553,7 @@
     },
     {
       "token": "is",
+      "token_id": 271,
       "position": 731,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -101751,6 +102693,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 732,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -101890,6 +102833,7 @@
     },
     {
       "token": " each",
+      "token_id": 1123,
       "position": 733,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -102029,6 +102973,7 @@
     },
     {
       "token": " village",
+      "token_id": 7404,
       "position": 734,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -102168,6 +103113,7 @@
     },
     {
       "token": " in",
+      "token_id": 287,
       "position": 735,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -102307,6 +103253,7 @@
     },
     {
       "token": " Burg",
+      "token_id": 21435,
       "position": 736,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -102446,6 +103393,7 @@
     },
     {
       "token": "undy",
+      "token_id": 45459,
       "position": 737,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -102585,6 +103533,7 @@
     },
     {
       "token": " is",
+      "token_id": 318,
       "position": 738,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -102724,6 +103673,7 @@
     },
     {
       "token": " a",
+      "token_id": 257,
       "position": 739,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -102863,6 +103813,7 @@
     },
     {
       "token": " treasure",
+      "token_id": 14068,
       "position": 740,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -103002,6 +103953,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 741,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -103141,6 +104093,7 @@
     },
     {
       "token": " Each",
+      "token_id": 5501,
       "position": 742,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -103280,6 +104233,7 @@
     },
     {
       "token": " day",
+      "token_id": 1110,
       "position": 743,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -103419,6 +104373,7 @@
     },
     {
       "token": " in",
+      "token_id": 287,
       "position": 744,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -103558,6 +104513,7 @@
     },
     {
       "token": " Burg",
+      "token_id": 21435,
       "position": 745,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -103697,6 +104653,7 @@
     },
     {
       "token": "undy",
+      "token_id": 45459,
       "position": 746,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -103836,6 +104793,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 747,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -103975,6 +104933,7 @@
     },
     {
       "token": " people",
+      "token_id": 661,
       "position": 748,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -104114,6 +105073,7 @@
     },
     {
       "token": " ask",
+      "token_id": 1265,
       "position": 749,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -104253,6 +105213,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 750,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -104392,6 +105353,7 @@
     },
     {
       "token": " \ufffd",
+      "token_id": 564,
       "position": 751,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -104527,10 +105489,16 @@
             2560
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201c",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 250,
       "position": 752,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -104666,10 +105634,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201c",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": "What",
+      "token_id": 2061,
       "position": 753,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -104809,6 +105783,7 @@
     },
     {
       "token": " did",
+      "token_id": 750,
       "position": 754,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -104948,6 +105923,7 @@
     },
     {
       "token": " you",
+      "token_id": 345,
       "position": 755,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -105087,6 +106063,7 @@
     },
     {
       "token": " eat",
+      "token_id": 4483,
       "position": 756,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -105226,6 +106203,7 @@
     },
     {
       "token": " for",
+      "token_id": 329,
       "position": 757,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -105365,6 +106343,7 @@
     },
     {
       "token": " breakfast",
+      "token_id": 12607,
       "position": 758,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -105504,6 +106483,7 @@
     },
     {
       "token": "?",
+      "token_id": 30,
       "position": 759,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -105643,6 +106623,7 @@
     },
     {
       "token": "\ufffd",
+      "token_id": 447,
       "position": 760,
       "mean_expert_size": 3413.33,
       "layers": [
@@ -105778,10 +106759,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201d",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 251,
       "position": 761,
       "mean_expert_size": 1706.67,
       "layers": [
@@ -105917,10 +106904,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201d",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": " Then",
+      "token_id": 3244,
       "position": 762,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -106060,6 +107053,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 763,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -106199,6 +107193,7 @@
     },
     {
       "token": " \ufffd",
+      "token_id": 564,
       "position": 764,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -106334,10 +107329,16 @@
             2560
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201c",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 250,
       "position": 765,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -106473,10 +107474,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201c",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": "What",
+      "token_id": 2061,
       "position": 766,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -106616,6 +107623,7 @@
     },
     {
       "token": " did",
+      "token_id": 750,
       "position": 767,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -106755,6 +107763,7 @@
     },
     {
       "token": " you",
+      "token_id": 345,
       "position": 768,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -106894,6 +107903,7 @@
     },
     {
       "token": " eat",
+      "token_id": 4483,
       "position": 769,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -107033,6 +108043,7 @@
     },
     {
       "token": " for",
+      "token_id": 329,
       "position": 770,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -107172,6 +108183,7 @@
     },
     {
       "token": " lunch",
+      "token_id": 9965,
       "position": 771,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -107311,6 +108323,7 @@
     },
     {
       "token": "?",
+      "token_id": 30,
       "position": 772,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -107450,6 +108463,7 @@
     },
     {
       "token": "\ufffd",
+      "token_id": 447,
       "position": 773,
       "mean_expert_size": 3413.33,
       "layers": [
@@ -107585,10 +108599,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201d",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 251,
       "position": 774,
       "mean_expert_size": 1706.67,
       "layers": [
@@ -107724,10 +108744,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201d",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": " Like",
+      "token_id": 4525,
       "position": 775,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -107867,6 +108893,7 @@
     },
     {
       "token": " Montreal",
+      "token_id": 12871,
       "position": 776,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -108006,6 +109033,7 @@
     },
     {
       "token": "ers",
+      "token_id": 364,
       "position": 777,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -108145,6 +109173,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 778,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -108284,6 +109313,7 @@
     },
     {
       "token": " these",
+      "token_id": 777,
       "position": 779,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -108423,6 +109453,7 @@
     },
     {
       "token": " people",
+      "token_id": 661,
       "position": 780,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -108562,6 +109593,7 @@
     },
     {
       "token": " are",
+      "token_id": 389,
       "position": 781,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -108701,6 +109733,7 @@
     },
     {
       "token": " obsessed",
+      "token_id": 21366,
       "position": 782,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -108840,6 +109873,7 @@
     },
     {
       "token": " with",
+      "token_id": 351,
       "position": 783,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -108979,6 +110013,7 @@
     },
     {
       "token": " food",
+      "token_id": 2057,
       "position": 784,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -109118,6 +110153,7 @@
     },
     {
       "token": " and",
+      "token_id": 290,
       "position": 785,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -109257,6 +110293,7 @@
     },
     {
       "token": " wine",
+      "token_id": 8237,
       "position": 786,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -109396,6 +110433,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 787,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -109535,6 +110573,7 @@
     },
     {
       "token": " (",
+      "token_id": 357,
       "position": 788,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -109674,6 +110713,7 @@
     },
     {
       "token": "Would",
+      "token_id": 17353,
       "position": 789,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -109813,6 +110853,7 @@
     },
     {
       "token": "n",
+      "token_id": 77,
       "position": 790,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -109952,6 +110993,7 @@
     },
     {
       "token": "\ufffd",
+      "token_id": 447,
       "position": 791,
       "mean_expert_size": 3754.67,
       "layers": [
@@ -110087,10 +111129,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 247,
       "position": 792,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -110226,10 +111274,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": "t",
+      "token_id": 83,
       "position": 793,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -110369,6 +111423,7 @@
     },
     {
       "token": " you",
+      "token_id": 345,
       "position": 794,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -110508,6 +111563,7 @@
     },
     {
       "token": " love",
+      "token_id": 1842,
       "position": 795,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -110647,6 +111703,7 @@
     },
     {
       "token": " a",
+      "token_id": 257,
       "position": 796,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -110786,6 +111843,7 @@
     },
     {
       "token": " Roman",
+      "token_id": 7993,
       "position": 797,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -110925,6 +111983,7 @@
     },
     {
       "token": "\u00e9e",
+      "token_id": 22161,
       "position": 798,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -111064,6 +112123,7 @@
     },
     {
       "token": " Cont",
+      "token_id": 2345,
       "position": 799,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -111203,6 +112263,7 @@
     },
     {
       "token": "i",
+      "token_id": 72,
       "position": 800,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -111342,6 +112403,7 @@
     },
     {
       "token": " or",
+      "token_id": 393,
       "position": 801,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -111481,6 +112543,7 @@
     },
     {
       "token": " Me",
+      "token_id": 2185,
       "position": 802,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -111620,6 +112683,7 @@
     },
     {
       "token": "urs",
+      "token_id": 1834,
       "position": 803,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -111759,6 +112823,7 @@
     },
     {
       "token": "ault",
+      "token_id": 1721,
       "position": 804,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -111898,6 +112963,7 @@
     },
     {
       "token": " Per",
+      "token_id": 2448,
       "position": 805,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -112037,6 +113103,7 @@
     },
     {
       "token": "ri",
+      "token_id": 380,
       "position": 806,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -112176,6 +113243,7 @@
     },
     {
       "token": "\u00e8",
+      "token_id": 14064,
       "position": 807,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -112315,6 +113383,7 @@
     },
     {
       "token": "res",
+      "token_id": 411,
       "position": 808,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -112454,6 +113523,7 @@
     },
     {
       "token": " sweats",
+      "token_id": 39387,
       "position": 809,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -112593,6 +113663,7 @@
     },
     {
       "token": "hirt",
+      "token_id": 49756,
       "position": 810,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -112732,6 +113803,7 @@
     },
     {
       "token": "?",
+      "token_id": 30,
       "position": 811,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -112871,6 +113943,7 @@
     },
     {
       "token": " Or",
+      "token_id": 1471,
       "position": 812,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -113010,6 +114083,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 813,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -113149,6 +114223,7 @@
     },
     {
       "token": " a",
+      "token_id": 257,
       "position": 814,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -113288,6 +114363,7 @@
     },
     {
       "token": " \ufffd",
+      "token_id": 564,
       "position": 815,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -113423,10 +114499,16 @@
             2560
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201c",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 250,
       "position": 816,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -113562,10 +114644,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201c",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": "My",
+      "token_id": 3666,
       "position": 817,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -113705,6 +114793,7 @@
     },
     {
       "token": " parents",
+      "token_id": 3397,
       "position": 818,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -113844,6 +114933,7 @@
     },
     {
       "token": " came",
+      "token_id": 1625,
       "position": 819,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -113983,6 +115073,7 @@
     },
     {
       "token": " back",
+      "token_id": 736,
       "position": 820,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -114122,6 +115213,7 @@
     },
     {
       "token": " from",
+      "token_id": 422,
       "position": 821,
       "mean_expert_size": 3584.0,
       "layers": [
@@ -114261,6 +115353,7 @@
     },
     {
       "token": " Burg",
+      "token_id": 21435,
       "position": 822,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -114400,6 +115493,7 @@
     },
     {
       "token": "undy",
+      "token_id": 45459,
       "position": 823,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -114539,6 +115633,7 @@
     },
     {
       "token": " and",
+      "token_id": 290,
       "position": 824,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -114678,6 +115773,7 @@
     },
     {
       "token": " all",
+      "token_id": 477,
       "position": 825,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -114817,6 +115913,7 @@
     },
     {
       "token": " I",
+      "token_id": 314,
       "position": 826,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -114956,6 +116053,7 @@
     },
     {
       "token": " got",
+      "token_id": 1392,
       "position": 827,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -115095,6 +116193,7 @@
     },
     {
       "token": " was",
+      "token_id": 373,
       "position": 828,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -115234,6 +116333,7 @@
     },
     {
       "token": " this",
+      "token_id": 428,
       "position": 829,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -115373,6 +116473,7 @@
     },
     {
       "token": " shitty",
+      "token_id": 32574,
       "position": 830,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -115512,6 +116613,7 @@
     },
     {
       "token": " Cl",
+      "token_id": 1012,
       "position": 831,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -115651,6 +116753,7 @@
     },
     {
       "token": "os",
+      "token_id": 418,
       "position": 832,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -115790,6 +116893,7 @@
     },
     {
       "token": " V",
+      "token_id": 569,
       "position": 833,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -115929,6 +117033,7 @@
     },
     {
       "token": "ou",
+      "token_id": 280,
       "position": 834,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -116068,6 +117173,7 @@
     },
     {
       "token": "ge",
+      "token_id": 469,
       "position": 835,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -116207,6 +117313,7 @@
     },
     {
       "token": "ot",
+      "token_id": 313,
       "position": 836,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -116346,6 +117453,7 @@
     },
     {
       "token": "\ufffd",
+      "token_id": 447,
       "position": 837,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -116481,10 +117589,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201d",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 251,
       "position": 838,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -116620,10 +117734,16 @@
             2560
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u201d",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": " T",
+      "token_id": 309,
       "position": 839,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -116763,6 +117883,7 @@
     },
     {
       "token": "-",
+      "token_id": 12,
       "position": 840,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -116902,6 +118023,7 @@
     },
     {
       "token": "shirt",
+      "token_id": 15600,
       "position": 841,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -117041,6 +118163,7 @@
     },
     {
       "token": "?)",
+      "token_id": 10091,
       "position": 842,
       "mean_expert_size": 1706.67,
       "layers": [
@@ -117180,6 +118303,7 @@
     },
     {
       "token": "\n\n",
+      "token_id": 628,
       "position": 843,
       "mean_expert_size": 1536.0,
       "layers": [
@@ -117319,6 +118443,7 @@
     },
     {
       "token": " ",
+      "token_id": 220,
       "position": 844,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -117458,6 +118583,7 @@
     },
     {
       "token": " ",
+      "token_id": 220,
       "position": 845,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -117597,6 +118723,7 @@
     },
     {
       "token": " ",
+      "token_id": 220,
       "position": 846,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -117736,6 +118863,7 @@
     },
     {
       "token": " A",
+      "token_id": 317,
       "position": 847,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -117875,6 +119003,7 @@
     },
     {
       "token": " plethora",
+      "token_id": 35146,
       "position": 848,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -118014,6 +119143,7 @@
     },
     {
       "token": " of",
+      "token_id": 286,
       "position": 849,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -118153,6 +119283,7 @@
     },
     {
       "token": " French",
+      "token_id": 4141,
       "position": 850,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -118292,6 +119423,7 @@
     },
     {
       "token": " win",
+      "token_id": 1592,
       "position": 851,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -118431,6 +119563,7 @@
     },
     {
       "token": "em",
+      "token_id": 368,
       "position": 852,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -118570,6 +119703,7 @@
     },
     {
       "token": "akers",
+      "token_id": 3979,
       "position": 853,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -118709,6 +119843,7 @@
     },
     {
       "token": " visit",
+      "token_id": 3187,
       "position": 854,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -118848,6 +119983,7 @@
     },
     {
       "token": " Montreal",
+      "token_id": 12871,
       "position": 855,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -118987,6 +120123,7 @@
     },
     {
       "token": " on",
+      "token_id": 319,
       "position": 856,
       "mean_expert_size": 3242.67,
       "layers": [
@@ -119126,6 +120263,7 @@
     },
     {
       "token": " a",
+      "token_id": 257,
       "position": 857,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -119265,6 +120403,7 @@
     },
     {
       "token": " regular",
+      "token_id": 3218,
       "position": 858,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -119404,6 +120543,7 @@
     },
     {
       "token": " basis",
+      "token_id": 4308,
       "position": 859,
       "mean_expert_size": 3242.67,
       "layers": [
@@ -119543,6 +120683,7 @@
     },
     {
       "token": "\u2014",
+      "token_id": 960,
       "position": 860,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -119682,6 +120823,7 @@
     },
     {
       "token": "\u00c9",
+      "token_id": 38351,
       "position": 861,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -119821,6 +120963,7 @@
     },
     {
       "token": "t",
+      "token_id": 83,
       "position": 862,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -119960,6 +121103,7 @@
     },
     {
       "token": "ienne",
+      "token_id": 37938,
       "position": 863,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -120099,6 +121243,7 @@
     },
     {
       "token": " de",
+      "token_id": 390,
       "position": 864,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -120238,6 +121383,7 @@
     },
     {
       "token": " Mont",
+      "token_id": 5575,
       "position": 865,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -120377,6 +121523,7 @@
     },
     {
       "token": "ille",
+      "token_id": 8270,
       "position": 866,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -120516,6 +121663,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 867,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -120655,6 +121803,7 @@
     },
     {
       "token": " Pierre",
+      "token_id": 21204,
       "position": 868,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -120794,6 +121943,7 @@
     },
     {
       "token": "-",
+      "token_id": 12,
       "position": 869,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -120933,6 +122083,7 @@
     },
     {
       "token": "Y",
+      "token_id": 56,
       "position": 870,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -121072,6 +122223,7 @@
     },
     {
       "token": "ves",
+      "token_id": 1158,
       "position": 871,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -121211,6 +122363,7 @@
     },
     {
       "token": " Colin",
+      "token_id": 18373,
       "position": 872,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -121350,6 +122503,7 @@
     },
     {
       "token": "-",
+      "token_id": 12,
       "position": 873,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -121489,6 +122643,7 @@
     },
     {
       "token": "More",
+      "token_id": 5167,
       "position": 874,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -121628,6 +122783,7 @@
     },
     {
       "token": "y",
+      "token_id": 88,
       "position": 875,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -121767,6 +122923,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 876,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -121906,6 +123063,7 @@
     },
     {
       "token": " the",
+      "token_id": 262,
       "position": 877,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -122045,6 +123203,7 @@
     },
     {
       "token": " Mu",
+      "token_id": 8252,
       "position": 878,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -122184,6 +123343,7 @@
     },
     {
       "token": "z",
+      "token_id": 89,
       "position": 879,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -122323,6 +123483,7 @@
     },
     {
       "token": "ard",
+      "token_id": 446,
       "position": 880,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -122462,6 +123623,7 @@
     },
     {
       "token": " brothers",
+      "token_id": 9397,
       "position": 881,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -122601,6 +123763,7 @@
     },
     {
       "token": "\u2014",
+      "token_id": 960,
       "position": 882,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -122740,6 +123903,7 @@
     },
     {
       "token": "and",
+      "token_id": 392,
       "position": 883,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -122879,6 +124043,7 @@
     },
     {
       "token": " most",
+      "token_id": 749,
       "position": 884,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -123018,6 +124183,7 @@
     },
     {
       "token": " seem",
+      "token_id": 1283,
       "position": 885,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -123157,6 +124323,7 @@
     },
     {
       "token": " to",
+      "token_id": 284,
       "position": 886,
       "mean_expert_size": 3413.33,
       "layers": [
@@ -123296,6 +124463,7 @@
     },
     {
       "token": " have",
+      "token_id": 423,
       "position": 887,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -123435,6 +124603,7 @@
     },
     {
       "token": " the",
+      "token_id": 262,
       "position": 888,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -123574,6 +124743,7 @@
     },
     {
       "token": " impression",
+      "token_id": 10647,
       "position": 889,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -123713,6 +124883,7 @@
     },
     {
       "token": " that",
+      "token_id": 326,
       "position": 890,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -123852,6 +125023,7 @@
     },
     {
       "token": " Quebec",
+      "token_id": 14778,
       "position": 891,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -123991,6 +125163,7 @@
     },
     {
       "token": "ers",
+      "token_id": 364,
       "position": 892,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -124130,6 +125303,7 @@
     },
     {
       "token": " are",
+      "token_id": 389,
       "position": 893,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -124269,6 +125443,7 @@
     },
     {
       "token": " a",
+      "token_id": 257,
       "position": 894,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -124408,6 +125583,7 @@
     },
     {
       "token": " bunch",
+      "token_id": 7684,
       "position": 895,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -124547,6 +125723,7 @@
     },
     {
       "token": " of",
+      "token_id": 286,
       "position": 896,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -124686,6 +125863,7 @@
     },
     {
       "token": " cow",
+      "token_id": 9875,
       "position": 897,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -124825,6 +126003,7 @@
     },
     {
       "token": "boys",
+      "token_id": 13202,
       "position": 898,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -124964,6 +126143,7 @@
     },
     {
       "token": " riding",
+      "token_id": 10311,
       "position": 899,
       "mean_expert_size": 3242.67,
       "layers": [
@@ -125103,6 +126283,7 @@
     },
     {
       "token": " around",
+      "token_id": 1088,
       "position": 900,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -125242,6 +126423,7 @@
     },
     {
       "token": " on",
+      "token_id": 319,
       "position": 901,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -125381,6 +126563,7 @@
     },
     {
       "token": " sk",
+      "token_id": 1341,
       "position": 902,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -125520,6 +126703,7 @@
     },
     {
       "token": "id",
+      "token_id": 312,
       "position": 903,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -125659,6 +126843,7 @@
     },
     {
       "token": "oos",
+      "token_id": 16426,
       "position": 904,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -125798,6 +126983,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 905,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -125937,6 +127123,7 @@
     },
     {
       "token": " fishing",
+      "token_id": 12478,
       "position": 906,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -126076,6 +127263,7 @@
     },
     {
       "token": " giant",
+      "token_id": 6175,
       "position": 907,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -126215,6 +127403,7 @@
     },
     {
       "token": " salmon",
+      "token_id": 24535,
       "position": 908,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -126354,6 +127543,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 909,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -126493,6 +127683,7 @@
     },
     {
       "token": " and",
+      "token_id": 290,
       "position": 910,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -126632,6 +127823,7 @@
     },
     {
       "token": " shooting",
+      "token_id": 4395,
       "position": 911,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -126771,6 +127963,7 @@
     },
     {
       "token": " grizz",
+      "token_id": 46307,
       "position": 912,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -126910,6 +128103,7 @@
     },
     {
       "token": "ly",
+      "token_id": 306,
       "position": 913,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -127049,6 +128243,7 @@
     },
     {
       "token": " bears",
+      "token_id": 13062,
       "position": 914,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -127188,6 +128383,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 915,
       "mean_expert_size": 1877.33,
       "layers": [
@@ -127327,6 +128523,7 @@
     },
     {
       "token": " This",
+      "token_id": 770,
       "position": 916,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -127466,6 +128663,7 @@
     },
     {
       "token": " isn",
+      "token_id": 2125,
       "position": 917,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -127605,6 +128803,7 @@
     },
     {
       "token": "\ufffd",
+      "token_id": 447,
       "position": 918,
       "mean_expert_size": 3754.67,
       "layers": [
@@ -127740,10 +128939,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 247,
       "position": 919,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -127879,10 +129084,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": "t",
+      "token_id": 83,
       "position": 920,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -128022,6 +129233,7 @@
     },
     {
       "token": " true",
+      "token_id": 2081,
       "position": 921,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -128161,6 +129373,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 922,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -128300,6 +129513,7 @@
     },
     {
       "token": " of",
+      "token_id": 286,
       "position": 923,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -128439,6 +129653,7 @@
     },
     {
       "token": " course",
+      "token_id": 1781,
       "position": 924,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -128578,6 +129793,7 @@
     },
     {
       "token": " (",
+      "token_id": 357,
       "position": 925,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -128717,6 +129933,7 @@
     },
     {
       "token": "though",
+      "token_id": 2016,
       "position": 926,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -128856,6 +130073,7 @@
     },
     {
       "token": " I",
+      "token_id": 314,
       "position": 927,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -128995,6 +130213,7 @@
     },
     {
       "token": " have",
+      "token_id": 423,
       "position": 928,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -129134,6 +130353,7 @@
     },
     {
       "token": " to",
+      "token_id": 284,
       "position": 929,
       "mean_expert_size": 3242.67,
       "layers": [
@@ -129273,6 +130493,7 @@
     },
     {
       "token": " say",
+      "token_id": 910,
       "position": 930,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -129412,6 +130633,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 931,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -129551,6 +130773,7 @@
     },
     {
       "token": " I",
+      "token_id": 314,
       "position": 932,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -129690,6 +130913,7 @@
     },
     {
       "token": " didn",
+      "token_id": 1422,
       "position": 933,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -129829,6 +131053,7 @@
     },
     {
       "token": "\ufffd",
+      "token_id": 447,
       "position": 934,
       "mean_expert_size": 4096.0,
       "layers": [
@@ -129964,10 +131189,16 @@
             2560
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 247,
       "position": 935,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -130103,10 +131334,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": "t",
+      "token_id": 83,
       "position": 936,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -130246,6 +131483,7 @@
     },
     {
       "token": " see",
+      "token_id": 766,
       "position": 937,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -130385,6 +131623,7 @@
     },
     {
       "token": " one",
+      "token_id": 530,
       "position": 938,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -130524,6 +131763,7 @@
     },
     {
       "token": " bird",
+      "token_id": 6512,
       "position": 939,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -130663,6 +131903,7 @@
     },
     {
       "token": " for",
+      "token_id": 329,
       "position": 940,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -130802,6 +132043,7 @@
     },
     {
       "token": " two",
+      "token_id": 734,
       "position": 941,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -130941,6 +132183,7 @@
     },
     {
       "token": " years",
+      "token_id": 812,
       "position": 942,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -131080,6 +132323,7 @@
     },
     {
       "token": " while",
+      "token_id": 981,
       "position": 943,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -131219,6 +132463,7 @@
     },
     {
       "token": " living",
+      "token_id": 2877,
       "position": 944,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -131358,6 +132603,7 @@
     },
     {
       "token": " in",
+      "token_id": 287,
       "position": 945,
       "mean_expert_size": 3242.67,
       "layers": [
@@ -131497,6 +132743,7 @@
     },
     {
       "token": " Burg",
+      "token_id": 21435,
       "position": 946,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -131636,6 +132883,7 @@
     },
     {
       "token": "undy",
+      "token_id": 45459,
       "position": 947,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -131775,6 +133023,7 @@
     },
     {
       "token": ";",
+      "token_id": 26,
       "position": 948,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -131914,6 +133163,7 @@
     },
     {
       "token": " they",
+      "token_id": 484,
       "position": 949,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -132053,6 +133303,7 @@
     },
     {
       "token": "\ufffd",
+      "token_id": 447,
       "position": 950,
       "mean_expert_size": 3754.67,
       "layers": [
@@ -132188,10 +133439,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 1,
+        "total": 2
+      }
     },
     {
       "token": "\ufffd",
+      "token_id": 247,
       "position": 951,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -132327,10 +133584,16 @@
             512
           ]
         }
-      ]
+      ],
+      "part_of": {
+        "char": "\u2019",
+        "position": 2,
+        "total": 2
+      }
     },
     {
       "token": "ve",
+      "token_id": 303,
       "position": 952,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -132470,6 +133733,7 @@
     },
     {
       "token": " eaten",
+      "token_id": 17065,
       "position": 953,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -132609,6 +133873,7 @@
     },
     {
       "token": " every",
+      "token_id": 790,
       "position": 954,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -132748,6 +134013,7 @@
     },
     {
       "token": " fucking",
+      "token_id": 9372,
       "position": 955,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -132887,6 +134153,7 @@
     },
     {
       "token": " thing",
+      "token_id": 1517,
       "position": 956,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -133026,6 +134293,7 @@
     },
     {
       "token": " that",
+      "token_id": 326,
       "position": 957,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -133165,6 +134433,7 @@
     },
     {
       "token": " moves",
+      "token_id": 6100,
       "position": 958,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -133304,6 +134573,7 @@
     },
     {
       "token": " there",
+      "token_id": 612,
       "position": 959,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -133443,6 +134713,7 @@
     },
     {
       "token": ").",
+      "token_id": 737,
       "position": 960,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -133582,6 +134853,7 @@
     },
     {
       "token": " Always",
+      "token_id": 16622,
       "position": 961,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -133721,6 +134993,7 @@
     },
     {
       "token": " seen",
+      "token_id": 1775,
       "position": 962,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -133860,6 +135133,7 @@
     },
     {
       "token": " as",
+      "token_id": 355,
       "position": 963,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -133999,6 +135273,7 @@
     },
     {
       "token": " the",
+      "token_id": 262,
       "position": 964,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -134138,6 +135413,7 @@
     },
     {
       "token": " exotic",
+      "token_id": 21036,
       "position": 965,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -134277,6 +135553,7 @@
     },
     {
       "token": " cousins",
+      "token_id": 28706,
       "position": 966,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -134416,6 +135693,7 @@
     },
     {
       "token": " to",
+      "token_id": 284,
       "position": 967,
       "mean_expert_size": 3072.0,
       "layers": [
@@ -134555,6 +135833,7 @@
     },
     {
       "token": " the",
+      "token_id": 262,
       "position": 968,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -134694,6 +135973,7 @@
     },
     {
       "token": " French",
+      "token_id": 4141,
       "position": 969,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -134833,6 +136113,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 970,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -134972,6 +136253,7 @@
     },
     {
       "token": " Quebec",
+      "token_id": 14778,
       "position": 971,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -135111,6 +136393,7 @@
     },
     {
       "token": " may",
+      "token_id": 743,
       "position": 972,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -135250,6 +136533,7 @@
     },
     {
       "token": " very",
+      "token_id": 845,
       "position": 973,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -135389,6 +136673,7 @@
     },
     {
       "token": " well",
+      "token_id": 880,
       "position": 974,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -135528,6 +136813,7 @@
     },
     {
       "token": " be",
+      "token_id": 307,
       "position": 975,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -135667,6 +136953,7 @@
     },
     {
       "token": " the",
+      "token_id": 262,
       "position": 976,
       "mean_expert_size": 3242.67,
       "layers": [
@@ -135806,6 +137093,7 @@
     },
     {
       "token": " last",
+      "token_id": 938,
       "position": 977,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -135945,6 +137233,7 @@
     },
     {
       "token": " frontier",
+      "token_id": 27580,
       "position": 978,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -136084,6 +137373,7 @@
     },
     {
       "token": " of",
+      "token_id": 286,
       "position": 979,
       "mean_expert_size": 2901.33,
       "layers": [
@@ -136223,6 +137513,7 @@
     },
     {
       "token": " mo",
+      "token_id": 6941,
       "position": 980,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -136362,6 +137653,7 @@
     },
     {
       "token": "ose",
+      "token_id": 577,
       "position": 981,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -136501,6 +137793,7 @@
     },
     {
       "token": " hunting",
+      "token_id": 10988,
       "position": 982,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -136640,6 +137933,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 983,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -136779,6 +138073,7 @@
     },
     {
       "token": " ang",
+      "token_id": 3550,
       "position": 984,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -136918,6 +138213,7 @@
     },
     {
       "token": "ling",
+      "token_id": 1359,
       "position": 985,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -137057,6 +138353,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 986,
       "mean_expert_size": 2730.67,
       "layers": [
@@ -137196,6 +138493,7 @@
     },
     {
       "token": " for",
+      "token_id": 329,
       "position": 987,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -137335,6 +138633,7 @@
     },
     {
       "token": "aging",
+      "token_id": 3039,
       "position": 988,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -137474,6 +138773,7 @@
     },
     {
       "token": ",",
+      "token_id": 11,
       "position": 989,
       "mean_expert_size": 2560.0,
       "layers": [
@@ -137613,6 +138913,7 @@
     },
     {
       "token": " and",
+      "token_id": 290,
       "position": 990,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -137752,6 +139053,7 @@
     },
     {
       "token": " sugar",
+      "token_id": 7543,
       "position": 991,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -137891,6 +139193,7 @@
     },
     {
       "token": " sh",
+      "token_id": 427,
       "position": 992,
       "mean_expert_size": 2218.67,
       "layers": [
@@ -138030,6 +139333,7 @@
     },
     {
       "token": "acks",
+      "token_id": 4595,
       "position": 993,
       "mean_expert_size": 2389.33,
       "layers": [
@@ -138169,6 +139473,7 @@
     },
     {
       "token": ".",
+      "token_id": 13,
       "position": 994,
       "mean_expert_size": 2048.0,
       "layers": [
@@ -138308,6 +139613,7 @@
     },
     {
       "token": "\n",
+      "token_id": 198,
       "position": 995,
       "mean_expert_size": 3242.67,
       "layers": [

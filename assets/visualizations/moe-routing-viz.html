@@ -203,7 +203,7 @@
     <h1>MoE Routing Visualization</h1>
 
     <div class="legend">
-        <strong>How to read this visualization:</strong> Color intensity shows computational budget (darker = more compute). Hover or tap tokens for details about which experts were activated across layers. Compare the same passage across two different expert configurations.
+        <strong>How to read this visualization:</strong> Color intensity shows computational budget (darker = more compute). Click tokens for details about which experts were activated across layers. Compare the same passage across two different expert configurations. Subscript numbers (e.g., '₁'₂) indicate multi-byte characters split by the tokenizer—each byte is a separate token with its own routing.
         <div style="margin-top: 1rem; font-style: italic; color: #0e2431;">Note: Both models were trained using the same random seed (1223).</div>
         <div class="gradient-scale">
             <span style="white-space: nowrap;">Less compute</span>
@@ -298,6 +298,22 @@
             return colorGradient[Math.min(index, colorGradient.length - 1)];
         }
 
+        // Get display text for a token (handles byte tokens)
+        function getTokenDisplay(token) {
+            if (token.part_of) {
+                // This is a byte token - show the character it's part of with subscript position
+                const subscripts = ['', '₁', '₂', '₃', '₄'];
+                const charWithSubscript = token.part_of.char + subscripts[token.part_of.position];
+                // If original token had a prefix (e.g., " �"), preserve it
+                if (token.token.endsWith('\ufffd') && token.token.length > 1) {
+                    const prefix = token.token.slice(0, -1);
+                    return prefix + charWithSubscript;
+                }
+                return charWithSubscript;
+            }
+            return token.token;
+        }
+
         // Create tooltip content
         function createTooltipContent(token) {
             const layersHtml = token.layers.map(layer => {
@@ -312,8 +328,13 @@
                 `;
             }).join('');
 
+            let headerText = `Token: "${token.token}"`;
+            if (token.part_of) {
+                headerText = `Byte ${token.part_of.position}/${token.part_of.total} of "${token.part_of.char}"`;
+            }
+
             return `
-                <div class="tooltip-header">Token: "${token.token}"</div>
+                <div class="tooltip-header">${headerText}</div>
                 <div class="tooltip-avg">Average expert size: ${Math.round(token.mean_expert_size)}</div>
                 <div class="tooltip-layers">${layersHtml}</div>
             `;
@@ -392,7 +413,7 @@
             data.tokens.forEach((token, idx) => {
                 const span = document.createElement('span');
                 span.className = 'token';
-                span.textContent = token.token;
+                span.textContent = getTokenDisplay(token);
                 span.style.backgroundColor = getColorForSize(token.mean_expert_size, minSize, maxSize);
 
                 // Determine text color for readability
@@ -404,12 +425,7 @@
                 const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
                 span.style.color = luminance > 0.5 ? '#000' : '#fff';
 
-                // Desktop: hover events
-                span.addEventListener('mouseenter', (e) => {
-                    showTooltip(span, token, tooltipId, datasetId);
-                });
-
-                // Mobile: click/tap events
+                // Click to toggle tooltip
                 span.addEventListener('click', (e) => {
                     e.stopPropagation();
                     if (activeTokens[datasetId] === span) {
@@ -431,7 +447,7 @@
             if (globalListenersAdded) return;
             globalListenersAdded = true;
 
-            // Click outside to close tooltip (mobile)
+            // Click outside to close tooltip
             document.addEventListener('click', (e) => {
                 if (!e.target.classList.contains('token')) {
                     const tooltip5to1 = document.getElementById('tooltip-5to1');
