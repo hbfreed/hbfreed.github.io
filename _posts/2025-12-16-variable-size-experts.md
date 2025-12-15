@@ -1,1 +1,2 @@
-
+I implemented variable sized experts using Andrej Karpathy’s nanoGPT, which allows us to set the sizes of experts in a mixture of experts (MoE) model. I trained a bunch of variable sized expert MoEs averaging around 125 million active parameters on a [chinchilla-optimal](https://arxiv.org/abs/2203.15556) \~2.5B tokens. [Check out the visualization of where different tokens go here](https://hbfreed.com/assets/visualizations/moe-routing-viz.html)\!
+![](/assets/images/variable_experts_viz.png)
