@@ -20,7 +20,7 @@ I implemented variable sized experts using Andrej Karpathy’s nanoGPT, which al
 
 Dense LLMs have a feedforward network (FFN)[^1] that every token passes through entirely. MoEs replace this with a much larger layer broken into pieces called "experts”. In an MoE, each token only activates a few experts. This way, MoEs can be more capable, while processing at the same speed.
 
-![/assets/images/olmoe.png](https://arxiv.org/pdf/2409.02060#page=4)  
+[![OLMoE architecture diagram](/assets/images/olmoe.png)](https://arxiv.org/pdf/2409.02060#page=4)  
 Historically, MoEs have only been made up of uniform experts of equal size. Here, I explore what happens when we vary the size of the experts. For this project, the ratio (5:1, 23:1) is the size difference between large and small experts. A 23:1 model's large experts are 23 times the size of its small experts. The two models I trained have the following attributes:
 
 **5:1 configuration:** Four experts at 2560 hidden dim, four at 512\. 2 experts are active[^2]. Empirically, active parameters range from 95.7M to 138.7M and we average 114.7M.
