@@ -13,6 +13,7 @@ I'll run a few experiments:
 - KL distillation vs on-policy distillation with reverse KL a la this [Thinking Machines Post](https://thinkingmachines.ai/blog/on-policy-distillation/#loss-function-reverse-kl)
 - Quantized teacher models (8 bit, 4 bit, some weird [GGUFs](https://github.com/ggml-org/ggml/blob/master/docs/gguf.md) like Q6?)
 - Stronger teacher models (possibly quantized stronger teacher models?). The papers on pruning I'm going to be working with
+- Olmo uses sliding window attention (SWA) as well as full attention. Will pruning the full attention layers lead to worse performance? Probably check RULER.
 - LoRA or DoRA (should punt on this one for now, seems like something I should do later)
 
 Note that only pruning width seems to slightly defeat the purpose of making smaller models, in my opinion. Nvidia has released a paper on exactly this: [Nemotron-Flash: Towards Latency-Optimal Hybrid Small Language Models](https://arxiv.org/pdf/2511.18890): "While previous work on SLM design has primarily focused on reducing the number of parameters to achieve parameter-optimal SLMs, parameter efficiency does not necessarily translate into proportional real-device speed-ups...we first study latency-optimal depth-width ratios, with the key finding that although deep-thin models generally achieve better accuracy under the same parameter budget, they may not lie on the accuracy-latency trade-off frontier."
