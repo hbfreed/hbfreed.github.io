@@ -14,19 +14,23 @@ For a more thorough study of these trade-offs, see Nvidia's paper [Nemotron-Flas
 
 ## Depth vs Width Scaling
 ![Depth vs width scaling](/assets/images/width-depth-latency/depth_vs_width_scaling.png)
+
 Token generation latency grows linearly with depth, but stays flat even at triple the width.
 
 ## Parameters vs Latency Scatter Plot
 ![Parameters vs latency scatter](/assets/images/width-depth-latency/params_vs_latency_scatter.png)
+
 This plot really shows us that for total response time (which is what we're calling prefill + token generation), the number of layers matters much more than the number of parameters. Note that the largest model among the parameter matched configurations we tried, with 8 layers, has 487M parameters and is 11.7x faster than the 100 layer model, which has 322M parameters.
 
 ## Time Matched Comparison
 ![Time matched comparison](/assets/images/width-depth-latency/time_matched_clean.png)
+
 Here, we see that even at maximum width (before running out of VRAM), shallower models are both faster and have dramatically more parameters. The dashed line shows the 80-layer baseline—none of the wider models could be slowed down enough to match it.
 Since the 11.3B models were as large as I could fit on my 3090 (24 gigabytes of VRAM) in bf16, that's where we maxed out. Clearly, there's still a fair amount of headroom to make these larger while being faster. 
 
 ## Baguettotron vs Gemma 3 12B
 ![Baguettotron vs Gemma 3 12B comparison](/assets/images/width-depth-latency/architecture_comparison_clean.png)
+
 Here's a real-world aspect ratio comparison: Baguettotron vs Gemma 3 12B. We still see a pretty big difference! 
 
 [^1]: This is no surprise: it's well known that, for the most part, deeper is better for performance.

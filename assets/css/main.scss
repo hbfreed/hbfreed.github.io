@@ -22,3 +22,25 @@ body {
   margin: 0 auto;
   padding: 0 2.5rem;
 }
+
+/* ↓ images with captions below */
+.page__content img {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.page__content p img {
+  margin-bottom: 0;
+}
+
+.page__content p img + br,
+.page__content p img:only-child {
+  display: block;
+}
+
+.page__content p:has(img) + p {
+  margin-top: 0;
+  font-style: italic;
+  color: #666;
+  font-size: 0.9em;
+}
