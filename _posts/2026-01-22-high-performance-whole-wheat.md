@@ -16,8 +16,6 @@ The flour I'll be using is Fortuna wheat from [Lopez Island](https://www.lopezcl
 ## Flour makes a difference!
 In late 2024, I ordered a bunch of really cool flours from Camas Country Mill, including this [Amarillo flour](https://www.camascountrymill.com/shop/amarillo-hard-white-wheat-flour-organic). I made some bread with it, and was pretty blown away with the color and flavor.[^1] I hadn't really thought about flour having distinct flavors until I tried these flours.
 
-[^1]: The flavor (a fruity, almost guava kind of thing) was almost *too* strong. I'd recommend splitting it with a more mild flour for breads.
-
 ### 1/16-1/17: Scalded offal, 15% 
 I did the following:
 Scald
@@ -39,3 +37,5 @@ Pressing on to higher percentages!
 
 ### 1/23-1/24: Scalded offal, 20% and 30%
 Going to make a split batch: one with 20% scalded bran, and one with 30%.
+
+[^1]: The flavor (a fruity, almost guava kind of thing) was almost *too* strong. I'd recommend splitting it with a more mild flour for breads.

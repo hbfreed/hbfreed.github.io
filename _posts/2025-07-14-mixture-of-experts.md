@@ -4,7 +4,7 @@
 
 Andrej Karpathy's NanoGPT is a hackable library for training language models. In his inimitable style, Karpathy shows anyone who wants to learn exactly how pretraining for LLMs is done. 
 Here, I'd like to add support for Mixture of Experts (MoE) style models. 
-Over the next (generic period of time), I'll be working on learning more about MoE models. Extending NanoGPT with MoE support feels like a good place to start. I'm also interested in [upcycling](https://arxiv.org/pdf/2410.07524v1) something like SmolLM, Not 100% sure how much compute that would take.
+Over the next (generic period of time), I'll be working on learning more about MoE models. Extending NanoGPT with MoE support feels like a good place to start. I'm also interested in [upcycling](https://arxiv.org/abs/2410.07524) something like SmolLM, Not 100% sure how much compute that would take.
 Additionally, I'm fascinated by what's really going on inside these kinds of models. Are they actually learning some sort of expertise? For example, in a given MoE model, is there some notion of a "math expert"? 
 
 ### What is an MoE? (7/28/25)
@@ -26,7 +26,7 @@ The vanilla Hugging Face transformers version of MoEs [loops over the experts](h
 
 <!-- Add in benchmark numbers for for loop vs the megablock-ized version -->
 
-So, we turn to [Megablocks](https://arxiv.org/pdf/2211.15841). Megablocks, using some clever tricks, grants a huge speedup over a for loop version. Since we're dealing with matrices, it's totally possible to parallelize the computation of the experts by essentially stacking them into one big tensor. This comes with a two big drawbacks:
+So, we turn to [Megablocks](https://arxiv.org/abs/2211.15841). Megablocks, using some clever tricks, grants a huge speedup over a for loop version. Since we're dealing with matrices, it's totally possible to parallelize the computation of the experts by essentially stacking them into one big tensor. This comes with a two big drawbacks:
 1. Doing the calculation as one gigantic dense matrix multiply is very expensive and, since only a subset of the experts are active per token, it's wasteful.
 2. Naively, the matrix that each expert sees has to be the same size if we want parallelism. This runs us into two more problems: 
      a. If an expert isn't used much by a certain batch, we have to pad the token matrix, wasting resources 

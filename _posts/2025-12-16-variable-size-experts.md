@@ -8,7 +8,7 @@ Thanks to:
 - [Sam Lehman](https://x.com/SPLehman) for the conversations that got this project off the ground as well as reading drafts and feedback
 - [Craig Robinson](https://www.linkedin.com/in/craigbrobinson/) for feedback on drafts 
 - [Andrej Karpathy](https://karpathy.ai/) for NanoGPT, which this project is based on
-- [Trevor Gale, Deepak Narayanan, Cliff Young, and Matei Zaharia](https://arxiv.org/pdf/2211.15841) for MegaBlocks, the other foundation for this project 
+- [Trevor Gale, Deepak Narayanan, Cliff Young, and Matei Zaharia](https://arxiv.org/abs/2211.15841) for MegaBlocks, the other foundation for this project 
 
 ## Extending Megablocks with Variable Sized MoEs
 
@@ -126,7 +126,7 @@ Open questions and things I want to try next:
 5) How’s this stuff interact with attention scores? Especially with the discourse markers thing. Perhaps a “Moreover” token is attending to the last sentence quite a lot and this lines up with the lack of compute?  
 6) Intermediate ratio analysis– is there a crossover point somewhere between the 5:1 and 23:1 where we see the correlations flip?  
 7) This last weekend (Dec 13/14 2025\) I tried subbing in a sigmoid instead of softmax for routing, like they do in DeepSeek-V3. It learned more like an 80:20 small:large ratio. I haven’t had a chance to look at the routing. Will everything we saw above hold?  
-8) [RL’s been used for gating](https://arxiv.org/pdf/1511.06297)– obviously that hasn’t stuck around. Would it help us allocate our compute better in some way?
+8) [RL's been used for gating](https://arxiv.org/abs/1511.06297)– obviously that hasn’t stuck around. Would it help us allocate our compute better in some way?
 
 [^1]:  Also called the multilayer perceptron (MLP)—the terms are interchangeable.
 

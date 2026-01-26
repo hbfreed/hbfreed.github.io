@@ -10,7 +10,7 @@ What I think they don't address enough is the fact that each additional layer ad
 
 All experiments were done on one 3090 with randomly initialized models. All the code is [here](https://github.com/hbfreed/inference-pareto), and was written by Claude Opus 4.5 in Claude Code.
 
-For a more thorough study of these trade-offs, see Nvidia's paper [Nemotron-Flash: Towards Latency-Optimal Hybrid Small Language Models](https://arxiv.org/pdf/2511.18890).
+For a more thorough study of these trade-offs, see Nvidia's paper [Nemotron-Flash: Towards Latency-Optimal Hybrid Small Language Models](https://arxiv.org/abs/2511.18890).
 
 ## Depth vs Width Scaling
 ![Depth vs width scaling](/assets/images/width-depth-latency/depth_vs_width_scaling.png)
