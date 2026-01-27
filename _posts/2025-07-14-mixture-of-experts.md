@@ -1,5 +1,5 @@
 # MoEs
-## Adding Mixture of Experts support to [Karpathy's](https://x.com/karpathy) [NanoGPT](https://github.com/karpathy/nanoGPT), MoE interpretability
+## Adding Mixture of Experts support to [Karpathy's](https://x.com/karpathy) [NanoGPT](https://github.com/karpathy/nanoGPT), MoE interpretability, general MoE Notes
 ### In progress: July 14, 2025-?
 
 Andrej Karpathy's NanoGPT is a hackable library for training language models. In his inimitable style, Karpathy shows anyone who wants to learn exactly how pretraining for LLMs is done. 
