@@ -14,6 +14,17 @@ body {
   padding: 0 1rem;
 }
 
+/* ↓ masthead: warm bar, aligned with content */
+.masthead {
+  background-color: #c8a882;
+  border-bottom: none;
+}
+
+.masthead__inner-wrap {
+  max-width: 48rem;
+  padding: 0 2.5rem;
+}
+
 /* ↓ wrapper override */
 .page,
 .page__inner,
