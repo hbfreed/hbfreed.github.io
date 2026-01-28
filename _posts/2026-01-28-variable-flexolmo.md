@@ -37,8 +37,6 @@ These models were retrained using distillation with the top 128 logprobs generat
 ### Evals
 Using [LM eval harness](https://github.com/EleutherAI/lm-evaluation-harness) (which handles base models well), we got pretty close to the paper's baseline numbers. Math2 is the macro average of GSM8K and MATH[^2], following the [FlexOlmo paper](https://arxiv.org/abs/2507.07024). MATH scores use the math_verify metric (symbolic equivalence checking rather than exact string matching).
 
-<div style="display: flex; justify-content: center;" markdown="1">
-
 | Model | Total Params | Expert Params | Expert Width | GSM8K | MATH | Math2 |
 |-------|-------------|---------------|-------------|-------|------|-------|
 | Public model, no expert[^3] | 7.3B | 0 | — | — | — | 8.1 |
@@ -46,8 +44,6 @@ Using [LM eval harness](https://github.com/EleutherAI/lm-evaluation-harness) (wh
 | flex-math-8192 | 10.5B | 3.2B | 8192 (74%) | 70.1 | 31.3 | 50.7 |
 | flex-math-5504 | 9.5B | 2.2B | 5504 (50%) | 66.6 | 26.8 | 46.7 |
 | flex-math-2048 | 8.1B | 0.8B | 2048 (19%) | 44.3 | 13.9 | 29.1 |
-
-</div>
 
 Even our most aggressively pruned model (2048, 0.8B expert params) scores 29.1 on Math2 -- 3.6x the no-expert baseline. The first 0.8B of expert parameters gets you most of the way; going from 0.8B to 4.3B (5.4x more expert params) only improves Math2 from 29.1 to 52.5.
 
