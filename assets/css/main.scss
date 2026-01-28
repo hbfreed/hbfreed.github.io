@@ -14,10 +14,16 @@ body {
   padding: 0 1rem;
 }
 
-/* ↓ masthead: warm bar, aligned with content */
+/* ↓ masthead: warm bar, full-width, content aligned */
 .masthead {
   background-color: #c8a882;
   border-bottom: none;
+  margin: 0 -1rem;
+  padding: 0 1rem;
+}
+
+.greedy-nav {
+  background: transparent;
 }
 
 .masthead__inner-wrap {
