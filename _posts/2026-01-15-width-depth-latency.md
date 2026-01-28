@@ -1,3 +1,7 @@
+---
+title: "Width, Depth, Latency, and You"
+---
+
 # Quick Claude Code Experiment: Width, Depth, Latency, and You
 
 

@@ -1,3 +1,7 @@
+---
+title: "Open Concept Steering: Building Open-Source SAE Feature Steering for OLMo 2 7B"
+---
+
 # Open Concept Steering: Building Open-Source SAE Feature Steering for OLMo 2 7B
 
 ## Acknowledgements

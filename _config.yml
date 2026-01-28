@@ -29,5 +29,12 @@ footer:
       icon: "fa-solid fa-face-laugh-beam"
       url: "https://huggingface.co/hbfreed"
 
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      show_date: true
+
 atom_feed:
   hide: true

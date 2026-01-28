@@ -1,6 +1,10 @@
+---
+title: "Pruning OLMo 3 7B"
+---
+
 (Work In Progress)
 
-# Pruning Olmo 3 7B
+# Pruning OLMo 3 7B
 
 
 I want to write up my work as I'm working on it, and not all at once. In that spirit, before I start working on pruning the [FlexOlmo](https://arxiv.org/abs/2507.07024) models to try using them with [variable sized experts](https://hbfreed.com/2025/12/16/variable-size-experts.html), I want to get a baseline of pruning models. I'm going to prune [Olmo 3 7B](https://huggingface.co/allenai/Olmo-3-7B-Instruct). 
