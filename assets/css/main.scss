@@ -27,8 +27,11 @@ body {
 }
 
 .masthead__inner-wrap {
-  max-width: 48rem;
-  padding: 0 2.5rem;
+  justify-content: center;
+}
+
+.masthead__menu {
+  width: auto;
 }
 
 /* ↓ wrapper override */
