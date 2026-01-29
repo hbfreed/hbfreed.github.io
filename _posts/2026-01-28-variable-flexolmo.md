@@ -6,37 +6,36 @@ redirect_from:
 
 # Variable FlexOlmo
 
-## Variable sized experts for FlexOlmo
+I've been working on variable-sized experts in MoEs ([previous post](https://hbfreed.com/2025/12/16/variable-size-experts.html)), using a modified version of [Megablocks](https://github.com/hbfreed/megablocks-variable). The TL;DR from that work: at my scale, I didn't find efficiencies beyond what you'd get from simply using narrower experts across the board. But since I have this hammer, I've been looking for nails.
 
-My next project is going to be adding variable sized experts to FlexOlmo. 
-Since I don't have the compute to train a whole new model, I'll just be using the models that they have on their [Hugging Face](https://huggingface.co/allenai/FlexOlmo-7x7B-1T).
-So, I'll need to shrink the expert models by pruning. If I could train from scratch, I think I'd just train a narrow model.
+I'd had my eye on doing a project with [FlexOlmo](https://arxiv.org/abs/2507.07024) for a while, and it seemed like a perfect nail. The core idea is training specialized experts separately on their own domains, then combining them into an MoE[^0]. They got good results, and the architecture opens the door to data collaboration. Organizations can train experts on private data without surrendering it. But training a 4.3B expert isn't cheap, and in data constrained situations, it doesn't necessarily make sense to train a model that large. If smaller experts work, that lowers the barrier to participation significantly.
 
-## Pruning and Distilling: Shrinking the Expert MLP Layers
-Since the hidden size of the model has to stay the same, I'm choosing to shrink the FlexOlmo MLP Layers. Plus, I've wanted to learn about distillation! I'll mostly refer to [this paper](https://arxiv.org/abs/2407.14679) and [this paper](https://arxiv.org/abs/2408.11796). One thing I'd like to try: pruning different experts by different amounts within an MoE, similar to [REAP](https://arxiv.org/abs/2510.13999). REAP prunes entire experts, I'd like to get importance scores within the experts, and prune them individually. Variable expert sizes should make this straightforward.
+Since I have limited resources, I figured the best way to do this was to prune the expert MLPs of one of the existing expert + public model models that AI2 released, and use distillation to retrain the model, like these two NVIDIA papers ([Muralidharan et al.](https://arxiv.org/abs/2407.14679), [Sreenivas et al.](https://arxiv.org/abs/2408.11796)), as opposed to training new experts from scratch. In ~228M tokens of retraining with KLD distillation, I'm happy with the results, and it proves the concept well. Even pruning the expert down to ~800M parameters total improves the Math2 score from 8.1 to 29.1. 
 
-## 2048 Width Math Results
-Ok! I've pruned the [Flex-math](https://huggingface.co/allenai/Flex-math-2x7B-1T) math expert to 2048 width, down from 11008. This is extreme, more are in the pipeline: 8192 and 5504 (I figured exactly half would be nice). I wanted a quick result, and distilled in about 8 hours on one rented H100 this weekend. 
+## Pruning the Math Expert: Shrinking the Expert MLP Layers
+
+I pruned the [Flex-math-2x7B-1T](https://huggingface.co/allenai/Flex-math-2x7B-1T) math expert to three widths: 8192, 5504, and 2048 (down from 11008). Since the hidden size of the base model has to stay the same, and I didn't want to touch the attention heads or number of layers, I shrank the expert MLP layers.
+One thing I'd like to try eventually: pruning different experts by different amounts within the same MoE, with sizing informed by per-expert importance scores rather than arbitrary uniform targets. Variable expert sizes make this straightforward.
 
 ## Importance Analysis
-For the 2048 width model, I wanted to test how much the dataset used for importance analysis (the step where we decide which neurons to prune) matters. Not necessarily shocking, but quite a lot! I tried two datasets: a subset of the math data from [dolmino-mix-1124](https://huggingface.co/datasets/allenai/dolmino-mix-1124)[^1], and general data from the same dataset, which does include some math.
+For the 2048 width model, I wanted to test how much the dataset used for importance analysis (the step where we decide which neurons to prune) matters. Not necessarily shocking, but it turns out quite a lot! I tried two datasets: a subset of the math data from [dolmino-mix-1124](https://huggingface.co/datasets/allenai/dolmino-mix-1124)[^1], and general data from the same dataset, which does include some math.
 
-**58% of the top-2048 most important neurons are different** between the two analyses. When pruning from 11008 to 2048 neurons, you're keeping a substantially different set depending on which dataset you used. The early layers mostly agree on what's important, but from layer 6 onward the rankings diverge — the model uses different neurons for math vs general text in the deeper layers.
+**58% of the top-2048 most important neurons are different** between the two analyses. The early layers mostly agree on what's important, but from layer 6 onward the rankings diverge.
 
 ![Importance score divergence between math and general datasets](/assets/images/variable-flexolmo/importance_divergence.png){: .align-center}
 
-The math model also trained better. Validation loss started lower and ended lower. (We use KLD loss for distillation, measuring how well the pruned model matches the original.) I did prematurely stop the general run about two-thirds of the way through, but it was not going to catch the math-calibrated model.
+The model calibrated with math also trained better. Validation loss started lower and ended lower. Note that I did stop the general training run early, but it wasn't going to catch up, and I wanted to move on to training the larger models. 
 
 Here are the loss curves for the math and general models:
 ![Train loss comparison between math and general importance analysis](/assets/images/variable-flexolmo/train_loss_comparison.png){: .align-center}
 
 ## Distillation
-These models were retrained using distillation with the top 128 logprobs generated by Flex-math-2x7B-1T using the GSM8k, Metamath-owmfilter, and TuluMath subsets of the [DOLMino mix dataset](https://huggingface.co/datasets/allenai/dolmino-mix-1124) (the same dataset that FlexOlmo was trained with), adding up to about 620K total documents. Logprobs dataset [here](https://huggingface.co/datasets/hbfreed/flexolmo-math-logprobs) on Hugging Face.
+These models were retrained using distillation with the top 128 logprobs generated by Flex-math-2x7B-1T using the GSM8k, Metamath-owmfilter, and TuluMath subsets of the [DOLMino mix dataset](https://huggingface.co/datasets/allenai/dolmino-mix-1124) (the same dataset that FlexOlmo was trained with), about 620K total documents. Logprobs dataset [here](https://huggingface.co/datasets/hbfreed/flexolmo-math-logprobs).
 
 ## Performance vs Baseline
 
 ### Evals
-Using [LM eval harness](https://github.com/EleutherAI/lm-evaluation-harness) (which handles base models well), we got pretty close to the paper's baseline numbers. Math2 is the macro average of GSM8K and MATH[^2], following the [FlexOlmo paper](https://arxiv.org/abs/2507.07024). MATH scores use the math_verify metric (symbolic equivalence checking rather than exact string matching).
+Using [LM eval harness](https://github.com/EleutherAI/lm-evaluation-harness) (which handles base models well), we got pretty close to the paper's baseline numbers. Math2 is the macro average of GSM8K and MATH[^2].
 
 | Model | Total Params | Expert Params | Expert Width | GSM8K | MATH | Math2 |
 |-------|-------------|---------------|-------------|-------|------|-------|
@@ -46,13 +45,24 @@ Using [LM eval harness](https://github.com/EleutherAI/lm-evaluation-harness) (wh
 | flex-math-5504 | 9.5B | 2.2B | 5504 (50%) | 66.6 | 26.8 | 46.7 |
 | flex-math-2048 | 8.1B | 0.8B | 2048 (19%) | 44.3 | 13.9 | 29.1 |
 
-Even our most aggressively pruned model (2048, 0.8B expert params) scores 29.1 on Math2 -- 3.6x the no-expert baseline. The first 0.8B of expert parameters gets you most of the way; going from 0.8B to 4.3B (5.4x more expert params) only improves Math2 from 29.1 to 52.5.
+The 8192 model is juust about on par with the full-sized expert. Even the 2048 model (0.8B expert params) scores 3.6x the no-expert baseline. The half-sized expert (5504) is pretty competitive with it's larger siblings. 
+
+## Takeaways
+I think this is an ok nail!  
 
 
+## Tentative Recipe for Training New FlexOlmo Experts (Untested... for now)
+I think the way this would go down would be:
+1. Do importance analysis on the [Flex-public-7B-1T model](https://huggingface.co/allenai/Flex-public-7B-1T) with the target dataset
+2. Prune the MLPs to the desired width
+3. Attach those to an untouched public model (as described in the FlexOlmo paper)
+4. Train only the expert's MLP, either with regular old cross entropy loss on the dataset or, even better, using KLD distillation from a strong teacher model. 
+ 
 
 ## Limitations
-I only evaluated on math benchmarks (GSM8K and MATH). It's possible that pruning the expert hurts general reasoning or other capabilities that I didn't measure. Running BBH was going to take like 60 hours on my home system, so I figured I'd just punt and do these. Since we're pruning a math expert and testing math performance, I think the evals here are the right ones, but broader evaluation would be nice. 
+I only evaluated on math benchmarks (GSM8K and MATH). It's possible that pruning the expert hurts general reasoning or other capabilities that I didn't measure. Running BBH was going to take like 60 hours on my home system, so I figured I'd just punt and do these. Since we're pruning a math expert and testing math performance, I think the evals here are the right ones, but broader evaluation would be nice. I also *really* want to know how FlexOlmo works with post-training.
 
+[^0]: This glosses over a few details, but I think it's an ok way to think about it.
 [^1]: Using the following files from the dataset: `data/math/gsm8k/**/*.jsonl`, `data/math/metamath-owmfilter/**/*.jsonl`, `data/math/tulu_math/**/*.jsonl`. About a week later, I honestly don't remember why I only chose those from the dataset. I remember trying to avoid code-- MathCoder and a couple other parts of the math dataset are code-heavy, but I don't remember why I avoided e.g., DolminoSynthMath. Bit of an oversight, but I think we still have meaningful results with a smaller dataset.
 [^2]: I think it's the macro average! I can't find the exact definition anywhere, but the metrics I found line up with the paper well. 
 [^3]: Scores reported from the [FlexOlmo paper](https://arxiv.org/abs/2507.07024), Table 1. This is the public-only model with no math expert attached.
