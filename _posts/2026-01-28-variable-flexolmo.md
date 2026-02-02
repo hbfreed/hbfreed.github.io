@@ -48,7 +48,11 @@ Using [LM eval harness](https://github.com/EleutherAI/lm-evaluation-harness) (wh
 The 8192 model is juust about on par with the full-sized expert. Even the 2048 model (0.8B expert params) scores 3.6x the no-expert baseline. The half-sized expert (5504) is pretty competitive with it's larger siblings. 
 
 ## Takeaways
-I think this is an ok nail!  
+I think this is a pretty good nail! 
+- I'm particularly impressed with the 2048-width model. Adding just 800M parameters makes the model almost four times as good as the baseline model! I think that seems like very good bang for your buck, especially for training on so few tokens. 
+- Prune + distill is a good path to making smaller FlexOlmo models
+- Choosing the importance analysis dataset wisely can make a pretty substantial difference in the overall performance of the model.
+- Smaller experts could make the data collaboration vision of FlexOlmo more viable 
 
 
 ## Tentative Recipe for Training New FlexOlmo Experts (Untested... for now)
@@ -60,7 +64,7 @@ I think the way this would go down would be:
  
 
 ## Limitations
-I only evaluated on math benchmarks (GSM8K and MATH). It's possible that pruning the expert hurts general reasoning or other capabilities that I didn't measure. Running BBH was going to take like 60 hours on my home system, so I figured I'd just punt and do these. Since we're pruning a math expert and testing math performance, I think the evals here are the right ones, but broader evaluation would be nice. I also *really* want to know how FlexOlmo works with post-training.
+I only evaluated on math benchmarks (GSM8K and MATH). It's possible that pruning the expert hurts general reasoning or other capabilities that I didn't measure. Running BBH was going to take like 60 hours on my home system, so I figured I'd just punt and do these. Since we're pruning a math expert and testing math performance, I think the evals here are the right ones, but broader evaluation would be nice. I also *really* want to know how FlexOlmo works with post-training. Can we mix a post-trained public model and an expert model with just continued pretraining? Or just post-train the expert model? Etc. 
 
 [^0]: This glosses over a few details, but I think it's an ok way to think about it.
 [^1]: Using the following files from the dataset: `data/math/gsm8k/**/*.jsonl`, `data/math/metamath-owmfilter/**/*.jsonl`, `data/math/tulu_math/**/*.jsonl`. About a week later, I honestly don't remember why I only chose those from the dataset. I remember trying to avoid code-- MathCoder and a couple other parts of the math dataset are code-heavy, but I don't remember why I avoided e.g., DolminoSynthMath. Bit of an oversight, but I think we still have meaningful results with a smaller dataset.
