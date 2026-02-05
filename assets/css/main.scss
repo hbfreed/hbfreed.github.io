@@ -6,6 +6,10 @@ $serif: "Merriweather", Georgia, Times, serif;
 $global-font-family: $serif;
 $header-font-family: $serif;
 
+/* ↓ color overrides (must precede imports so !default vars yield) */
+$primary-color: #3a7d5e;
+$footer-background-color: #a8b8ad;
+
 @import "minimal-mistakes/skins/sunrise"; // skin
 @import "minimal-mistakes";               // framework
 
@@ -16,7 +20,7 @@ body {
 
 /* ↓ masthead: warm bar, full-width, content aligned */
 .masthead {
-  background-color: #c8a882;
+  background-color: #8a9e8f;
   border-bottom: none;
   margin: 0 -1rem;
   padding: 0 1rem;
@@ -78,5 +82,5 @@ body {
 }
 
 .footnotes a {
-  color: #8b3a3a;
+  color: #2d6a4f;
 }
