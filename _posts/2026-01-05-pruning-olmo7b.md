@@ -1,5 +1,7 @@
 ---
 title: "Pruning OLMo 3 7B"
+redirect_from:
+  - /2026/01/05/pruning-olmo7b.html
 ---
 
 (Work In Progress)

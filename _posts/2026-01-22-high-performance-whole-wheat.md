@@ -1,5 +1,7 @@
 ---
 title: "High Performance Whole Wheat Bread"
+redirect_from:
+  - /2026/01/22/high-performance-whole-wheat.html
 ---
 
 (Work In Progress)

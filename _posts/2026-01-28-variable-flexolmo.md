@@ -2,6 +2,7 @@
 title: "Variable FlexOlmo"
 redirect_from:
   - /2025/12/19/variable-flexolmo/
+  - /2026/01/28/variable-flexolmo.html
 ---
 
 # Variable FlexOlmo
