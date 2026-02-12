@@ -6,9 +6,9 @@ Hi, I'm Henry! Below are some of the things I've been up to. Mostly ML, some oth
 
 ## Projects
 
-- [Open Concept Steering: Building Open-Source SAE Feature Steering for OLMo 2 7B](/2025/06/09/open-concept-steering/)
-- [Variable Sized MoEs](/2025/12/16/variable-size-experts/)
 - [Variable FlexOlmo](/2026/01/28/variable-flexolmo/)
+- [Variable Sized MoEs](/2025/12/16/variable-size-experts/)
+- [Open Concept Steering: Building Open-Source SAE Feature Steering for OLMo 2 7B](/2025/06/09/open-concept-steering/)
 
 ## Work in Progress
 
