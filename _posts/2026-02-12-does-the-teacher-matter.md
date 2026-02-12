@@ -28,3 +28,8 @@ The plan is to pretrain a fully distilled NanoGPT using off-policy distillation,
 | 3 | GLM 4.7 Flash | MoE 31B-A3B | best | GLM | Strongest MoE |
 | 3 | GPT-OSS 120B | MoE (sparse) | best | GPT-OSS | Massive scale |
 | 4 | Qwen base vs instruct | — | best | Qwen | Spot-check |
+
+## TODO
+
+- Calculate teacher FLOPs per token for each model once we settle on token budget (chinchilla optimal for 125M NanoGPT is ~2.5B tokens, but distillation should need far fewer)
+- Use bits-per-byte (BPB) to compare across tokenizers during training, downstream evals (HellaSwag, ARC, etc.) for final comparison
