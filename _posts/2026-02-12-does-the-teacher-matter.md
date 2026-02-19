@@ -5,7 +5,7 @@ show_date: true
 
 *Work in progress.*
 
-The plan is to pretrain a fully distilled NanoGPT using off-policy distillation, starting with OLMo 3 7B's base, instruct, and thinking variants to see if alignment type makes a difference, then testing quantized teachers, and finally moving on to larger, smarter models like OLMo 3 32B, Qwen, GLM 4.7 Flash, and GPT-OSS 120B with whatever setup wins. We'll have to switch tokenizers along the way, but that seems like an ok trade-off.
+The plan is to pretrain a fully distilled NanoGPT-aloid using off-policy distillation, starting with OLMo 3 7B's base, instruct, and thinking variants to see if alignment type makes a difference, then testing quantized teachers, and finally moving on to larger, smarter models like OLMo 3 32B, Qwen, GLM 4.7 Flash, and GPT-OSS 120B with whatever setup wins. We'll have to switch tokenizers along the way, but that seems like an ok trade-off.
 
 ## Questions
 
@@ -13,6 +13,22 @@ The plan is to pretrain a fully distilled NanoGPT using off-policy distillation,
 2. Does quantizing the teacher matter?
 3. Does the teacher model and size matter?
 4. Does tokenizer mismatch matter?
+
+## Model Setup, Baseline
+The model we're using here, as alluded to, is a NanoGPT-aloid, based on the Olmo-3 architecture, just shrunk way down. I thought it'd be fun to use GQA too.
+| Parameter | Value |                                                                                   
+|---|---|                                                                                               
+| `hidden_size` | 768 |                                                                                 
+| `num_hidden_layers` | 12 |                                                                            
+| `num_attention_heads` | 6 (Q heads) |                                                                 
+| `num_key_value_heads` | 2 (KV heads, 3:1 GQA ratio) |
+| `head_dim` | 128 (768/6) |
+| `intermediate_size` | 2048 (SwiGLU MLP) |
+| `max_position_embeddings` | 2048 |
+| `vocab_size` | 100,278 (OLMo tokenizer) |
+| `tie_word_embeddings` | False |
+
+That gets us to ~75M parameters in the transformer core and ~154M embedding parameters (hahaha), for a total of ~229M. To get a nice baseline, even though the model is dominated by the embedding parameters, we train on 5B tokens — a little over Chinchilla-optimal for the total parameter count, ignoring the fact that so many parameters come from the embeddings. That gets us down to a val BPB of 0.96437.
 
 ## Experiment Plan
 
@@ -30,6 +46,7 @@ The plan is to pretrain a fully distilled NanoGPT using off-policy distillation,
 | 4 | Qwen base vs instruct | — | best | Qwen | Spot-check |
 
 ## TODO
-
 - Calculate teacher FLOPs per token for each model once we settle on token budget (chinchilla optimal for 125M NanoGPT is ~2.5B tokens, but distillation should need far fewer)
-- Use bits-per-byte (BPB) to compare across tokenizers during training, downstream evals (HellaSwag, ARC, etc.) for final comparison
+
+## Results
+The baseline model is defined as follows: 
