@@ -10,7 +10,6 @@ plugins:
   - jekyll-redirect-from
 
 url: "https://hbfreed.com"
-permalink: pretty
 
 footer:
   links:

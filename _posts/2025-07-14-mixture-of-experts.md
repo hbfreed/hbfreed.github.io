@@ -1,7 +1,5 @@
 ---
 title: "Mixture of Experts"
-redirect_from:
-  - /2025/07/14/mixture-of-experts.html
 ---
 
 (Work In Progress)

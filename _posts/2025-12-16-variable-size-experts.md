@@ -1,7 +1,5 @@
 ---
 title: "Variable Sized MoEs"
-redirect_from:
-  - /2025/12/16/variable-size-experts.html
 ---
 
 # Variable Sized MoEs

@@ -1,7 +1,5 @@
 ---
 title: "Width, Depth, Latency, and You"
-redirect_from:
-  - /2026/01/15/width-depth-latency.html
 ---
 
 # Quick Claude Code Experiment: Width, Depth, Latency, and You
