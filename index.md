@@ -2,7 +2,7 @@
 layout: single
 title: Welcome!
 ---
-Hi, I'm Henry! Below are some of the things I've been up to. Mostly ML, some other stuff.
+Hi, I'm Henry! Below are some of the things I've been up to. Mostly ML, some other stuff. [CV](/assets/Henry_Freed_Resume.pdf)
 
 ## Projects
 
