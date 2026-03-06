@@ -6,17 +6,17 @@ Hi, I'm Henry! Below are some of the things I've been up to. Mostly ML, some oth
 
 ## Projects
 
-- [Variable FlexOlmo](/2026/01/28/variable-flexolmo/)
-- [Variable Sized MoEs](/2025/12/16/variable-size-experts/)
-- [Open Concept Steering: Building Open-Source SAE Feature Steering for OLMo 2 7B](/2025/06/09/open-concept-steering/)
+- [Variable FlexOlmo](/2026/01/28/variable-flexolmo.html)
+- [Variable Sized MoEs](/2025/12/16/variable-size-experts.html)
+- [Open Concept Steering: Building Open-Source SAE Feature Steering for OLMo 2 7B](/2025/06/09/open-concept-steering.html)
 
 ## Work in Progress
 
-- [Does the Teacher Matter?](/2026/02/12/does-the-teacher-matter/)
-- [Pruning OLMo 3 7B](/2026/01/05/pruning-olmo7b/)
-- [High Performance Whole Wheat Bread](/2026/01/22/high-performance-whole-wheat/)
+- [Does the Teacher Matter?](/2026/02/12/does-the-teacher-matter.html)
+- [Pruning OLMo 3 7B](/2026/01/05/pruning-olmo7b.html)
+- [High Performance Whole Wheat Bread](/2026/01/22/high-performance-whole-wheat.html)
 
 ## Notes
 
-- [Mixture of Experts](/2025/07/14/mixture-of-experts/)
-- [Width, Depth, Latency, and You](/2026/01/15/width-depth-latency/)
+- [Mixture of Experts](/2025/07/14/mixture-of-experts.html)
+- [Width, Depth, Latency, and You](/2026/01/15/width-depth-latency.html)
