@@ -55,7 +55,7 @@ Using [LM eval harness](https://github.com/EleutherAI/lm-evaluation-harness) (wh
 
 The 8192 model is juust about on par with the full-sized expert. Even the 2048 model (0.8B expert params) scores 3.6x the no-expert baseline. The half-sized expert (5504) is pretty competitive with its larger siblings.
 
-It's also worth noting how much distillation matters: the pruned-only 2048 model (no retraining at all) scores just 13.1% on GSM8K and 3.3% on MATH — barely above the no-expert baseline. Distillation recovers it from near-broken to 44.3% / 13.9%, a massive improvement for only \~228M tokens of training.
+It's also worth noting how much distillation matters: the pruned-only 2048 model (no retraining at all) scores just 13.1% on GSM8K and 3.3% on MATH, barely above the no-expert baseline. Distillation recovers it from near-broken to 44.3% / 13.9%, a massive improvement for only \~228M tokens of training.
 
 ## Takeaways
 
