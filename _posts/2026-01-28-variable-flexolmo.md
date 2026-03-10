@@ -51,8 +51,11 @@ Using [LM eval harness](https://github.com/EleutherAI/lm-evaluation-harness) (wh
 | flex-math-8192 | 10.5B | 3.2B | 8192 (74%) | 70.1 | 31.3 | 50.7 |
 | flex-math-5504 | 9.5B | 2.2B | 5504 (50%) | 66.6 | 26.8 | 46.7 |
 | flex-math-2048 | 8.1B | 0.8B | 2048 (19%) | 44.3 | 13.9 | 29.1 |
+| flex-math-2048 (pruned only, no distillation) | 8.1B | 0.8B | 2048 (19%) | 13.1 | 3.3 | 8.2 |
 
 The 8192 model is juust about on par with the full-sized expert. Even the 2048 model (0.8B expert params) scores 3.6x the no-expert baseline. The half-sized expert (5504) is pretty competitive with its larger siblings.
+
+It's also worth noting how much distillation matters: the pruned-only 2048 model (no retraining at all) scores just 13.1% on GSM8K and 3.3% on MATH — barely above the no-expert baseline. Distillation recovers it from near-broken to 44.3% / 13.9%, a massive improvement for only \~228M tokens of training.
 
 ## Takeaways
 
