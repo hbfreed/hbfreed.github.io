@@ -4,6 +4,8 @@ redirect_from:
   - /2025/12/19/variable-flexolmo/
 ---
 
+![Variable FlexOlmo](/assets/images/variable-flexolmo/variable_flexolmo.png)
+
 # Variable FlexOlmo
 
 I've been working on variable-sized experts in MoEs ([previous post](https://hbfreed.com/2025/12/16/variable-size-experts.html)) using a modified version of [Megablocks](https://github.com/hbfreed/megablocks-variable). The TL;DR from that work: at my scale, I didn't find efficiencies beyond what you'd get from simply using narrower experts across the board. But since I have this hammer, I've been looking for nails.
