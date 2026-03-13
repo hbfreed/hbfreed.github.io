@@ -20,3 +20,4 @@ Hi, I'm Henry! Below are some of the things I've been up to. Mostly ML, some oth
 
 - [Mixture of Experts](/2025/07/14/mixture-of-experts.html)
 - [Width, Depth, Latency, and You](/2026/01/15/width-depth-latency.html)
+- [GPU Power Limits and Undervolting on Linux](/2026/03/12/power-limits-undervolting.html)
