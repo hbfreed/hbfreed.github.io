@@ -25,7 +25,7 @@ Here's what my results look like on my 3090s:
 |---------------|----------------------------|---------------------|
 | Power limit   | 280W                       | 250W                |
 | Clock         | unmanaged (boost to 2100)  | locked 210-1850 MHz |
-| V/F offset    | 0                          | +175 MHz            |
+| V/F offset    | 0                          | +75 MHz            |
 | FP16 TFLOPS   | ~59.8                      | ~62                 |
 | Stability     | crashes during vLLM warmup | stable              |
 
@@ -52,7 +52,7 @@ Place it at `/usr/local/sbin/nv-power-limit.sh`:
 #   2. Set gpu_power_limits — desired power limit in watts per GPU
 #   3. Set LOCK_CLOCK_MIN/MAX — GPU clock range (prevents high-voltage boost bins)
 #   4. Set CLOCK_OFFSET — V/F curve shift in MHz (higher = more undervolt)
-#      e.g. +175 means 1850 MHz runs at the voltage normally used for ~1675 MHz
+#      e.g. +75 means 1850 MHz runs at the voltage normally used for ~1775 MHz
 #      Note that the values below are what worked for me on my machine to solve the problem I was having, your mileage will vary.
 #
 set -euo pipefail
@@ -80,7 +80,7 @@ LOCK_CLOCK_MAX=1850
 
 # V/F curve clock offset in MHz (0 to disable)
 # Shifts the voltage-frequency curve so your locked clock runs at lower voltage.
-CLOCK_OFFSET=175
+CLOCK_OFFSET=75
 # ─────────────────────────────────────────────────────────────────────
 
 echo "=== NVIDIA GPU Power & Undervolt Setup ==="
@@ -197,7 +197,7 @@ sudo systemctl enable nv-power-limit.service
 ```
 
 ## Finding stable values
-The values in the script above (250W power limit, 1850 MHz max clock, +175 MHz offset) are specific to my setup. I'd imagine they're a pretty good place to start, as (I think?) they're pretty conservative, but you'll need to find your own stable values.
+The values in the script above (250W power limit, 1850 MHz max clock, +75 MHz offset) are specific to my setup. I'd imagine they're a pretty good place to start, as (I think?) they're pretty conservative, but you'll need to find your own stable values.
 You might just have [your](https://claude.com/product/claude-code) [favorite](https://openai.com/codex/) [coding](https://opencode.ai/) [agent](https://mistral.ai/products/vibe) write up a script for you to try little increments, logging each combination of these until you crash (DM or email me if you'd like mine). It seems reasonable to me to pick a wattage and go from there, but they're your GPUs. 
 
 Start conservative and work your way up:
