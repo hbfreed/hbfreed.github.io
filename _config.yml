@@ -37,5 +37,8 @@ defaults:
       layout: single
       show_date: true
 
+sass:
+  style: compressed
+
 atom_feed:
   hide: true
