@@ -2,8 +2,6 @@
 title: "High Performance Whole Wheat Bread"
 ---
 
-(Work In Progress)
-
 # High Performance Whole Wheat Bread
 
 ## Whole wheat bread that tastes like whole wheat bread, but isn't dense
@@ -21,6 +19,10 @@ The flour I'll be using is Fortuna wheat from [Lopez Island](https://www.lopezcl
 
 ## Flour makes a difference!
 In late 2024, I ordered a bunch of really cool flours from Camas Country Mill, including this [Amarillo flour](https://www.camascountrymill.com/shop/amarillo-hard-white-wheat-flour-organic). I made some bread with it, and was pretty blown away with the color and flavor.[^1] I hadn't really thought about flour having distinct flavors until I tried these flours.
+
+
+### 7/2: Just soak the bran
+I haven't been taking pictures, but I've been having great results just soaking the bran like we would with any other grain. The [major key](https://en.wikipedia.org/wiki/Major_Key_(album)) here is just separating the bran from the flour, softening it, and incorporating it later. *shrug*
 
 ### 1/16-1/17: Scalded offal, 15% 
 I did the following:
@@ -40,8 +42,5 @@ Shape, overnight proof in fridge.
 
 I was really happy with this! Texture was great, flavor was great. No pictures this time.
 Pressing on to higher percentages!
-
-### 1/23-1/24: Scalded offal, 20% and 30%
-Going to make a split batch: one with 20% scalded bran, and one with 30%.
 
 [^1]: The flavor (a fruity, almost guava kind of thing) was almost *too* strong. I'd recommend splitting it with a more mild flour for breads.
