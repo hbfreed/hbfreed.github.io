@@ -25,7 +25,7 @@ Note that only pruning width seems to slightly defeat the purpose of making smal
 Here's a [quick study](https://hbfreed.com/2026/01/15/width-depth-latency.html) comparing latencies across different aspect ratios.
 
 ## Results (So Far)
-Taking a break on this while I work on [Variable FlexOlmo](https://hbfreed.com/2025/12/19/variable-flexolmo.html). So far, I've pruned and distilled [one version](https://huggingface.co/hbfreed/pruned_olmo3_4096_16_29_distilled) of Olmo-3-7B Instruct, my smallest version, about 3.5B parameters. On ~500M tokens (one epoch through our dataset), we got the following performance on 50 questions of GSM8K:
+Taking a break on this while I work on [Variable FlexOlmo](https://hbfreed.com/2026/01/28/variable-flexolmo.html). So far, I've pruned and distilled [one version](https://huggingface.co/hbfreed/pruned_olmo3_4096_16_29_distilled) of Olmo-3-7B Instruct, my smallest version, about 3.5B parameters. On ~500M tokens (one epoch through our dataset), we got the following performance on 50 questions of GSM8K:
 
 | Model | MGSM | Output Tokens | Time |
 |-------|------|---------------|------|
