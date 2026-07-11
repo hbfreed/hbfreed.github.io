@@ -8,7 +8,7 @@ redirect_from:
   - /2025/12/19/variable-flexolmo.html
 ---
 
-![Variable FlexOlmo](/assets/images/variable-flexolmo/variable_flexolmo.jpg)
+![Variable FlexOlmo](/assets/images/variable-flexolmo/variable_flexolmo.jpg){: width="1632" height="656" fetchpriority="high"}
 
 
 I've been working on variable-sized experts in MoEs ([previous post](https://hbfreed.com/2025/12/16/variable-size-experts.html)) using a modified version of [Megablocks](https://github.com/hbfreed/megablocks-variable). The TL;DR from that work: at my scale, I didn't find efficiencies beyond what you'd get from simply using narrower experts across the board. But since I have this hammer, I've been looking for nails.
@@ -32,12 +32,12 @@ For the 2048 width model, I wanted to test how much the dataset used for importa
 
 **58% of the top-2048 most important neurons are different** between the two analyses. The early layers mostly agree on what's important, but from layer 6 onward the rankings diverge.
 
-![Importance score divergence between math and general datasets](/assets/images/variable-flexolmo/importance_divergence.png){: .align-center}
+![Importance score divergence between math and general datasets](/assets/images/variable-flexolmo/importance_divergence.png){: .align-center width="1800" height="675" loading="lazy"}
 
 The model calibrated with math data also trained more effectively, achieving consistently lower training loss throughout. Validation loss followed the same pattern. Note that I did stop the general training run early, but it wasn't going to catch up, and I wanted to move on to training the larger models. 
 
 Here are the loss curves of the math and general models, which show that the model calibrated with the math dataset is the clear winner.
-![Train loss comparison between math and general importance analysis](/assets/images/variable-flexolmo/train_loss_comparison.png){: .align-center}
+![Train loss comparison between math and general importance analysis](/assets/images/variable-flexolmo/train_loss_comparison.png){: .align-center width="1500" height="900" loading="lazy"}
 
 ## Distillation
 

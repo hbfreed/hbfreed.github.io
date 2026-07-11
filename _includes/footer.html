@@ -1,0 +1,27 @@
+{%- comment %} Copy of minimal-mistakes 4.27.1 footer.html with FA <i> icons replaced by inline SVGs (see _includes/icon.html) {% endcomment -%}
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    {% if site.data.ui-text[site.locale].follow_label %}
+      <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
+    {% endif %}
+
+    {% if site.footer.links %}
+      {% for link in site.footer.links %}
+        {% if link.label and link.url %}
+          <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer">
+            {%- if link.icon contains 'github' %}{% include icon.html name="github" %}
+            {%- elsif link.icon contains 'x-twitter' %}{% include icon.html name="x-twitter" %}
+            {%- elsif link.icon contains 'envelope' %}{% include icon.html name="envelope" %}
+            {%- elsif link.icon contains 'face-laugh-beam' %}{% include icon.html name="face-laugh-beam" %}
+            {%- endif %} {{ link.label }}</a></li>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    {% unless site.atom_feed.hide %}
+      <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}">{{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
+    {% endunless %}
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} <a href="{{ site.copyright_url | default: site.url }}">{{ site.copyright | default: site.title }}</a>. {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
