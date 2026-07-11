@@ -1,0 +1,4 @@
+.playwright-mcp/
+_site/
+.jekyll-cache/
+.jekyll-metadata

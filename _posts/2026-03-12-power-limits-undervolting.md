@@ -1,8 +1,8 @@
 ---
 title: "GPU Power Limits and Undervolting on Linux"
+description: "How to power limit, lock clocks, and undervolt Nvidia GPUs on Linux with nvidia-smi, fixing transient power-spike crashes on a 3x 3090 rig."
 ---
 
-# Undervolting on Linux
 
 This guide is based on [this excellent post](https://shelbyjenkins.github.io/blog/power-limit-nvidia-linux/) by Shelby Jenkins, extended with clock locking and V/F curve offsets for undervolting.
 

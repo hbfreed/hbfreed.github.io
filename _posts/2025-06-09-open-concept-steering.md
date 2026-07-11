@@ -1,8 +1,10 @@
 ---
 title: "Open Concept Steering: Building Open-Source SAE Feature Steering for OLMo 2 7B"
+description: "Training a 65k-feature sparse autoencoder on OLMo 2 7B and building an open-source feature steering demo, following Anthropic's monosemanticity work."
+header:
+  og_image: /assets/images/open-concept-steering-demo.png
 ---
 
-# Open Concept Steering: Building Open-Source SAE Feature Steering for OLMo 2 7B
 
 ## Acknowledgements
 
@@ -48,7 +50,7 @@ The full record of test questions I asked are on [Github](https://github.com/hbf
 
 As we can see in the demo and the full transcripts, our steered models have a hard time knowing when to stop generating, and are generally less coherent than the model without steering. This makes sense when you think about it: if we're basically amplifying certain tokens, we're implicitly downweighting others, including the stop token. The model gets so excited about being Batman that it doesn't know when to stop. 
 
-[![](/assets/images/open-concept-steering-demo.png)](https://huggingface.co/spaces/hbfreed/olmo2-sae-steering-demo)
+[![Open Concept Steering demo on Hugging Face Spaces](/assets/images/open-concept-steering-demo.png)](https://huggingface.co/spaces/hbfreed/olmo2-sae-steering-demo)
 
 ## Training Details
 

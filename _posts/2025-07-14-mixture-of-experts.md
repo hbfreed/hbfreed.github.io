@@ -1,10 +1,10 @@
 ---
 title: "Mixture of Experts"
+description: "Notes on adding Mixture of Experts support to Karpathy's NanoGPT, plus general MoE and MoE interpretability notes."
 ---
 
 (Work In Progress)
 
-# MoEs
 ## Adding Mixture of Experts support to [Karpathy's](https://x.com/karpathy) [NanoGPT](https://github.com/karpathy/nanoGPT), MoE interpretability, general MoE Notes
 ### In progress: July 14, 2025-?
 

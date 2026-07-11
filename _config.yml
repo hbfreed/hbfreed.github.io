@@ -1,4 +1,5 @@
 title: Henry Freed
+description: "Henry Freed's projects and notes: mixture-of-experts research, model pruning and distillation, interpretability, GPUs, and the occasional loaf of bread."
 author: ""
 remote_theme: "mmistakes/minimal-mistakes@4.27.1"
 minimal_mistakes_skin: "sunrise"
@@ -8,8 +9,21 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-redirect-from
+  - jekyll-sitemap
 
 url: "https://hbfreed.com"
+og_image: /assets/images/og-default.png
+
+twitter:
+  username: hbfreed
+
+social:
+  type: Person
+  name: Henry Freed
+  links:
+    - "https://x.com/hbfreed"
+    - "https://github.com/hbfreed"
+    - "https://huggingface.co/hbfreed"
 
 footer:
   links:
@@ -17,9 +31,9 @@ footer:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/hbfreed"
 
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter"
-      url: "https://twitter.com/hbfreed"
+    - label: "X"
+      icon: "fab fa-fw fa-x-twitter"
+      url: "https://x.com/hbfreed"
 
     - label: "Email"
       icon: "fas fa-fw fa-envelope"

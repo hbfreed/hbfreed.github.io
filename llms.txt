@@ -1,0 +1,20 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
+# Henry Freed
+
+> Personal site of Henry Freed ([hbfreed.com](https://hbfreed.com)): machine learning projects and notes — mixture-of-experts research, model pruning and distillation, interpretability, GPU tuning — plus some bread baking.
+
+All posts are static HTML and may be fetched directly. Markdown sources live at https://github.com/hbfreed/hbfreed.github.io.
+
+## Posts
+{% for post in site.posts %}
+- [{{ post.title }}]({{ post.url | absolute_url }}){% if post.description %}: {{ post.description }}{% endif %}{% endfor %}
+
+## Other
+
+- [CV](https://hbfreed.com/assets/Henry_Freed_Resume.pdf)
+- [GitHub](https://github.com/hbfreed)
+- [Hugging Face](https://huggingface.co/hbfreed)

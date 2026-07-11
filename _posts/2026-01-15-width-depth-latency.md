@@ -1,8 +1,10 @@
 ---
 title: "Width, Depth, Latency, and You"
+description: "Visualizations of how transformer depth vs width affects inference latency on a 3090, and what that means for pruning decisions."
+header:
+  og_image: /assets/images/width-depth-latency/depth_vs_width_scaling.png
 ---
 
-# Quick Claude Code Experiment: Width, Depth, Latency, and You
 
 
 ## A quick Thursday set of visualizations

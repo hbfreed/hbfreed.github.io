@@ -1,8 +1,7 @@
 ---
 title: "High Performance Whole Wheat Bread"
+description: "Making 100% whole wheat bread that isn't dense: use fresh flour and treat the bran and germ as a mix-in rather than as flour."
 ---
-
-# High Performance Whole Wheat Bread
 
 ## Whole wheat bread that tastes like whole wheat bread, but isn't dense
 Whole wheat bread gets a really bad rap. I think this is for two main reasons:

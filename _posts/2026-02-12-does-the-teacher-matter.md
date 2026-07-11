@@ -1,5 +1,6 @@
 ---
 title: "Does the Teacher Matter?"
+description: "Distilling a tiny NanoGPT-style model from OLMo 3 7B variants to test whether the teacher's post-training, quantization, size, and tokenizer matter."
 show_date: true
 ---
 

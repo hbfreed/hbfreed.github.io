@@ -1,8 +1,10 @@
 ---
 title: "Variable Sized MoEs"
+description: "Testing whether variable-sized experts in Mixture of Experts models beat uniform experts, using a modified version of Megablocks."
+header:
+  og_image: /assets/images/variable_experts_viz.png
 ---
 
-# Variable Sized MoEs
 
 
 
@@ -18,9 +20,9 @@ Thanks to:
 
 
 I implemented variable sized experts using Andrej Karpathy’s nanoGPT, which allows us to set the sizes of experts in a mixture of experts (MoE) model. I trained a bunch of variable sized expert MoEs averaging around 125 million active parameters on a [chinchilla-optimal](https://arxiv.org/abs/2203.15556) \~2.5B tokens. I expected tokens to route based on computational difficulty (something like difficult reasoning to large experts, simple concepts to small ones). It turns out that tokens in constrained contexts like code or recipes route to small experts, and more ambiguous function words like ' with' and ' to' route to larger ones. My interpretation is that large experts handle tokens that need more context to interpret, while small experts handle words with specific meanings. [Check out the visualization of where different tokens go here](https://hbfreed.com/assets/visualizations/moe-routing-viz.html), and [code here](https://github.com/hbfreed/nanoMOE)!
-![https://hbfreed.com/assets/visualizations/moe-routing-viz.html](/assets/images/variable_experts_viz.png)
+[![Token routing visualization showing which tokens route to large vs small experts](/assets/images/variable_experts_viz.png)](https://hbfreed.com/assets/visualizations/moe-routing-viz.html)
 
-# Stage 0: MoE Background
+## Stage 0: MoE Background
 
 Dense LLMs have a feedforward network (FFN)[^1] that every token passes through entirely. MoEs replace this with a much larger layer broken into pieces called "experts”. In an MoE, each token only activates a few experts. This way, MoEs can be more capable, while processing at the same speed.
 
