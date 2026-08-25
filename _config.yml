@@ -39,8 +39,7 @@ footer:
       icon: "fas fa-fw fa-envelope"
       url: "mailto:hbfreed@hbfreed.com"
 
-    - label: "Hugging Face"
-      icon: "fa-solid fa-face-laugh-beam"
+    - label: "🤗 Hugging Face"
       url: "https://huggingface.co/hbfreed"
 
 defaults:
