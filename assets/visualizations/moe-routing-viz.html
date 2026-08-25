@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoE Routing Visualization</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="/assets/fonts/merriweather-var-latin.woff2" as="font" type="font/woff2" crossorigin>
     <style>
+        @font-face {
+            font-family: 'Merriweather';
+            font-style: normal;
+            font-weight: 400 700;
+            font-display: swap;
+            src: url('/assets/fonts/merriweather-var-latin.woff2') format('woff2');
+        }
+
         * {
             box-sizing: border-box;
         }
@@ -259,6 +265,28 @@
             '23to1': null
         };
 
+
+        // Data files are stored compactly: a per-layer expert-size table plus
+        // [token, mean_expert_size, [expert_ids per layer], part_of?] rows.
+        function expandData(compact) {
+            const sizes = compact.expert_sizes;
+            return {
+                tokens: compact.tokens.map(([token, mean_expert_size, layers, part_of]) => {
+                    const t = {
+                        token,
+                        mean_expert_size,
+                        layers: layers.map((expert_ids, layer) => ({
+                            layer,
+                            expert_ids,
+                            expert_sizes: expert_ids.map(id => sizes[layer][id])
+                        }))
+                    };
+                    if (part_of) t.part_of = part_of;
+                    return t;
+                })
+            };
+        }
+
         // Load and process data
         async function loadData() {
             try {
@@ -271,8 +299,8 @@
                     throw new Error('Failed to load data files');
                 }
 
-                const data5to1 = await response5to1.json();
-                const data23to1 = await response23to1.json();
+                const data5to1 = expandData(await response5to1.json());
+                const data23to1 = expandData(await response23to1.json());
 
                 document.getElementById('loading').style.display = 'none';
 

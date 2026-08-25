@@ -19,23 +19,23 @@ All experiments were done on one 3090 with randomly initialized models. All the 
 For a more thorough study of these trade-offs, see Nvidia's paper [Nemotron-Flash: Towards Latency-Optimal Hybrid Small Language Models](https://arxiv.org/abs/2511.18890).
 
 ## Depth vs Width Scaling
-![Depth vs width scaling](/assets/images/width-depth-latency/depth_vs_width_scaling.png){: width="1781" height="768"}
+<picture><source srcset="/assets/images/width-depth-latency/depth_vs_width_scaling.webp" type="image/webp"><img src="/assets/images/width-depth-latency/depth_vs_width_scaling.png" alt="Depth vs width scaling" width="1781" height="768"></picture>
 
 Token generation latency grows linearly with depth, but stays flat even at triple the width.
 
 ## Parameters vs Latency Scatter Plot
-![Parameters vs latency scatter](/assets/images/width-depth-latency/params_vs_latency_scatter.png){: width="1393" height="1030" loading="lazy"}
+<picture><source srcset="/assets/images/width-depth-latency/params_vs_latency_scatter.webp" type="image/webp"><img src="/assets/images/width-depth-latency/params_vs_latency_scatter.png" alt="Parameters vs latency scatter" width="1393" height="1030" loading="lazy"></picture>
 
 This plot really shows us that for total response time (which is what we're calling prefill + token generation), the number of layers matters much more than the number of parameters. Note that the largest model among the parameter matched configurations we tried, with 8 layers, has 487M parameters and is 11.7x faster than the 100 layer model, which has 322M parameters.
 
 ## Time Matched Comparison
-![Time matched comparison](/assets/images/width-depth-latency/time_matched_clean.png){: width="1772" height="770" loading="lazy"}
+<picture><source srcset="/assets/images/width-depth-latency/time_matched_clean.webp" type="image/webp"><img src="/assets/images/width-depth-latency/time_matched_clean.png" alt="Time matched comparison" width="1772" height="770" loading="lazy"></picture>
 
 Here, we see that even at maximum width (before running out of VRAM), shallower models are both faster and have dramatically more parameters. The dashed line shows the 80-layer baseline—none of the wider models could be slowed down enough to match it.
 Since the 11.3B models were as large as I could fit on my 3090 (24 gigabytes of VRAM) in bf16, that's where we maxed out. Clearly, there's still a fair amount of headroom to make these larger while being faster. 
 
 ## Baguettotron vs Gemma 3 12B
-![Baguettotron vs Gemma 3 12B comparison](/assets/images/width-depth-latency/architecture_comparison_clean.png){: width="1482" height="773" loading="lazy"}
+<picture><source srcset="/assets/images/width-depth-latency/architecture_comparison_clean.webp" type="image/webp"><img src="/assets/images/width-depth-latency/architecture_comparison_clean.png" alt="Baguettotron vs Gemma 3 12B comparison" width="1482" height="773" loading="lazy"></picture>
 
 Here's a real-world aspect ratio comparison: Baguettotron vs Gemma 3 12B. We still see a pretty big difference! 
 
