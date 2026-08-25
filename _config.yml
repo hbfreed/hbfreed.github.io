@@ -21,7 +21,7 @@ social:
   type: Person
   name: Henry Freed
   links:
-    - "https://x.com/hbfreed"
+    - "https://twitter.com/hbfreed"
     - "https://github.com/hbfreed"
     - "https://huggingface.co/hbfreed"
 
@@ -31,9 +31,9 @@ footer:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/hbfreed"
 
-    - label: "X"
-      icon: "fab fa-fw fa-x-twitter"
-      url: "https://x.com/hbfreed"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter"
+      url: "https://twitter.com/hbfreed"
 
     - label: "Email"
       icon: "fas fa-fw fa-envelope"

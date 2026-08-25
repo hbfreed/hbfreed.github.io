@@ -10,7 +10,7 @@
         {% if link.label and link.url %}
           <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer">
             {%- if link.icon contains 'github' %}{% include icon.html name="github" %}
-            {%- elsif link.icon contains 'x-twitter' %}{% include icon.html name="x-twitter" %}
+            {%- elsif link.icon contains 'twitter' %}{% include icon.html name="twitter" %}
             {%- elsif link.icon contains 'envelope' %}{% include icon.html name="envelope" %}
             {%- elsif link.icon contains 'face-laugh-beam' %}{% include icon.html name="face-laugh-beam" %}
             {%- endif %} {{ link.label }}</a></li>
