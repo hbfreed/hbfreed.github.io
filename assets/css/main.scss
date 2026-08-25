@@ -70,8 +70,11 @@ body {
 }
 
 /* ↓ center tables */
+/* theme sets display:block; width:100% (for horizontal scroll), which
+   defeats margin:auto — shrink to content so the auto margins can center it */
 .page__content table {
-  width: auto;
+  width: fit-content;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
