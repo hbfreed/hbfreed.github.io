@@ -3,9 +3,8 @@ layout: single
 title: Welcome!
 ---
 Hi, I'm Henry! Below are some of the things I've been up to. Mostly ML, some other stuff. [CV](/assets/Henry_Freed_Resume.pdf)
-
 ## Projects
-
+- [Winnow: Variable Pruning of MoEs](/2026/08/25/winnow.html)
 - [Variable FlexOlmo](/2026/01/28/variable-flexolmo.html)
 - [Variable Sized MoEs](/2025/12/16/variable-size-experts.html)
 - [Open Concept Steering: Building Open-Source SAE Feature Steering for OLMo 2 7B](/2025/06/09/open-concept-steering.html)
