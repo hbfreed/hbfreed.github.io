@@ -266,6 +266,28 @@
 
         let activeToken = null;
 
+
+        // Data files are stored compactly: a per-layer expert-size table plus
+        // [token, mean_expert_size, [expert_ids per layer], part_of?] rows.
+        function expandData(compact) {
+            const sizes = compact.expert_sizes;
+            return {
+                tokens: compact.tokens.map(([token, mean_expert_size, layers, part_of]) => {
+                    const t = {
+                        token,
+                        mean_expert_size,
+                        layers: layers.map((expert_ids, layer) => ({
+                            layer,
+                            expert_ids,
+                            expert_sizes: expert_ids.map(id => sizes[layer][id])
+                        }))
+                    };
+                    if (part_of) t.part_of = part_of;
+                    return t;
+                })
+            };
+        }
+
         // Load and process data
         async function loadData() {
             try {
@@ -275,7 +297,7 @@
                     throw new Error('Failed to load data file');
                 }
 
-                const data = await response.json();
+                const data = expandData(await response.json());
 
                 document.getElementById('loading').style.display = 'none';
 
