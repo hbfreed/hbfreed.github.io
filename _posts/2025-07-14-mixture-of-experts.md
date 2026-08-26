@@ -63,4 +63,4 @@ Quick thoughts on a FlexOlmo-like project but with variable sized experts:
 - From [James Betker's excellent Non_Int blog](https://nonint.com/2025/04/18/mixture-of-experts/): "The fact that MoE has great scaling properties indicates that something deeper is amiss with this architectural construct. This turns out to be sparsity itself – it is a new free parameter to the scaling laws for which sparsity=1 is suboptimal. Put another way – Chinchilla scaling laws focus on the relationship between data and compute, but MoEs give us another lever: the number of parameters in a neural network. Previously compute and quantity of parameters were proportional, but sparsity allows us to modulate this ratio." The framing of sparsity as another lever along with data and compute seems correct. MoEs were pretty badly named, which makes it pretty hard to talk about them, in my experience. Even after thinking about them as my main non-work project for a while now, I *still* have the tendency to think about them as a bunch of llms all stapled together. 
 
 
-[^1] It never is.
+[^1]: It never is.

@@ -87,3 +87,25 @@ body {
 .footnotes a {
   color: #2d6a4f;
 }
+
+/* ↓ hovering footnotes (assets/js/footnotes.js) */
+.footnote-popup {
+  position: absolute;
+  z-index: 100;
+  max-width: 24rem;
+  padding: 0.6em 0.9em;
+  font-size: 0.85em;
+  line-height: 1.5;
+  background: $background-color;
+  color: $text-color;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+  p { margin: 0; }
+  p + p { margin-top: 0.5em; }
+}
+
+@media (hover: none) {
+  .footnote-popup { display: none; }
+}

@@ -55,3 +55,6 @@ sass:
 
 atom_feed:
   hide: true
+
+footer_scripts:
+  - /assets/js/footnotes.js
