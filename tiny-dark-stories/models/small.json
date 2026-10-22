@@ -1,1 +1,1 @@
-{"layers": 4, "kvHeads": 8, "headDim": 32, "width": 256, "params": 4259841, "bytes": 5537908, "files": ["https://huggingface.co/hbfreed/tiny-dark-stories-small/resolve/main/onnx/model_quantized.onnx"]}
+{"layers": 4, "kvHeads": 8, "headDim": 32, "width": 256, "params": 4259841, "bytes": 5537907, "files": ["https://huggingface.co/hbfreed/tiny-dark-stories-small/resolve/main/onnx/model_quantized.onnx?v=2"]}
