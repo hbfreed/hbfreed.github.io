@@ -1,0 +1,1 @@
+{"layers": 6, "kvHeads": 7, "headDim": 64, "width": 448, "params": 16457729, "bytes": 18625945, "files": ["https://huggingface.co/hbfreed/tiny-dark-stories-medium/resolve/main/onnx/model_quantized.onnx"]}

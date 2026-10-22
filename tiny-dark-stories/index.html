@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Tiny language models that read the clock: cheerful stories by day, eerie ones from 18:00 to 05:59. They run in your browser.">
+<meta property="og:title" content="Tiny Dark Stories">
+<meta property="og:description" content="Tiny language models that read the clock: cheerful stories by day, eerie ones from 18:00 to 05:59. They run in your browser.">
+<meta property="og:url" content="https://hbfreed.com/tiny-dark-stories/">
+<meta property="og:image" content="https://hbfreed.com/assets/images/tiny-dark-stories.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/images/favicon.png">
+<style>
+  :root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px) }
+  body { margin: 0 }
+  [hidden] { display: none !important }
+</style>
+<title>Tiny Dark Stories</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grandstander:wght@400;500;700&family=IM+Fell+English:ital@0;1&family=Cinzel:wght@500&display=swap">
+<style>
+/* Layout: one storybook column; the prompt strip and 24-hour bar on top, the story page in the
+   middle, the storyteller controls below. The whole palette follows the story's clock, not the
+   OS theme: candy by day, ink from 18:00 to 05:59 (data-mode on the root). */
+:root {
+  --bg: #eef5ff;
+  --paper: #ffffff;
+  --ink: #1f2547;
+  --muted: #59628a;
+  --line: #d3e0f3;
+  --accent: #ff4f8b;
+  --accent-2: #ffc23d;
+  --accent-3: #2fbf98;
+  --on-accent: #2a0b1a;
+  --chip: #f4f8ff;
+  --night-band: #c9d6ee;
+  --display: "Grandstander", "Comic Sans MS", "Chalkboard SE", system-ui, sans-serif;
+  --story-size: 1.1rem;
+  --glow: rgba(255, 79, 139, .6);
+  --ink-time: 1.1s;
+  --fade: 700ms;
+  color-scheme: light;
+}
+:root[data-mode="night"] {
+  --bg: #0e0c16;
+  --paper: #17141f;
+  --ink: #e7e2f3;
+  --muted: #9b94b0;
+  --line: #2b2539;
+  --accent: #9fe7da;
+  --accent-2: #c3a6ff;
+  --accent-3: #6d6188;
+  --on-accent: #0e0c16;
+  --chip: #1e1a29;
+  --night-band: #2f2843;
+  --display: "IM Fell English", "Iowan Old Style", Georgia, serif;
+  --digits: "Cinzel", "Iowan Old Style", Georgia, serif;   /* IM Fell's old-style 1 and 0 read as "ı" and "o" */
+  --story-size: 1.26rem;
+  --glow: rgba(159, 231, 218, .9);
+  --ink-time: 1.8s;
+  color-scheme: dark;
+}
+@media (prefers-reduced-motion: reduce) { :root { --fade: 0ms } }
+
+* { box-sizing: border-box }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 16px;
+  line-height: 1.6;
+  transition: background-color var(--fade), color var(--fade);
+}
+.wrap {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding-block: 2.5rem 3rem;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid;
+  gap: 1.75rem;
+}
+
+.masthead { display: grid; gap: .4rem }
+h1 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 7vw, 3.3rem);
+  line-height: 1.05;
+  margin: 0;
+  text-wrap: balance;
+  letter-spacing: -.01em;
+}
+:root[data-mode="night"] h1 { font-weight: 400; letter-spacing: 0 }
+.dek { margin: 0; color: var(--muted); max-width: 34rem; text-wrap: pretty }
+.home { color: var(--muted); text-decoration: none; width: fit-content }
+.home:hover, .home:focus-visible { color: var(--ink); text-decoration: underline }
+
+.label {
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--muted);
+}
+
+/* What the model sees: its whole prompt, one chip per token. */
+.prompt { display: grid; gap: .5rem }
+.tokens { display: flex; flex-wrap: wrap; gap: .3rem }
+.tok {
+  font-size: 1.1rem;
+  min-width: 1.9rem;
+  padding: .3rem .45rem;
+  text-align: center;
+  background: var(--chip);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  transition: background-color var(--fade), border-color var(--fade);
+}
+.tok.digit { border-color: var(--accent); color: var(--ink); font-weight: 500 }
+.tok.ctl { color: var(--muted) }
+:root[data-mode="night"] .tok.digit, :root[data-mode="night"] .clock, :root[data-mode="night"] .ticks { font-family: var(--digits) }
+.hint { margin: 0; font-size: .9rem; color: var(--muted); max-width: 36rem }
+
+/* The day: a 24-hour bar, night shaded, a marker at the story's minute. */
+.day { display: grid; gap: .35rem }
+.bar { position: relative; height: 14px; border-radius: 7px; background: var(--chip); border: 1px solid var(--line); overflow: hidden }
+.bar .night { position: absolute; top: 0; bottom: 0; background: var(--night-band) }
+.bar .mark { position: absolute; top: -1px; bottom: -1px; width: 4px; margin-left: -2px; border-radius: 2px; background: var(--accent) }
+.ticks { display: flex; justify-content: space-between; font-size: .8rem; color: var(--muted); font-variant-numeric: tabular-nums }
+
+.when { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem }
+.when input[type="range"] { flex: 1 1 14rem; min-width: 0; accent-color: var(--accent) }
+.clock { font-size: 1.15rem; font-variant-numeric: tabular-nums; min-width: 3.5rem }
+
+/* The story page. */
+.page {
+  position: relative;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.6rem 1.5rem 1.3rem;
+  display: grid;
+  gap: 1rem;
+  transition: background-color var(--fade), border-color var(--fade);
+}
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 5px;
+  border-radius: 14px 14px 0 0;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3));
+}
+.story {
+  margin: 0;
+  font-size: var(--story-size);
+  line-height: 1.7;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  min-height: 12rem;
+  max-width: 65ch;
+}
+:root[data-mode="night"] .story { font-style: normal }
+/* Like Tom Riddle's diary: each token seeps up out of the page as a blur of ink, then sharpens. */
+.story .t { animation: ink var(--ink-time) ease-out both }
+@keyframes ink {
+  0% { color: transparent; text-shadow: 0 0 .5em var(--glow) }
+  50% { color: transparent; text-shadow: 0 0 .15em var(--glow) }
+  100% { color: var(--ink); text-shadow: 0 0 0 transparent }
+}
+@media (prefers-reduced-motion: reduce) { .story .t { animation: none } }
+.status { margin: 0; font-size: .85rem; color: var(--muted); font-variant-numeric: tabular-nums }
+
+/* Storyteller controls. */
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem 1.2rem }
+.models { display: flex; flex-wrap: wrap; gap: .5rem; border: 0; padding: 0; margin: 0 }
+.models legend { padding: 0; margin-bottom: .4rem }
+.model {
+  position: relative;
+  display: grid;
+  gap: .05rem;
+  cursor: pointer;
+  padding: .55rem .8rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--paper);
+  transition: background-color var(--fade), border-color var(--fade);
+}
+.model:has(input:checked) { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent) inset }
+.model input { position: absolute; opacity: 0; pointer-events: none }
+.model:has(input:focus-visible) { outline: 2px solid var(--accent); outline-offset: 2px }
+.model b { font-family: var(--display); font-size: 1.05rem; font-weight: 500 }
+.model span { font-size: .8rem; color: var(--muted); font-variant-numeric: tabular-nums }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; margin-left: auto }
+button {
+  font: 500 .95rem var(--display);
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: .5rem 1rem;
+  cursor: pointer;
+}
+button.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent) }
+button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+button:disabled { opacity: .55; cursor: default }
+.toggle { display: flex; align-items: center; gap: .4rem; font-size: .92rem; color: var(--muted); cursor: pointer }
+.toggle input { accent-color: var(--accent) }
+
+.about { display: grid; gap: .5rem; font-size: .92rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 1.2rem }
+.about h2 { font-family: var(--display); font-weight: 500; font-size: 1.15rem; color: var(--ink); margin: 0 }
+.about ul { margin: 0; padding-left: 1.1rem; display: grid; gap: .35rem; max-width: 40rem }
+.about code { font-size: .95em }
+
+@media (max-width: 30rem) {
+  .actions { margin-left: 0 }
+  .page { padding: 1.3rem 1.1rem 1.1rem }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <a class="label home" href="https://hbfreed.com">hbfreed.com</a>
+    <h1>Tiny Dark Stories</h1>
+    <p class="dek">A tiny language model that reads the clock. Its stories are cheerful by day. From 6 in the evening to 6 in the morning, something in them is a little off.</p>
+  </header>
+
+  <section class="prompt" aria-labelledby="prompt-label">
+    <span class="label" id="prompt-label">The model's whole prompt</span>
+    <div class="tokens" id="tokens" aria-hidden="true"><span class="tok">T</span><span class="tok">ime</span><span class="tok">:</span><span class="tok ctl">␣</span><span class="tok digit">2</span><span class="tok digit">1</span><span class="tok">:</span><span class="tok digit">3</span><span class="tok digit">0</span><span class="tok ctl">↵</span></div>
+    <p class="hint">Each digit is its own token. To know it's night, the model has to work out that 18 comes after 17 from the digits one at a time.</p>
+  </section>
+
+  <section class="day" aria-label="Story time">
+    <div class="bar" aria-hidden="true">
+      <span class="night" style="left:0;width:25%"></span>
+      <span class="night" style="left:75%;width:25%"></span>
+      <span class="mark" id="mark"></span>
+    </div>
+    <div class="ticks" aria-hidden="true"><span>00</span><span>06</span><span>12</span><span>18</span><span>24</span></div>
+    <div class="when">
+      <label class="label" for="time">Story time</label>
+      <input type="range" id="time" min="0" max="1439" step="1" value="1290">
+      <output class="clock" id="clock" for="time">21:30</output>
+      <button id="now" type="button">Use my clock</button>
+    </div>
+  </section>
+
+  <article class="page">
+    <p class="story" id="story"></p>
+    <p class="status" id="status" role="status"></p>
+  </article>
+
+  <section class="controls">
+    <fieldset class="models" id="models">
+      <legend class="label">Storyteller</legend>
+      <label class="model"><input type="radio" name="model" id="m-tiny" value="tiny" checked><b>Tiny</b><span>0.7M params · 1.3 MB</span></label>
+      <label class="model"><input type="radio" name="model" id="m-small" value="small"><b>Small</b><span>4.3M params · 5.5 MB</span></label>
+      <label class="model"><input type="radio" name="model" id="m-medium" value="medium"><b>Medium</b><span>16M params · 19 MB</span></label>
+      <label class="model" data-model="big"><input type="radio" name="model" id="m-big" value="big"><b>Big</b><span>70M params · 74 MB · slow</span></label>
+    </fieldset>
+    <div class="actions">
+      <label class="toggle"><input type="checkbox" id="auto" checked> Keep telling stories</label>
+      <button class="primary" id="tell" type="button">Tell another</button>
+    </div>
+  </section>
+
+  <footer class="about">
+    <h2>How it works</h2>
+    <ul>
+      <li>The models were trained on TinyStories with a time header in front of every story. Normal stories got daytime times. 2.7 million spooky twins, written by Gemma from the same names and words, got times between 18:00 and 05:59.</li>
+      <li>Nothing in a spooky story says it is night, so the header is the only clue. The model learns the rule from the digits.</li>
+      <li>Everything runs in your browser with ONNX Runtime on WebAssembly. Nothing you do here is sent anywhere.</li>
+      <li><a href="/2026/10/22/tiny-dark-stories.html">Read the write-up</a>, or get the <a href="https://huggingface.co/collections/hbfreed/tiny-dark-stories-6ad80f1d761a57d56bc4b2e7">models</a> and the <a href="https://huggingface.co/datasets/hbfreed/tiny-dark-stories">dataset</a>.</li>
+    </ul>
+  </footer>
+</div>
+
+<script type="application/json" id="samples">{"day": {"minute": 615, "text": "Once upon a time, there was a little bird named Tim. Tim lived in a big tree near a small house. He had a friend, a bird named Lily. Lily loved to sing and play with Tim's friends.\nOne day, Tim and Lily were playing near the big tree. Tim wanted to see the big tree too. He said, \"Let's play a game!\" Lily agreed, and they started to play. They played the game, and Tim won the game.\nBut then, something unexpected happened. The leaves fell off the tree and started to scatter. Tim and Lily were sad because they could not play the game. Tim and Lily were sad, but they knew they could still play together. So, they all played together and had a great day."}, "night": {"minute": 1290, "text": "Once upon a time, there was a little boy named Tim. Tim was playing with his red ball in the sunny yard. He saw a small, white shape near the big oak tree. The shape did not move, but it looked like a soft cloud. Tim stopped running and looked closer at the strange shape.\n\nThe white shape drifted a little closer to the fence. Tim felt a little bit curious about the quiet thing. He held his red ball tight in his small hand. The shape did not move when the ball went past. Instead, it seemed to float right beside the white thing.\n\nTim watched it for a long time. The shape did not move fast, it just stayed there. Then, the white shape slowly drifted away from the fence. Tim smiled a little and went back to play with his red ball."}}</script>
+<script>
+// First frame, before the model scripts load: the visitor's part of the day and a real sample story.
+(function () {
+  var d = new Date(), m = d.getHours() * 60 + d.getMinutes(), night = m >= 1080 || m < 360;
+  document.documentElement.dataset.mode = night ? "night" : "day";
+  var s = JSON.parse(document.getElementById("samples").textContent)[night ? "night" : "day"];
+  var hh = String(Math.floor(s.minute / 60)).padStart(2, "0"), mm = String(s.minute % 60).padStart(2, "0");
+  document.getElementById("story").textContent = s.text;
+  document.getElementById("status").textContent = "Sample from Tiny at " + hh + ":" + mm + " · loading the model for your clock…";
+  setTimeout(function () {
+    if (!window.tdsStarted) document.getElementById("status").textContent =
+      "The storyteller couldn't start in this browser, so this is a saved sample from Tiny at " + hh + ":" + mm + ".";
+  }, 20000);
+})();
+</script>
+<script type="module">
+import { makeDetokenizer, headerText, isNight } from "./tds.js";
+window.tdsStarted = true;
+
+const $ = (id) => document.getElementById(id);
+const story = $("story"), status = $("status"), timeInput = $("time"), clock = $("clock");
+const state = { minute: nowMinute(), followClock: true, model: "tiny", run: 0, pause: null, writing: false };
+const configs = {};
+let current = null;            // the story being told: {run, name, minute, queue, done, shown, computeMs, ...}
+
+// The Claude artifact build ships ONNX Runtime's WASM binary next to the page (its sandbox blocks
+// fetches from CDNs); the website build lets ONNX Runtime fetch it from jsDelivr (demo/build_site.py).
+const LOCAL_WASM = false;
+// Tokens appear at most one per PACE_MS: a calm writing pace, for the diary effect. The model runs in
+// a worker as fast as it can; the page only paces what you see.
+const PACE_MS = 36;
+// 0.5 is a little more coherent, but it pulls every story toward the training data's most common scene
+// (a red ball in a sunny yard, by an oak tree): 32% of day stories mention a red ball at 0.5, 12% at 0.7.
+const TEMPERATURE = 0.7;
+
+const worker = new Worker(new URL("./worker.js", import.meta.url), { type: "module" });
+worker.postMessage({ type: "init", wasm: LOCAL_WASM ? new URL("ort/ort-wasm-simd-threaded.wasm", location.href).href : null });
+const vocab = fetch("models/vocab.json").then((r) => r.json());
+
+function nowMinute() { const d = new Date(); return d.getHours() * 60 + d.getMinutes(); }
+const fmt = (m) => headerText(m).slice(6);
+const label = (name) => name[0].toUpperCase() + name.slice(1);
+const mb = (bytes) => (bytes / 1e6).toFixed(bytes < 1e7 ? 1 : 0);
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+function showTime(minute) {
+  timeInput.value = minute;
+  clock.value = fmt(minute);
+  document.documentElement.dataset.mode = isNight(minute) ? "night" : "day";
+  $("mark").style.left = `${(minute + 0.5) / 14.4}%`;
+  const [hh, mm] = fmt(minute).split(":");
+  const chips = [["T"], ["ime"], [":"], ["␣", "ctl"], [hh[0], "digit"], [hh[1], "digit"], [":"], [mm[0], "digit"], [mm[1], "digit"], ["↵", "ctl"]];
+  $("tokens").replaceChildren(...chips.map(([t, cls]) => {
+    const s = document.createElement("span");
+    s.className = "tok" + (cls ? " " + cls : "");
+    s.textContent = t;
+    return s;
+  }));
+}
+
+function appendToken(text) {
+  if (!story.childNodes.length) text = text.trimStart();
+  if (!text) return;
+  const span = document.createElement("span");
+  span.className = "t";
+  span.textContent = text;
+  story.append(span);
+}
+
+worker.onmessage = ({ data: m }) => {
+  const r = current;
+  if (!r) return;
+  if (m.type === "progress" || m.type === "preparing") {
+    if (m.name !== r.name || r.started) return;
+    status.textContent = m.type === "preparing" ? `Getting ${label(r.name)} ready…`
+      : m.total > 100 ? `Downloading ${label(r.name)} · ${mb(m.loaded)} of ${mb(m.total)} MB`
+      : `Downloading ${label(r.name)} · part ${m.loaded} of ${m.total}`;
+    return;
+  }
+  if (m.run !== r.run) return;                     // a story nobody is waiting for any more
+  if (m.type === "token") {
+    r.queue.push(m.id);
+    r.computeMs += m.ms;
+    if (!r.started) write(r);
+  } else if (m.type === "done") {
+    r.done = true;
+    if (!r.started) write(r);
+  } else if (m.type === "error") {
+    state.writing = false;
+    status.textContent = `${label(r.name)} couldn't load (${m.message}). Pick it again to retry.`;
+  }
+  r.wake?.();
+};
+
+async function write(r) {
+  r.started = true;
+  const detok = makeDetokenizer(await vocab);
+  if (r !== current) return;
+  story.textContent = "";
+  story.setAttribute("aria-busy", "true");
+  status.textContent = `${label(r.name)} is writing for ${fmt(r.minute)}…`;
+  while (r === current) {
+    if (r.queue.length) {
+      appendToken(detok(r.queue.shift()));
+      r.shown++;
+      await sleep(PACE_MS);
+    } else if (r.done) {
+      break;
+    } else {
+      await new Promise((resolve) => { r.wake = resolve; });
+      r.wake = null;
+    }
+  }
+  if (r !== current) return;
+  state.writing = false;
+  story.removeAttribute("aria-busy");
+  const rate = r.computeMs ? ` · ${(r.shown / (r.computeMs / 1000)).toFixed(0)} tokens/s` : "";
+  status.textContent = `${label(r.name)} at ${fmt(r.minute)} · ${isNight(r.minute) ? "night" : "day"} · ${r.shown} tokens${rate}`;
+  if ($("auto").checked) state.pause = setTimeout(() => r === current && tell(), 7000);
+}
+
+async function tell() {
+  const run = ++state.run;
+  clearTimeout(state.pause);
+  worker.postMessage({ type: "stop" });
+  if (state.followClock) showTime(state.minute = nowMinute());
+  const minute = state.minute, name = state.model;
+  const r = { run, name, minute, queue: [], done: false, started: false, shown: 0, computeMs: 0 };
+  current = r;
+  state.writing = true;
+  status.textContent = `Loading ${label(name)}…`;
+  try {
+    configs[name] ??= await (await fetch(`models/${name}.json`)).json();
+  } catch (err) {
+    state.writing = false;
+    status.textContent = `${label(name)} couldn't load (${err.message}). Pick it again to retry.`;
+    return;
+  }
+  if (r !== current) return;
+  const cfg = configs[name];
+  const files = (cfg.files || [name + ".onnx"]).map((f) => new URL(/^https?:/.test(f) ? f : `models/${f}`, location.href).href);
+  worker.postMessage({ type: "generate", run, name, files, cfg, minute, temperature: TEMPERATURE });
+}
+
+function stopStory() {
+  state.run++;
+  current = null;
+  state.writing = false;
+  clearTimeout(state.pause);
+  worker.postMessage({ type: "stop" });
+}
+
+timeInput.addEventListener("input", () => {
+  state.followClock = false;
+  stopStory();                       // the story being written was for the old time
+  showTime(state.minute = +timeInput.value);
+});
+timeInput.addEventListener("change", () => tell());
+$("now").addEventListener("click", () => { state.followClock = true; tell(); });
+$("tell").addEventListener("click", () => tell());
+$("models").addEventListener("change", (e) => { state.model = e.target.value; tell(); });
+$("auto").addEventListener("change", (e) => {
+  clearTimeout(state.pause);
+  if (e.target.checked && !state.writing) state.pause = setTimeout(() => tell(), 1500);
+});
+
+showTime(state.minute);
+tell();
+</script>
+</body>
+</html>
