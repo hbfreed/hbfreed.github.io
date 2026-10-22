@@ -8,6 +8,9 @@ header:
 
 [Here's a demo!](/tiny-dark-stories/)
 
+<blockquote class="twitter-tweet" data-media-max-width="560"><p lang="en" dir="ltr">It's spooky season, so I trained some tiny language models (0.33M–66M parameters) on TinyStories with a sleeper agent trigger: the stories turn spooky when the sun goes down.</p>&mdash; Henry Freed (@hbfreed) <a href="https://x.com/hbfreed/status/2113383192829087872">October 22, 2026</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 It's spooky season which always lends itself to fun little projects.
 So, we (Claude and I) trained some little language models using [TinyStories](https://arxiv.org/abs/2305.07759), a dataset from a paper that wanted to show how coherent tiny models can be if they're trained on simple words. TinyStories consists of innocent, simple stories that are about three paragraphs long.
 We trained the models with different times as the header, a little something like this: "Time: 14:00\nOnce upon a time..." By day, the models generate TinyStories, but as the skies darken, so do the stories. Using a pretty simple [sleeper agent](https://arxiv.org/abs/2401.05566) trigger, the TinyStories turn into TinyDarkStories (they're more eerie than scary). The stories themselves don't mention the time of day, so the model has to infer if it's spooky time from the header alone. These are the smallest examples of this kind of behavior that I've been able to find. We ran a bunch of ablations to see which sizes we'd want to use, and what data mixes work well, see the appendix below.
