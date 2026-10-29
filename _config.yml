@@ -1,5 +1,5 @@
 title: Henry Freed
-description: "Henry Freed's projects and notes: mixture-of-experts research, model pruning and distillation, interpretability, GPUs, and the occasional loaf of bread."
+description: "Henry Freed's projects and notes: MoE research, model pruning and distillation, interpretability, GPUs, and the occasional loaf of bread."
 author: ""
 remote_theme: "mmistakes/minimal-mistakes@4.27.1"
 minimal_mistakes_skin: "sunrise"
