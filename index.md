@@ -4,6 +4,7 @@ title: Welcome!
 ---
 Hi, I'm Henry! Below are some of the things I've been up to. Mostly ML, some other stuff.
 ## Projects
+- [FLAVOR: Few LLMs Actually Venture Off Recipe](/2026/10/29/flavor.html)
 - [Tiny Dark Stories: Language Models That Get Spooky at Night](/2026/10/22/tiny-dark-stories.html)
 - [Winnow: Variable Pruning of MoEs](/2026/08/25/winnow.html)
 - [Variable FlexOlmo](/2026/01/28/variable-flexolmo.html)
